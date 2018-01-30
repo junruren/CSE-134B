@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up as a Driver</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign Up as a Driver</h1>
+      <form class="signup-form" action="index.html" method="get">
+        <div class="horizontal-group">
+          <input type="text" name="firstname" placeholder="First Name">
+          <input type="text" name="lastname" placeholder="Last Name">
+        </div>
+        <input type="number" name="phone-number" placeholder="Phone Number">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="confirm-password" placeholder="Confirm Password">
+        <hr>
+        <input type="text" name="driver-license-number" placeholder="Driver License Number">
+        <a href="#">Upload scanned license</a>
+        <div class="horizontal-group">
+          <select class="vehicle-info" name="year">
+            <option disabled selected>Year</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+          </select>
+          <select class="vehicle-info" name="make">
+            <option disabled selected>Make</option>
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Honda">Honda</option>
+            <option value="Mercedez-Benz">Mercedez-Benz</option>
+            <option value="Toyota">Toyota</option>
+          </select>
+          <select class="vehicle-info" name="model">
+            <option disabled selected>Model</option>
+            <option value="">Some dynamic populated option</option>
+          </select>
+          <select class="vehicle-info" name="color">
+            <option disabled selected>Color</option>
+            <option value="Black">Black</option>
+            <option value="Red">Red</option>
+            <option value="White">White</option>
+            <option value="Yellow">Yellow</option>
+          </select>
+        </div>
+        <div class="horizontal-group">
+          <label>Max number of passengers</label>
+          <select class="vehicle-info" name="max-passengers">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select>
+        </div>
+        <hr>
+        <select class="airport" name="airport">
+          <option disabled selected>Home Base Airport</option>
+          <option value="LAX">LAX</option>
+        </select>
+        <button class="button">Sign Up</button>
+        <p>Already have an account?</p>
+        <a href="#">Log In</a>
+      </form>
+    </div>
+  </body>
+</html>
