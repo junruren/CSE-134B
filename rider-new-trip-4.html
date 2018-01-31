@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Trip</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-right">
+        <a href="#">Notification</a>
+        <a href="#">My Account</a>
+        <div class="dropdown-content">
+          <a href="#">My Trips</a>
+          <a href="#">Settings</a>
+        </div>
+        <a href="#">Sign Out</a>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>A ride for your arrival</h1>
+      <p>Here is what we have found!</p>
+      <p>You can edit any fields per your preference</p>
+
+      <div class="details">
+        <div class="flight-details">
+          <!-- Icon Here -->
+          <p>Flight CA986</p>
+          <p>For Los Angeles (LAX)</p>
+          <p>6:00 pm</p>
+          <p>Aug 01, 2018</p>
+          <input type="checkbox" checked><label>Allow paired driver to know my flight no.</label>
+          <a href="#">Edit flight info</a>
+        </div>
+        <div class="arrival-details">
+          <!-- Icon Here -->
+          <p>Estimated time within the terminal</p>
+          <input type="number" name="hour" value="1"><p>Hours</p>
+          <input type="number" name="minute" value="45"><p>Minutes</p>
+          <input type="checkbox"><label>Currently don't know</label>
+        </div>
+        <div class="party-details">
+          <!-- Icon Here -->
+          <p>Including you</p>
+          <p>How many persons will be riding?</p>
+          <input type="number" name="persons" value="1">
+          <input type="checkbox"><label>Currently don't know</label>
+        </div>
+        <div class="location-details">
+          <div class="pick-up">
+            <!-- Icon Here -->
+            <p>Meet your driver at *</p>
+            <input type="text" placeholder="Arrival Gate B, Tom Bradly Intl Terminal">
+            <div class="horizontal-group">
+              <p>Roughly</p>
+              <p>7:45pm Aug 01, 2018</p>
+            </div>
+          </div>
+          <div class="drop-off">
+            <!-- Icon Here -->
+            <p>Ride destination</p>
+            <input type="text" placeholder="9229 Regents Road, La Jolla, CA 92037">
+            <input type="checkbox"><label>Currently don't know *</label>
+          </div>
+        </div>
+      </div>
+      <label>Flight Number</label>
+      <input type="text" name="flight-number" value="CA983">
+      <label>Arrival Date (in destination's timezone)</label>
+      <!-- Icon here -->
+      <input type="date" name="arrival-date" value="2018-08-01">
+      <button class="button">Broadcast my request to drivers!</button>
+      <div class="footer">
+        <p>* You will have to confrim these info eventually in order to make a deal with a paired driver</p>
+      </div>
+    </div>
+  </body>
+</html>
