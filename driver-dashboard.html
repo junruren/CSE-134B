@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="css/requests.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Muli' >  
   </head>
+    
   <body>
+    <!-- Navigation bar -->
     <nav>
       <a href="#">Notification</a>
       <a href="#">My Account</a>
@@ -14,10 +18,24 @@
       </div>
       <a href="#">Sign Out</a>
     </nav>
-    <div class="container">
+
+
+    <!-- Greetings -->
+    <div class="container homepage">
       <h1>Good morning, John</h1>
       <p>Ready to take another order?</p>
-      <button class="button">Find My Next Riders</button>
+      <button class="button homepage" >Find Riders</button>
     </div>
   </body>
+
+  <style>
+    body {
+      background: url("images/homepage_driver_bg.jpg") no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    </style>
+
 </html>
