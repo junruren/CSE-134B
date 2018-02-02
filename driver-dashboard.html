@@ -3,28 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css/requests.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Muli' >  
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
   </head>
     
   <body>
     <!-- Navigation bar -->
-    <nav>
-      <a href="#">Notification</a>
-      <a href="#">My Account</a>
-      <div class="dropdown-content">
-        <a href="#">My Trips</a>
-        <a href="#">Settings</a>
-      </div>
-      <a href="#">Sign Out</a>
-    </nav>
+    <ul class="navbar">
+      <!-- Order revered from right to left because ul.navbar li {float: right;}-->
+      <li><a href="#">Sign Out</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Account</a>
+        <div class="dropdown-content">
+          <a href="#">My Trips</a>
+          <a href="#">Settings</a>
+        </div>
+      </li>
+      <li><a href="#">Notification</a></li>
+    </ul>
 
 
     <!-- Greetings -->
     <div class="container homepage">
-      <h1>Good morning, John</h1>
-      <p>Ready to take another order?</p>
-      <button class="button homepage" >Find Riders</button>
+      <div class="vertical-middle">
+        <h1>Good morning, John</h1>
+        <h2>Ready to take another order?</h2>
+        <button class="button homepage" >Find Riders</button>
+      </div>
     </div>
   </body>
 
