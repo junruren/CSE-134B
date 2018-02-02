@@ -1,6 +1,16 @@
 * {
     font-family: 'Muli', sans-serif;
 }
+
+body {
+    background-image: url(../images/rider-dashboard-bg.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #252525;
+}
+
 ul.navbar {
     list-style-type: none;
     margin: 0;
