@@ -28,7 +28,7 @@ input, button {
   display: block;
   border: 1px solid black;
   border-radius: 5px;
-  font-size: 1.3nem;
+  font-size: 1em;
 }
 
 .signup-form input {

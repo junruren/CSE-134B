@@ -32,7 +32,7 @@ body.container {
 .signup-form input, button, select {
   height: 40px;
   display: block;
-  font-size: 1.3nem;
+  font-size: 1em;
   border: 1px solid black;
   border-radius: 5px;
   margin-top: 20px;
@@ -43,7 +43,7 @@ body.container {
   width: 60%;
 }
 
-.signup-form input {
+.signup-form input, select {
   text-align: left;
   padding-left: 10px;
 }
