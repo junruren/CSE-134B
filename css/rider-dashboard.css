@@ -11,6 +11,47 @@ body {
     background-color: #252525;
 }
 
+body.container {
+    position: relative;
+}
+
+.vertical-middle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 60%;
+    height: 50%;
+    margin: auto;
+}
+.container h1 {
+    font-size: 400%;
+    font-weight: 700; /* This corresponds to "Bold" */
+    text-align: left;
+    color: white;
+    line-height: 1.45;
+}
+
+.container h2 {
+    font-size: 200%;
+    font-weight: 600; /* This corresponds to "Semi Bold" */
+    text-align: left;
+    color: white;
+    line-height: 1.45;
+}
+
+.button {
+    background-color: #1F7DC1;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 ul.navbar {
     list-style-type: none;
     margin: 0;
@@ -38,7 +79,10 @@ ul.navbar li a, ul.navbar li.dropdown a.dropbtn {
 
 ul.navbar li a:hover:not(.active) {background-color: #94C6CF;}
 
-ul.navbar li a.active {background-color: #1F7DC1;}
+ul.navbar li a.active {
+    background-color: white;
+    color: #252525
+}
 
 ul.navbar .dropdown-content {
     display: none;

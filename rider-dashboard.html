@@ -3,12 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Dashboard</title>
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/rider-dashboard.css">
   </head>
   <body>
     <ul class="navbar">
-      <li class="left"><a class="active" href="#">Dashboard</a></li>
+      <!--
+        This is an example of "active" option within the navbar: make it class of "active" 
+        However, practically speaking when in a dashboard, we don't really need any active
+        option
+        <li class="left"><a class="active" href="#">Dashboard</a></li>
+      -->
       <!-- Order revered from right to left because ul.navbar li {float: right;}-->
       <li><a href="#">Sign Out</a></li>
       <li class="dropdown">
@@ -22,9 +27,11 @@
     </ul>
     
     <div class="container">
-      <h1>Good morning, Annie</h1>
-      <p>Where is your next destination?</p>
-      <button class="button">Find My Next Rides</button>
+      <div class="vertical-middle">
+          <h1>Hello Annie,</h1>
+          <h2>Where is your next destination?</p>
+          <button class="button">Find My Next Rides</button>
+      </div>
     </div>
   </body>
 </html>
