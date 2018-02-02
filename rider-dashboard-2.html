@@ -29,25 +29,31 @@
       <div class="vertical-middle with-more-info">
         <h1>Hello Annie,</h1>
         <h2>Ready to finalize your trip to Los Angeles?</h2>
-        <div class="horizontal-group">
+        <div class="dashboard-info">
           <div class="departure">
-            <h2>Ride to Hefei Xinqiao (HFE)</h2>
+            <h3>Ride to Hefei Xinqiao (HFE)</h3>
             <hr>
-            <div class="horizontal-group">
-              <div class="div">
+            <div class="ride-info">
+              <div class="ride-info-left">
                 <button class="button">Ride Details</button>
                 <button class="button">Message Your Driver</button>
                 <button class="button">Departure Flight Info</button>
               </div>
-              <img src="https://placehold.it/100x100" alt="checkmark image">
+              <div class="ride-info-right">
+                <img id="status_complete" src="icons/correct-64.png" alt="checkmark image">
+              </div>
             </div>
           </div>
           <div class="arrival">
-            <h2>Ride from Los Angeles (LAX)</h2>
+            <h3>Ride from Los Angeles (LAX)</h3>
             <hr>
-            <div class="horizontal-group">
-              <button class="button">Finalize Ride Details</button>
-              <div class="div">
+            <div class="ride-info">
+              <div class="ride-info-left">
+                <button class="button">Finalize Ride Details</button>
+                <button class="button">Message Your Driver</button>
+                <button class="button">Arriving Flight Info</button>
+              </div>
+              <div class="ride-info-right">
                 <ul>
                   <li><input type="checkbox" checked disabled>Add your ride destination from LAX</li>
                   <li><input type="checkbox" checked disabled>Add your arriving flight info</li>
@@ -56,14 +62,9 @@
                 </ul>
               </div>
             </div>
-            <hr>
-            <div class="horizontal-group">
-              <button class="button">Message Your Driver</button>
-              <button class="button">Arriving Flight Info</button>
-            </div>
           </div>
         </div>
-        <a href="#">Find Rides for Another Trip</a>
+        <a class="find-another" href="#">Find Rides for Another Trip</a>
       </div>
     </div>
   </body>
