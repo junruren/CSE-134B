@@ -25,6 +25,15 @@ body.container {
     height: 50%;
     margin: auto;
 }
+
+/*
+ * For dashboard when user has more info about upcoming ride.
+ * Use both vertical-middle with-more-info for class.
+ */
+.vertical-middle.with-more-info {
+    width: 80%;
+    height: 70%;
+}
 .container h1 {
     font-size: 400%;
     font-weight: 700; /* This corresponds to "Bold" */
@@ -112,6 +121,10 @@ ul.navbar .dropdown-content a:hover {background-color: #f1f1f1}
 
 ul.navbar .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.horizontal-group {
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 @media screen and (max-width: 600px){
