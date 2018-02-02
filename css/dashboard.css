@@ -35,12 +35,12 @@ body.container {
     height: 70%;
 }
 
-.departure, .arrival {
+.departure, .arrival, .need-a-ride {
     background-color: rgba(255,255,255,0.9);
 }
 
 /* This makes two divs side-by-side */
-.departure, .arrival, .ride-info-left, .ride-info-right {
+.departure, .arrival, .need-a-ride, .ride-info-left, .ride-info-right {
     float: left;
     width: 46%;
     padding-left: 1%;
@@ -95,7 +95,11 @@ body.container {
     position: relative;
     float: left;
     display: block;
-    font-weight: 100;
+    font-weight: 300;
+}
+
+a.find-a-ride {
+    color: #94C6CF;
 }
 
 /* Put the "Find another" link to the bottom center */
