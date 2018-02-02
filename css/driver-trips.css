@@ -7,7 +7,7 @@
 	padding: 5px;
 }
 
-.area-filter, .time-filter, .capacity-filter {
+.area-filter, .time-filter, .capacity-filter, .status-filter {
   display: inline-block;
   padding-right: 30px;
   color: black;
@@ -55,4 +55,8 @@ table {
 
 .left {
 	margin-right: 100px;
+}
+
+.message {
+	padding: 8px 15px 8px 15px;
 }

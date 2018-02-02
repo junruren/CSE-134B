@@ -3,35 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>All Requests</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/driver-trips.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
   </head>
   <body class="driver">
-    <nav>
-      <div class="nav-center">
-        <!-- Home Icon Here -->
-      </div>
-      <div class="nav-right">
-        <a href="#">Notification</a>
-        <a href="#">My Account</a>
-        <a href="#">Sign Out</a>
-      </div>
-    </nav>
+
+   <!-- Navigation bar -->
+   <ul class="navbar">
+      <!-- Order reversed from right to left because ul.navbar li {float: right;}-->
+      <li><a href="#">Sign Out</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Account</a>
+        <div class="dropdown-content">
+          <a href="#">My Trips</a>
+          <a href="#">Settings</a>
+        </div>
+      </li>
+      <li><a href="#">Notification</a></li>
+      <li><a href="#">Home</a></li>
+    </ul>
+
+    <!-- Trips -->
     <div class="container">
-      <h1>Here are all your pickups:</h1>
-      <div class="area-filter">
-        <input type="checkbox"><label>Area</label>
-        <select>
-          <option value="San Diego - Los Angeles" selected>San Diego - Los Angeles</option>
-        </select>
+      <h2>Here are all your pickups:</h2>
+
+      <div class="filters">
+        <div class="area-filter">
+          <input type="checkbox"><label>Area</label>
+          <select>
+            <option value="San Diego - Los Angeles" selected>San Diego - Los Angeles</option>
+          </select>
+        </div>
+        <div class="status-filter">
+          <input type="checkbox"><label>Finished</label>
+          <input type="checkbox" checked><label>Upcoming</label>
+        </div>
+        <div class="time-filter">
+          <span>Next</span>
+          <input type="number">
+          <span>days</span>
+        </div>
       </div>
-      <div class="status-filter">
-        <input type="checkbox"><label>Finished</label>
-        <input type="checkbox" checked><label>Upcoming</label>
-      </div>
-      <div class="time-filter">
-        <span>Next</span>
-        <input type="number">
-        <span>days</span>
-      </div>
+
       <div class="results-table">
         <table>
           <thead>
@@ -54,7 +68,7 @@
               <td>2018-01-19 15:03</td>
               <td>Peldi</td>
               <td>Driver Arrival</td>
-              <td><button class="button">Message</button></td>
+              <td><button class="button message">Message</button></td>
             </tr>
             <tr>
               <td>Marco Botton</td>
@@ -65,7 +79,7 @@
               <td>2018-01-25 05:25</td>
               <td>Mark</td>
               <td>Confirmed</td>
-              <td><button class="button">Message</button></td>
+              <td><button class="button message">Message</button></td>
             </tr>
             <tr>
               <td>Mariah Maclachlan</td>
@@ -76,7 +90,7 @@
               <td>2018-01-26 09:33</td>
               <td>Patata</td>
               <td>Confirmed</td>
-              <td><button class="button">Message</button></td>
+              <td><button class="button message">Message</button></td>
             </tr>
             <tr>
               <td>Valerie Liberty</td>
@@ -87,12 +101,14 @@
               <td>2018-02-01 23:42</td>
               <td>Val</td>
               <td>Confirmed</td>
-              <td><button class="button">Message</button></td>
+              <td><button class="button message">Message</button></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <button class="button">Back to Dashboard</button>
+      <div class="horizontal-group">
+        <button class="button progress">Back to Dashboard</button>
+      </div>
     </div>
   </body>
 </html>
