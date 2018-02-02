@@ -50,7 +50,14 @@ body.container {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 2px;
+    cursor: pointer;
 }
+
+.button:hover {
+    background-color: rgba(220,220,220,0.55)；
+}
+
 
 ul.navbar {
     list-style-type: none;
