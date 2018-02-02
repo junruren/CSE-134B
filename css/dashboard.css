@@ -3,12 +3,22 @@
 }
 
 body {
-    background-image: url(../images/rider-dashboard-bg.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    
     background-color: #252525;
+}
+
+body.driver {
+    background-image: url("../images/homepage_driver_bg.jpg"); 
+}
+
+body.rider {
+    background-image: url(../images/rider-dashboard-bg.jpeg);
 }
 
 body.container {
@@ -62,7 +72,7 @@ body.container {
     font-weight: 600; /* This corresponds to "Semi Bold" */
     text-align: left;
     color: white;
-    line-height: 1.45;
+    line-height: 1;
 }
 
 .button {

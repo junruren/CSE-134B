@@ -3,57 +3,66 @@
   <head>
     <meta charset="utf-8">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
   </head>
-  <body>
-    <nav>
-      <a href="#">Notification</a>
-      <div class="banner">
-        <p>Marco accepted your offer!</p>
-      </div>
-      <a href="#">My Account</a>
-      <a href="#">Sign Out</a>
-    </nav>
+  
+  <body class="driver">
+
+    <!-- Navigation bar -->
+    <ul class="navbar">
+      <!-- Order reversed from right to left because ul.navbar li {float: right;}-->
+      <li><a href="#">Sign Out</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Account</a>
+        <div class="dropdown-content">
+          <a href="#">My Trips</a>
+          <a href="#">Settings</a>
+        </div>
+      </li>
+      <li><a href="#">Notification</a></li>
+    </ul>
+
     <div class="container">
-      <h1>Good morning, John</h1>
-      <p>[[ Summary of the status of the order ]]</p>
-      <hr>
-      <div class="horizontal-group">
-        <div class="upcoming">
-          <h2>UPcoming: [[ Pick-up time ]]</h2>
-          <h2>Picking up [[ Name ]]</h2>
-          <hr>
-          <div class="div">
-            <button class="button">Ride Details</button>
-            <button class="button">Message Your Guest</button>
-            <button class="button">Arriving Flight Info</button>
+      <div class="vertical-middle with-more-info">
+        <h1>Good morning, John</h1>
+        <div class="horizontal-group">
+          <div class="upcoming">
+            <h2>UPcoming: [[ Pick-up time ]]</h2>
+            <h2>Picking up [[ Name ]]</h2>
+            <div class="driver-info left">
+              <button class="button">Ride Details</button>
+              <button class="button">Message Your Guest</button>
+              <button class="button">Arriving Flight Info</button>
+            </div>
+          </div>
+          <div class="driver-info todos">
+            <div>
+              <button class="button">Find a request</button><input type="checkbox" checked disabled>
+            </div>
+            <div>
+              <button class="button">Send price offer</button><input type="checkbox" checked disabled>
+            </div>
+            <div>
+              <button class="button">Confirm deal</button><input type="checkbox" checked disabled>
+            </div>
+            <div>
+              <button class="button">Confirm driver arrival</button><input type="checkbox" disabled>
+            </div>
+            <div>
+              <button class="button">Confirm guests pickup</button><input type="checkbox" disabled>
+            </div>
+            <div>
+              <button class="button">Confirm dropoff</button><input type="checkbox" disabled>
+            </div>
+            <div>
+              <button class="button">Write a review</button><input type="checkbox" disabled>
+            </div>
           </div>
         </div>
-        <div class="todos">
-          <div>
-            <button class="button">Find a request</button><input type="checkbox" checked disabled>
-          </div>
-          <div>
-            <button class="button">Send price offer</button><input type="checkbox" checked disabled>
-          </div>
-          <div>
-            <button class="button">Confirm deal</button><input type="checkbox" checked disabled>
-          </div>
-          <div>
-            <button class="button">Confirm driver arrival</button><input type="checkbox" disabled>
-          </div>
-          <div>
-            <button class="button">Confirm guests pickup</button><input type="checkbox" disabled>
-          </div>
-          <div>
-            <button class="button">Confirm dropoff</button><input type="checkbox" disabled>
-          </div>
-          <div>
-            <button class="button">Write a review</button><input type="checkbox" disabled>
-          </div>
-        </div>
+        <a href="#">See All Upcoming</a>
+        <a href="#">Find Requests for Another Trip</a>
       </div>
-      <a href="#">See All Upcoming</a>
-      <a href="#">Find Requests for Another Trip</a>
     </div>
   </body>
 </html>
