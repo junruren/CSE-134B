@@ -3,48 +3,64 @@
   <head>
     <meta charset="utf-8">
     <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/dashboard.css">
   </head>
   <body>
-    <nav>
-      <a href="#">Notification</a>
-      <a href="#">My Account</a>
-      <div class="dropdown-content">
-        <a href="#">My Trips</a>
-        <a href="#">Settings</a>
-      </div>
-      <a href="#">Sign Out</a>
-    </nav>
+      <ul class="navbar">
+        <!--
+          This is an example of "active" option within the navbar: make it class of "active" 
+          However, practically speaking when in a dashboard, we don't really need any active
+          option
+          <li class="left"><a class="active" href="#">Dashboard</a></li>
+        -->
+        <!-- Order reversed from right to left because ul.navbar li {float: right;}-->
+        <li><a href="#">Sign Out</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Account</a>
+          <div class="dropdown-content">
+            <a href="#">My Trips</a>
+            <a href="#">Settings</a>
+          </div>
+        </li>
+        <li><a href="#">Notification</a></li>
+      </ul>
     <div class="container">
-      <h1>Good morning, Annie</h1>
-      <p>Your trip to Los Angeles is good to go!</p>
-      <hr>
-      <div class="horizontal-group">
-        <div class="departure">
-          <h2>Ride to Hefei Xinqiao (HFE)</h2>
-          <hr>
-          <div class="horizontal-group">
-            <div class="div">
-              <button class="button">Ride Details</button>
-              <button class="button">Message Your Driver</button>
-              <button class="button">Departure Flight Info</button>
+      <div class="vertical-middle with-more-info">
+        <h1>Hello Annie,</h1>
+        <h2>Your trip to Los Angeles is good to go!</h2>
+        <div class="dashboard-info">
+          <div class="departure">
+            <h3>Ride to Hefei Xinqiao (HFE)</h3>
+            <hr>
+            <div class="ride-info">
+              <div class="ride-info-left">
+                <button class="button">Ride Details</button>
+                <button class="button">Message Your Driver</button>
+                <button class="button">Departure Flight Info</button>
+              </div>
+              <div class="ride-info-right">
+                <img id="status_complete" src="icons/correct-64.png" alt="checkmark image">
+              </div>
             </div>
-            <img src="https://placehold.it/100x100" alt="checkmark image">
+          </div>
+          <div class="arrival">
+            <h3>Ride from Los Angeles (LAX)</h3>
+            <hr>
+            <div class="ride-info">
+              <div class="ride-info-left">
+                <button class="button">Ride Details</button>
+                <button class="button">Message Your Driver</button>
+                <button class="button">Departure Flight Info</button>
+              </div>
+              <div class="ride-info-right">
+                <img id="status_complete" src="icons/correct-64.png" alt="checkmark image">
+              </div>
+            </div>
           </div>
         </div>
-        <div class="arrival">
-          <h2>Ride from Los Angeles (LAX)</h2>
-          <hr>
-          <div class="horizontal-group">
-            <div class="div">
-              <button class="button">Ride Details</button>
-              <button class="button">Message Your Driver</button>
-              <button class="button">Departure Flight Info</button>
-            </div>
-            <img src="https://placehold.it/100x100" alt="checkmark image">
-          </div>
-        </div>
+        <a class="find-another" href="#">Find Rides for Another Trip</a>
       </div>
-      <a href="#">Find Rides for Another Trip</a>
     </div>
   </body>
 </html>
