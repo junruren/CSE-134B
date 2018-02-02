@@ -3,17 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="stylesheet" href="./css/rider-dashboard.css">
   </head>
   <body>
-    <nav>
-      <a href="#">Notification</a>
-      <a href="#">My Account</a>
-      <div class="dropdown-content">
-        <a href="#">My Trips</a>
-        <a href="#">Settings</a>
-      </div>
-      <a href="#">Sign Out</a>
-    </nav>
+    <ul class="navbar">
+      <li class="left"><a class="active" href="#">Dashboard</a></li>
+      <!-- Order revered from right to left because ul.navbar li {float: right;}-->
+      <li><a href="#">Sign Out</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Account</a>
+        <div class="dropdown-content">
+          <a href="#">My Trips</a>
+          <a href="#">Settings</a>
+        </div>
+      </li>
+      <li><a href="#">Notification</a></li>
+    </ul>
+    
     <div class="container">
       <h1>Good morning, Annie</h1>
       <p>Where is your next destination?</p>
