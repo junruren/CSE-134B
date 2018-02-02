@@ -3,23 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Sign Up as a Driver</title>
+    <link rel="stylesheet" href="css/signup.css">
   </head>
   <body>
     <div class="container">
       <h1>Sign Up as a Driver</h1>
-      <form class="signup-form" action="index.html" method="get">
-        <div class="horizontal-group">
+      <div class="signup-form">
+        <div class="names">
           <input type="text" name="firstname" placeholder="First Name">
           <input type="text" name="lastname" placeholder="Last Name">
         </div>
-        <input type="number" name="phone-number" placeholder="Phone Number">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="confirm-password" placeholder="Confirm Password">
+        <div>
+          <input type="number" name="phone-number" placeholder="Phone Number">
+        </div>
+        <div>
+          <input type="email" name="email" placeholder="Email">
+        </div>
+        <div>
+          <input type="password" name="password" placeholder="Password">
+        </div>
+        <div>
+          <input type="password" name="confirm-password" placeholder="Confirm Password">
+        </div>
         <hr>
-        <input type="text" name="driver-license-number" placeholder="Driver License Number">
-        <a href="#">Upload scanned license</a>
-        <div class="horizontal-group">
+        <div>
+          <input type="text" name="driver-license-number" placeholder="Driver License Number">
+        </div>
+        <div>
+          <a href="#">Upload scanned license</a>
+        </div>
+        <div class="vehicle">
           <select class="vehicle-info" name="year">
             <option disabled selected>Year</option>
             <option value="2012">2012</option>
@@ -50,7 +63,7 @@
             <option value="Yellow">Yellow</option>
           </select>
         </div>
-        <div class="horizontal-group">
+        <div class="num-passengers">
           <label>Max number of passengers</label>
           <select class="vehicle-info" name="max-passengers">
             <option value="1">1</option>
@@ -63,14 +76,18 @@
           </select>
         </div>
         <hr>
-        <select class="airport" name="airport">
-          <option disabled selected>Home Base Airport</option>
-          <option value="LAX">LAX</option>
-        </select>
-        <button class="button">Sign Up</button>
-        <p>Already have an account?</p>
-        <a href="#">Log In</a>
-      </form>
+        <div>
+          <select class="airport" name="airport">
+            <option disabled selected>Home Base Airport</option>
+            <option value="LAX">LAX</option>
+            <option value="SAN">SAN</option>
+          </select>
+        </div>
+        <div>
+          <button class="button">Sign Up</button>
+        </div>
+        <p>Already have an account? <a href="#">Log In</a></p>
+      </div>
     </div>
   </body>
 </html>

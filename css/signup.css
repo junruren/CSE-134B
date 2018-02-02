@@ -1,0 +1,100 @@
+* {
+    font-family: 'Muli', sans-serif;
+}
+
+body.container {
+  position: relative;
+}
+
+.vertical-middle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 60%;
+    height: 50%;
+    margin: auto;
+}
+
+.signup-form div {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signup-form div * {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.signup-form input, button, select {
+  height: 40px;
+  display: block;
+  font-size: 1.3nem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.signup-form hr {
+  width: 60%;
+}
+
+.signup-form input {
+  text-align: left;
+  padding-left: 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+/* Fixed the problem where input and button are not having the same width */
+/* https://stackoverflow.com/questions/24389298/css-submit-button-and-input-text-doesnt-have-the-same-width */
+* {
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.names, .vehicle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.names input {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  width: 40%;
+}
+
+.vehicle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vehicle select {
+  width: 20%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.num-passengers {
+  display: flex;
+  align-items: center;
+}
+
+.vehicle select, .num-passengers select {
+  height: 30px;
+}
