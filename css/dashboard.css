@@ -92,6 +92,11 @@ body.container {
     background-color: #94C6CF;
 }
 
+.button:disabled {
+  opacity: 0.65; 
+  cursor: not-allowed;
+}
+
 .ride-info-left .button {
     width: 70%;
     margin: 1%;
