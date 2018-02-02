@@ -84,7 +84,7 @@ body.container {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border-radius: 2px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
@@ -121,6 +121,39 @@ a.find-another {
     color: #94C6CF;
 }
 
+
+/*** Driver Page Specific ***/
+.upcoming {
+    float:left; 
+    width:65%;
+}
+
+.todos {
+    float:left; 
+    width:30%;
+    background-color: rgba(255,255,255,0.6);
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.checklist {
+    padding: 7px 15px;
+}
+
+.more-links {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.more-links-content {
+    color: white;
+}
+
+
+/*** Navigation Bar ***/
 ul.navbar {
     list-style-type: none;
     margin: 0;
