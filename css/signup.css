@@ -98,3 +98,7 @@ p {
 .vehicle select, .num-passengers select {
   height: 30px;
 }
+
+.num-passengers select {
+  width: 20%;
+}
