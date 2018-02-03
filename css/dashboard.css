@@ -18,7 +18,7 @@ body.driver {
 }
 
 body.rider {
-    background-image: url(../images/rider-dashboard-bg.jpeg);
+    background-image: url("../images/rider-dashboard-bg.jpeg");
 }
 
 body.container {
@@ -50,13 +50,25 @@ body.container {
 }
 
 /* This makes two divs side-by-side */
-.departure, .arrival, .need-a-ride, .ride-info-left, .ride-info-right {
+.departure, .arrival, .need-a-ride, .find-another {
+    float: left;
+    width: 500px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.ride-info-left, .ride-info-right {
     float: left;
     width: 46%;
     padding-left: 1%;
     padding-right: 1%;
     margin-left: 1%;
     margin-right: 1%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .container h1 {
@@ -118,9 +130,9 @@ a.find-a-ride {
 }
 
 /* Put the "Find another" link to the bottom center */
-a.find-another {
-    position: absolute;
-    bottom: 0;
+.find-another a {
+    /*position: absolute;
+    bottom: 2.5%;*/
     width: 100%;
     text-align: center;
     color: #94C6CF;
@@ -215,6 +227,7 @@ ul.navbar .dropdown:hover .dropdown-content {
     display: block;
 }
 
+/****************** Responsive yeah! *********************/
 @media screen and (max-width: 600px){
     ul.navbar li.left, 
     ul.navbar li.dropdown,
