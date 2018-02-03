@@ -125,6 +125,10 @@ body.container {
     font-weight: 300;
 }
 
+/* This one refers to the section where rider has upcoming trip but only 
+ * requested a ride for either departure or arrival. This is not same as 
+ * find-another.
+ */
 a.find-a-ride {
     color: #94C6CF;
 }
