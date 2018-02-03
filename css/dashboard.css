@@ -50,11 +50,18 @@ body.container {
 }
 
 /* This makes two divs side-by-side */
-.departure, .arrival, .need-a-ride, .find-another {
+.departure, .arrival, .need-a-ride {
     float: left;
-    width: 500px;
+    width: 600px;
     padding: 5px;
     margin: 5px;
+}
+.find-another {
+    float: left;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
 }
 
 .ride-info-left, .ride-info-right {
