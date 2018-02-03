@@ -3,31 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>New Trip</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/trip.css">
   </head>
-  <body>
-    <nav>
-      <div class="nav-right">
-        <a href="#">Notification</a>
-        <a href="#">My Account</a>
+  <body class="trip">
+    <ul class="navbar">
+      <li class="left">
+        <a class="back-to-dashboard" href="#">Back to Dashboard</a>
+      </li>
+      <!-- Order reversed from right to left because ul.navbar li {float: right;}-->
+      <li><a href="#">Sign Out</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Account</a>
         <div class="dropdown-content">
           <a href="#">My Trips</a>
           <a href="#">Settings</a>
         </div>
-        <a href="#">Sign Out</a>
-      </div>
-    </nav>
+      </li>
+      <li><a href="#">Notification</a></li>
+    </ul>
     <div class="container">
-      <h1>A ride for your arrival</h1>
-      <p>Tell us about your arrival information</p>
-      <!-- Icon Here -->
-      <label>Flight Number</label>
-      <input type="text" name="flight-number" value="CA983">
-      <label>Arrival Date (in destination's timezone)</label>
-      <!-- Icon here -->
-      <input type="date" name="arrival-date" value="2018-08-01">
-      <button class="button">Next</button>
-      <div class="footer">
-        <p>Flight info helps us to figure out your best pick up time and location for you instantly\nPlus, your driver will be able to track your flight status</p>
+      <div class="vertical-middle">
+        <h1>A ride for your arrival</h1>
+        <h2>Tell us about your arrival information</h2>
+        <div class="flex-container">
+          <div class="f-n">
+            <label>Flight Number</label>
+            <input type="text" name="flight-number" value="CA983">
+          </div>
+          <div class="a-d">
+            <label>Arrival Date (in destination's timezone)</label>
+            <input type="date" name="arrival-date" value="2018-08-01">
+          </div>
+        </div>
+        <button class="button">Next</button>
+        <div class="footer">
+          <p>Flight info helps us to figure out your best pick up time and location for you instantly</p>
+          <p>Plus, your driver will be able to track your flight status</p>
+        </div>
       </div>
     </div>
   </body>

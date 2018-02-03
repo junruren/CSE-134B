@@ -28,10 +28,21 @@ body.container {
     left: 0;
     right: 0;
     width: 60%;
-    height: 50%;
+    height: 80%;
     margin: auto;
     padding: 2%;
     background-color: rgba(255,255,255,0.9);
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.f-n, .a-d {
+    float: left;
+    padding: 5px;
+    margin: 5px;
 }
 
 .container h1 {
@@ -71,6 +82,18 @@ body.container {
   opacity: 0.65; 
   cursor: not-allowed;
 }
+
+input, select {
+    height: 40px;
+    display: block;
+    font-size: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 10px;
+  }
 
 /*** Customized Checkbox *** 
  * Source: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
@@ -226,4 +249,12 @@ ul.navbar .dropdown:hover .dropdown-content {
     ul.navbar li.left, 
     ul.navbar li.dropdown,
     ul.navbar li {float: none;}
+
+    .container h1 {
+        font-size: 200%;
+    }
+
+    .container h2 {
+        font-size: 100%;
+    }
 }
