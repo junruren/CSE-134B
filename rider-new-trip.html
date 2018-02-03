@@ -3,25 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title>New Trip</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/trip.css">
   </head>
-  <body>
-    <nav>
-      <div class="nav-right">
-        <a href="#">Notification</a>
-        <a href="#">My Account</a>
+  <body class="trip">
+    <ul class="navbar">
+      <li class="left">
+        <a class="back-to-dashboard" href="#">Back to Dashboard</a>
+      </li>
+      <!-- Order reversed from right to left because ul.navbar li {float: right;}-->
+      <li><a href="#">Sign Out</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Account</a>
         <div class="dropdown-content">
           <a href="#">My Trips</a>
           <a href="#">Settings</a>
         </div>
-        <a href="#">Sign Out</a>
-      </div>
-    </nav>
+      </li>
+      <li><a href="#">Notification</a></li>
+    </ul>
+      
     <div class="container">
-      <h1>Tell us about your trip...</h1>
-      <p>Are you looking for...</p>
-      <input type="checkbox"><label>A ride for your departure (e.g. from your home to an airport)</label>
-      <input type="checkbox"><label>A ride after your arrival (e.g. from an airport to your destination)</label>
-      <button class="button">Next</button>
+      <div class="vertical-middle">
+          <h1>Tell us about your trip</h1>
+          <h2>Are you looking for...</h2>
+          <label class="checkbox-container">A ride for your departure (e.g. from your home to an airport)
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <hr>
+          <label class="checkbox-container">A ride after your arrival (e.g. from an airport to your destination)
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <button class="button">Next</button>
+      </div>
     </div>
   </body>
 </html>
