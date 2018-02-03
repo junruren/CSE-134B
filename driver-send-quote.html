@@ -3,21 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>New Request</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/driver-trips.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
   </head>
   <body class="driver">
-    <nav>
-      <div class="nav-center">
-        <!-- Home Icon Here -->
-      </div>
-      <div class="nav-right">
-        <a href="#">Notification</a>
-        <a href="#">My Account</a>
-        <a href="#">Sign Out</a>
-      </div>
-    </nav>
+  
+   <!-- Navigation bar -->
+   <ul class="navbar">
+      <!-- Order reversed from right to left because ul.navbar li {float: right;}-->
+      <li><a href="#">Sign Out</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Account</a>
+        <div class="dropdown-content">
+          <a href="#">My Trips</a>
+          <a href="#">Settings</a>
+        </div>
+      </li>
+      <li><a href="#">Notification</a></li>
+      <li><a href="#">Home</a></li>
+    </ul>
+
+    <!-- Trip -->
     <div class="container">
+      <h2>Mark's Ride Request</h2>
       <div class="results-table">
-        <h1>Mark's Ride Request</h1>
         <table>
           <thead>
             <th>Marco Botton</th>
@@ -43,14 +53,16 @@
       </div>
       <h2>Say hi to Mark (and give a quote!):</h2>
       <!-- I know it's ugly but it works for now... -->
+      <div class="send-message">
       <textarea name="message" rows="8" cols="80">Hi Mark,
 
 I'd like to make an offer of $100 for your ride. Please feel free to let me know if you have any questions! Look forward to serve you!
 
 Best,
 John</textarea>
+    </div>
     <div class="horizontal-group">
-      <button class="button">Back</button>
+      <button class="button left">Back</button>
       <button class="button">Send</button>
     </div>
     </div>
