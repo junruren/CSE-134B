@@ -7,6 +7,11 @@
 	padding: 5px;
 }
 
+.selected-option {
+	font-family: inherit;
+   	font-size: inherit;
+}
+
 .area-filter, .time-filter, .capacity-filter, .status-filter {
   display: inline-block;
   padding-right: 30px;
@@ -51,7 +56,7 @@ table {
 }
 
 .horizontal-group {
-	text-align: center
+	text-align: center;
 }
 
 .left {
@@ -93,4 +98,30 @@ textarea {
 	font-family: inherit;
    	font-size: inherit;
    	border-radius: 3px;
+}
+
+/****************** Responsive *********************/
+@media screen and (max-width: 600px){
+    
+    .container h1 {
+        font-size: 200%;
+    }
+
+    .container h2 {
+        font-size: 150%;
+    }
+
+    .container {
+	padding: 10px 30px 30px 40px;
+	}
+
+	.horizontal-group {
+		float: none;
+		text-align: center;
+	}
+
+	.left {
+	margin-right: 0;
+}
+
 }

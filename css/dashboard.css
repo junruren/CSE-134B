@@ -170,8 +170,8 @@ a.find-a-ride {
 }
 
 .more-links {
-    position: absolute;
-    bottom: 10px;
+    /*position: absolute;
+    bottom: 5%;*/
     width: 100%;
     text-align: center;
 }
@@ -242,5 +242,51 @@ ul.navbar .dropdown:hover .dropdown-content {
 @media screen and (max-width: 600px){
     ul.navbar li.left, 
     ul.navbar li.dropdown,
-    ul.navbar li {float: none;}
+    ul.navbar li {
+        float: none;
+    }
+
+   .container h1 {
+        font-size: 200%;
+    }
+
+    .container h2 {
+        font-size: 100%;
+    }
+
+    .vertical-middle {
+        position: absolute;
+        top: 10%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 50%;
+        margin: auto;
+    }
+
+    /*** Driver Page Specific ***/
+    .upcoming, .todos {
+        width:90%;
+        float: none;
+    }
+
+    .todos {
+        padding: 5%;
+    }
+
+    .more-links {
+        text-align: center;
+        margin: 3%;
+    }
+
+    .more-links-content {
+        margin: 2%;
+    }
+
+    .button {
+        margin-bottom: 5%;
+    }
+
+
 }
