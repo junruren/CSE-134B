@@ -1,166 +1,170 @@
 * {
-    font-family: 'Muli', sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 body.container {
-    position: relative;
+  position: relative;
 }
 
 .vertical-middle {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 50%;
-    height: 70%;
-    margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 70%;
+  margin: auto;
 }
 
 .flex-container {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container h1 {
-    font-size: 400%;
-    font-weight: 700; /* This corresponds to "Bold" */
-    text-align: left;
-    color: #252525;
-    line-height: 1.45;
+  font-size: 400%;
+  font-weight: 700; /* This corresponds to "Bold" */
+  text-align: left;
+  color: #252525;
+  line-height: 1.45;
 }
 
 .container h2 {
-    font-size: 200%;
-    font-weight: 600; /* This corresponds to "Semi Bold" */
-    text-align: left;
-    color: #252525;
-    line-height: 1.45;
+  font-size: 200%;
+  font-weight: 600; /* This corresponds to "Semi Bold" */
+  text-align: left;
+  color: #252525;
+  line-height: 1.45;
 }
 
 .profile-picture {
-    float: left;
-    width: 250px;
-    padding: 1px;
-    margin: 1px;
+  float: left;
+  width: 250px;
+  padding: 1px;
+  margin: 1px;
 }
 
 .info-details {
-    float: left;
-    width: 500px;
-    padding: 1px;
-    margin: 1px;
+  float: left;
+  width: 500px;
+  padding: 1px;
+  margin: 1px;
+}
+
+.airports {
+  width: 100%;
 }
 
 .button {
-    background-color: #1F7DC1;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 2px;
-    cursor: pointer;
+  background-color: #1F7DC1;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
 .button:hover {
-    background-color: #94C6CF;
+  background-color: #94C6CF;
 }
 
 .setting-buttons {
-    float: right;
+  float: right;
 }
 
 .setting-buttons .button {
-    margin: 1px;
+  margin: 1px;
 }
 
 label {
-    font-weight: 300;
-    font-size: 150%;
-    margin-right: 5px;
+  font-weight: 300;
+  font-size: 150%;
+  margin-right: 5px;
 }
 
 input {
-    font-weight: 600;
-    font-size: 125%;
+  font-weight: 600;
+  font-size: 125%;
 }
 
 /**************************** Nav Bar ****************************/
 ul.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgba(37, 37, 37, 0.6);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(37, 37, 37, 0.6);
 }
 
 /* Keep all options float to the right */
 ul.navbar li {
-    float: right;
+  float: right;
 }
 /* Exception for "Dashboard" option, which floats to left */
 ul.navbar li.left {
-    float: left;
+  float: left;
 }
 
 ul.navbar li a, ul.navbar li.dropdown a.dropbtn {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 ul.navbar li a.back-to-dashboard {
-    color: #94C6CF;
-    font-weight: 700;
+  color: #94C6CF;
+  font-weight: 700;
 }
 
 ul.navbar li a.back-to-dashboard:hover {
-    color: #252525;
+  color: #252525;
 }
 
 ul.navbar li a:hover {background-color: #94C6CF;}
 
 ul.navbar .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
 ul.navbar .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
 ul.navbar .dropdown-content a:hover {background-color: #f1f1f1}
 
 ul.navbar .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 @media screen and (max-width: 600px){
-    ul.navbar li.left, 
-    ul.navbar li.dropdown,
-    ul.navbar li {float: none;}
+  ul.navbar li.left,
+  ul.navbar li.dropdown,
+  ul.navbar li {float: none;}
 
-    .vertical-middle {
-        top: 250px;
-    }
+  .vertical-middle {
+      top: 250px;
+  }
 
-    .container h1 {
-        font-size: 200%;
-    }
+  .container h1 {
+      font-size: 200%;
+  }
 
-    .container h2 {
-        font-size: 100%;
-    }
+  .container h2 {
+      font-size: 100%;
+  }
 }

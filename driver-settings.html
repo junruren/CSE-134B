@@ -5,62 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Settings</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/settings.css">
   </head>
   <body>
-    <nav>
-      <div class="nav-left">
-        <a href="#">Home</a>
-        <a href="#">Back to my Dashboard</a>
-      </div>
-      <div class="nav-right">
-        <a href="#">Notification</a>
-        <a href="#">My Account</a>
+    <ul class="navbar">
+      <li class="left">
+        <a class="back-to-dashboard" href="./rider-dashboard.html">Back to Dashboard</a>
+      </li>
+      <!-- Order reversed from right to left because ul.navbar li {float: right;}-->
+      <li>
+        <a href="./index.html">Sign Out</a>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Account</a>
         <div class="dropdown-content">
           <a href="#">My Trips</a>
-          <a href="#">Settings</a>
+          <a class="active" href="">Settings</a>
         </div>
-        <a href="#">Sign Out</a>
-      </div>
-    </nav>
+      </li>
+      <li>
+        <a href="#">Notification</a>
+      </li>
+    </ul>
     <div class="container">
-      <h1>Settings</h1>
-      <div class="horizontal-group">
+      <div class="vertical-middle">
+        <h1>Settings</h1>
         <h2>Personal Information</h2>
-        <button class="button">Edit</button>
-      </div>
-      <div class="personal-info">
-        <img src="http://placehold.it/100x100" alt="profile">
-        <div class="info-details">
-          <form class="" action="index.html" method="post">
+        <div class="personal-info flex-container">
+          <div class="profile-picture">
+            <img src="http://placehold.it/100x100" alt="profile">
+          </div>
+          <div class="info-details">
             <label>First Name:</label>
             <input type="text" name="firstname" value="John" disabled>
+            <br>
             <label>Nick Name:</label>
             <input type="text" name="nickname" value="" disabled>
+            <br>
             <label>Last Name:</label>
             <input type="text" name="lastname" value="Smith" disabled>
+            <br>
             <label>Phone Number:</label>
             <input type="number" name="phone-number" value="6261234567" disabled>
+            <br>
             <label>Email Address:</label>
             <input type="email" name="email" value="jsmith@example.com" disabled>
-          </form>
-        </div>
-        <div class="airport">
-          <p>Home Base Airport(s):</p>
-          <ul>
-            <!-- Add icons here later -->
-            <li>Los Angeles Int'l (LAX)</li>
-            <li>San Diego Int'l (SAN)</li>
-            <li>Long Beach (LGB)</li>
-          </ul>
-          <form class="new-airport-form" action="index.html" method="post">
-            <!-- Add icons here later -->
-            <input type="text" placeholder="Add more">
-          </form>
-        </div>
-        <button class="button">Reset Password</button>
-        <div class="horizontal-group">
-          <button class="button">Save!</button>
-          <button class="button">Cancel Changes</button>
+          </div>
+          <div class="airports">
+            <p>Home Base Airport(s):</p>
+            <ul>
+              <!-- Add icons here later -->
+              <li>Los Angeles Int'l (LAX)</li>
+              <li>San Diego Int'l (SAN)</li>
+              <li>Long Beach (LGB)</li>
+            </ul>
+            <div>
+              <!-- Add icons here later -->
+              <input type="text" placeholder="Add more">
+            </div>
+          </div>
+          <div class="setting-buttons">
+            <button class="button">Edit</button>
+            <button class="button">Reset Password</button>
+          </div>
         </div>
       </div>
     </div>
