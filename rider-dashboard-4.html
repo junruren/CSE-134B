@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Dashboard</title>
-    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="./css/dashboard.css">
-  </head>
-  <body class="rider">
-      <ul class="navbar">
-        <!--
-          This is an example of "active" option within the navbar: make it class of "active"
-          However, practically speaking when in a dashboard, we don't really need any active
-          option
-          <li class="left"><a class="active" href="#">Dashboard</a></li>
-        -->
-        <!-- Order reversed from right to left because ul.navbar li {float: right;}-->
-        <li><a href="./index.html">Sign Out</a></li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Account</a>
-          <div class="dropdown-content">
-            <a href="#">My Trips</a>
-            <a href="./rider-settings.com">Settings</a>
-          </div>
-        </li>
-        <li><a href="#">Notification</a></li>
-      </ul>
 
-    <div class="container">
-      <div class="vertical-middle with-more-info">
-        <h1>Hello Annie,</h1>
-        <h2>Your trip to Los Angeles is good to go!</h2>
-        <div class="dashboard-info flex-container">
-          <div class="arrival">
-            <h3>Ride from Los Angeles (LAX)</h3>
-            <hr>
-            <div class="ride-info">
-              <div class="ride-info-left">
-                <button class="button">Ride Details</button>
-                <button class="button">Message Your Driver</button>
-                <button class="button">Departure Flight Info</button>
-              </div>
-              <div class="ride-info-right">
-                <img id="status_complete" src="icons/correct-64.png" alt="checkmark image">
-              </div>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+
+<body class="rider">
+  <ul class="navbar">
+    <!--
+        This is an example of "active" option within the navbar: make it class of "active"
+        However, practically speaking when in a dashboard, we don't really need any active
+        option
+        <li class="left"><a class="active" href="#">Dashboard</a></li>
+      -->
+    <!-- Order reversed from right to left because ul.navbar li {float: right;}-->
+    <li>
+      <a href="./index.html">Sign Out</a>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Account</a>
+      <div class="dropdown-content">
+        <a href="#">My Trips</a>
+        <a href="./rider-settings.com">Settings</a>
+      </div>
+    </li>
+    <li>
+      <a href="#">Notification</a>
+    </li>
+  </ul>
+  <div class="container">
+    <div class="vertical-middle with-more-info">
+      <h1>Hello Annie,</h1>
+      <h2>Your trip to Los Angeles is good to go!</h2>
+      <div class="dashboard-info flex-container">
+        <div class="arrival">
+          <h3>Ride from Los Angeles (LAX)</h3>
+          <hr>
+          <div class="ride-info">
+            <div class="ride-info-left">
+              <button class="button">Ride Details</button>
+              <button class="button">Message Your Driver</button>
+              <button class="button">Departure Flight Info</button>
+            </div>
+            <div class="ride-info-right">
+              <img id="arrival_status_complete" src="icons/correct-32.png" alt="checkmark image">
             </div>
           </div>
-          <div class="need-a-ride">
-            <h3>Need a ride for your departure?</h3>
-            <a class="find-a-ride" href="./rider-new-trip-2.html">Request now</a>
-          </div>
-          <div class="find-another">
-            <a href="#">Find Rides for Another Trip</a>
-          </div>
+        </div>
+        <div class="need-a-ride">
+          <h3>Need a ride for your departure?</h3>
+          <a class="find-a-ride" href="./rider-new-trip-2.html">Request now</a>
+        </div>
+        <div class="find-another">
+          <a href="./rider-new-trip.html">Find Rides for Another Trip</a>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>

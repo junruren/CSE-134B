@@ -9,24 +9,24 @@
     <link rel="stylesheet" href="./css/dashboard.css">
   </head>
   <body class="rider">
-      <ul class="navbar">
-        <!--
-          This is an example of "active" option within the navbar: make it class of "active"
-          However, practically speaking when in a dashboard, we don't really need any active
-          option
-          <li class="left"><a class="active" href="#">Dashboard</a></li>
-        -->
-        <!-- Order reversed from right to left because ul.navbar li {float: right;}-->
-        <li><a href="./index.html">Sign Out</a></li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Account</a>
-          <div class="dropdown-content">
-            <a href="#">My Trips</a>
-            <a href="./rider-settings.html">Settings</a>
-          </div>
-        </li>
-        <li><a href="#">Notification</a></li>
-      </ul>
+    <ul class="navbar">
+      <!--
+        This is an example of "active" option within the navbar: make it class of "active"
+        However, practically speaking when in a dashboard, we don't really need any active
+        option
+        <li class="left"><a class="active" href="#">Dashboard</a></li>
+      -->
+      <!-- Order reversed from right to left because ul.navbar li {float: right;}-->
+      <li><a href="./index.html">Sign Out</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Account</a>
+        <div class="dropdown-content">
+          <a href="#">My Trips</a>
+          <a href="./rider-settings.html">Settings</a>
+        </div>
+      </li>
+      <li><a href="#">Notification</a></li>
+    </ul>
     <div class="container">
       <div class="vertical-middle with-more-info">
         <h1>Hello Annie,</h1>
@@ -42,7 +42,7 @@
                 <button class="button">Departure Flight Info</button>
               </div>
               <div class="ride-info-right">
-                <img id="status_complete" src="icons/correct-64.png" alt="checkmark image">
+                <img id="departure_status_complete" src="icons/correct-32.png" alt="checkmark image">
               </div>
             </div>
           </div>
@@ -56,12 +56,12 @@
                 <button class="button">Departure Flight Info</button>
               </div>
               <div class="ride-info-right">
-                <img id="status_complete" src="icons/correct-64.png" alt="checkmark image">
+                <img id="arrival_status_complete" src="icons/correct-32.png" alt="checkmark image">
               </div>
             </div>
           </div>
           <div class="find-another">
-            <a href="#">Find Rides for Another Trip</a>
+            <a href="./rider-new-trip.html">Find Rides for Another Trip</a>
           </div>
         </div>
       </div>
