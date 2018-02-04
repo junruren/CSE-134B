@@ -284,6 +284,10 @@ ul.navbar .dropdown:hover .dropdown-content {
     ul.navbar li.dropdown,
     ul.navbar li {float: none;}
 
+    .vertical-middle {
+        top: 250px;
+    }
+
     .container h1 {
         font-size: 200%;
     }
