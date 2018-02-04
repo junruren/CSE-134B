@@ -1,12 +1,23 @@
-.container h1 {
-  font-size: 3em;
+.hero {
   text-align: center;
+  width: 100%;
+  height: 600px;
+  background: url('../images/hero.jpg');
+  background-size: cover;
+  color: white;
 }
 
-.container img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
+.layer {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 3em;
 }
 
 .highlights {
@@ -35,6 +46,7 @@
   margin: 30px;
   width: 200px;
   height: 50px;
+  border-radius: 5px;
 }
 
 .fas {
@@ -53,5 +65,8 @@
 @media screen and (max-width: 700px) {
   .feature {
     width: 100%;
+  }
+  .hero, .layer {
+    max-height: 300px;
   }
 }
