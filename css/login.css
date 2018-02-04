@@ -1,5 +1,5 @@
 * {
-    font-family: 'Muli', sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 body.container {
@@ -7,14 +7,14 @@ body.container {
 }
 
 .vertical-middle {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 60%;
-    height: 50%;
-    margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 60%;
+  height: 50%;
+  margin: auto;
 }
 
 .container * {

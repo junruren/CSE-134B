@@ -1,5 +1,5 @@
 * {
-    font-family: 'Muli', sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 body.container {
@@ -7,14 +7,14 @@ body.container {
 }
 
 .vertical-middle {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 60%;
-    height: 50%;
-    margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 60%;
+  height: 50%;
+  margin: auto;
 }
 
 .signup-form div {
@@ -60,10 +60,9 @@ p {
 /* Fixed the problem where input and button are not having the same width */
 /* https://stackoverflow.com/questions/24389298/css-submit-button-and-input-text-doesnt-have-the-same-width */
 * {
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
