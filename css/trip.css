@@ -31,12 +31,25 @@ body.container {
     height: 80%;
     margin: auto;
     padding: 2%;
-    background-color: rgba(255,255,255,0.9);
 }
 
 .flex-container {
     display: flex;
     flex-wrap: wrap;
+}
+
+.flight-details, .arrival-details, .party-details, .location-details {
+    float: left;
+    width: 300px;
+    padding: 5px;
+    margin: 10px;
+    background-color: rgba(255,255,255,0.9);
+}
+
+/* For add-trip-2 */
+.add-flight {
+    background-color: rgba(255,255,255,0.9);
+    margin: 5px;
 }
 
 .f-n, .a-d {
@@ -45,11 +58,19 @@ body.container {
     margin: 5px;
 }
 
+.text-over-dark-bg {
+    color: white;
+    text-shadow: 1px 1px 5px #252525;
+}
+
+.container h1:not(.text-over-dark-bg), .container h2:not(.text-over-dark-bg) {
+    color: #252525;
+}
+
 .container h1 {
     font-size: 400%;
     font-weight: 700; /* This corresponds to "Bold" */
     text-align: left;
-    color: #252525;
     line-height: 1.45;
 }
 
@@ -57,7 +78,6 @@ body.container {
     font-size: 200%;
     font-weight: 600; /* This corresponds to "Semi Bold" */
     text-align: left;
-    color: #252525;
     line-height: 1;
 }
 
@@ -93,7 +113,11 @@ input, select {
     margin-bottom: 20px;
     text-align: left;
     padding-left: 10px;
-  }
+}
+
+.footer p {
+    color: white;
+}
 
 /*** Customized Checkbox *** 
  * Source: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
