@@ -1,0 +1,43 @@
+.container h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.container img {
+  display: block;
+  margin: 0 auto;
+}
+
+.highlights {
+  margin: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.feature {
+  width: 25%;
+  line-height: 1.5em;
+}
+
+.feature img {
+  border-radius: 50%;
+}
+
+.onboard-buttons {
+  text-align: center;
+}
+
+.button {
+  font-size: 1.3em;
+  margin: 30px;
+  width: 200px;
+  height: 50px;
+}
+
+.fas {
+  font-size: 5em;
+  width: 100%;
+  text-align: center;
+  color: #94C6CF;
+}
