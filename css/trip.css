@@ -96,6 +96,10 @@ body.container {
     line-height: 1;
 }
 
+a {
+    color: #94C6CF;
+}
+
 .button {
     background-color: #1F7DC1;
     border: none;
@@ -128,6 +132,10 @@ input, select {
     margin-bottom: 20px;
     text-align: left;
     padding-left: 10px;
+}
+
+input:disabled {
+    background-color: lightgrey;
 }
 
 /*** Customized Checkbox *** 
@@ -164,7 +172,7 @@ input, select {
   }
   
   /* On mouse-over, add a grey background color */
-  .checkbox-container:hover input ~ .checkmark {
+  .checkbox-container:hover :not(:disabled) input ~ .checkmark {
     background-color: rgba(148,198,207, 1);
   }
   
