@@ -43,8 +43,17 @@ h1 {
 /* Fixed the problem where input and button are not having the same width */
 /* https://stackoverflow.com/questions/24389298/css-submit-button-and-input-text-doesnt-have-the-same-width */
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+@media screen and (max-width: 580px) {
+  .vertical-middle {
+    position: relative;
+  }
+
+  .signup-form > * {
+    min-width: 180px;
+  }
 }

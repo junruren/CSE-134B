@@ -24,12 +24,14 @@ nav > div {
 
 .messages {
   margin: 40px 0;
+  min-height: 65vh;
 }
 
 .messages > div {
   border: 1px solid #252525;
   border-radius: 10px;
-  width: 30%;
+  width: 55%;
+  max-width: 550px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -50,14 +52,18 @@ nav > div {
   margin-right: 10px;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0px;
+  margin-top: auto;
+  margin-bottom: 0;
   width: 100%;
 }
 
-button {
+button, input {
   border-radius: 5px;
 }
 
@@ -90,4 +96,16 @@ footer > button {
 .chat-control button {
   width: 18%;
   height: 40px;
+}
+
+/* https://stackoverflow.com/questions/34365271/hr-inside-container-with-display-flex-become-corrupted */
+hr {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media screen and (max-width: 860px) {
+  footer > button {
+    min-width: 210px;
+  }
 }

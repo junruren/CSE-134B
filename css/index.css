@@ -6,6 +6,7 @@
 .container img {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 .highlights {
@@ -18,6 +19,7 @@
 .feature {
   width: 25%;
   line-height: 1.5em;
+  margin-top: 20px;
 }
 
 .feature img {
@@ -40,4 +42,16 @@
   width: 100%;
   text-align: center;
   color: #94C6CF;
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .feature {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .feature {
+    width: 100%;
+  }
 }

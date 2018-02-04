@@ -69,6 +69,7 @@ p {
 
 .names, .vehicle {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -81,6 +82,7 @@ p {
 
 .vehicle {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -101,4 +103,23 @@ p {
 
 .num-passengers select {
   width: 20%;
+}
+
+@media screen and (max-width: 800px) {
+  .names > input {
+    width: 100%;
+  }
+
+  .vehicle select {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .vertical-middle {
+    position: relative;
+  }
+
+  .signup-form > * {
+    min-width: 180px;
+  }
 }
