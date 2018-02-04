@@ -105,7 +105,7 @@ p {
   width: 20%;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 800px) {
   .names > input {
     width: 100%;
   }
@@ -114,18 +114,12 @@ p {
     width: 100%;
     margin: 20px 0;
   }
-}
 
-@media screen and (min-width: 640px) and (max-width: 800px) {
-  .names > input {
-    width: 100%;
+  .vertical-middle {
+    position: relative;
   }
 
   .signup-form > * {
     min-width: 180px;
-  }
-
-  .vertical-middle {
-    position: relative;
   }
 }
