@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>New Request</title>
-      <link rel="stylesheet" href="css/dashboard.css">
+    <title>Give A Review</title>
+    <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/driver-trips.css">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
   </head>
   <body class="driver">
 
-   <!-- Navigation bar -->
+    <!-- Navigation bar -->
    <ul class="navbar">
       <!-- Order reversed from right to left because ul.navbar li {float: right;}-->
       <li><a href="./index.html">Sign Out</a></li>
@@ -28,12 +28,12 @@
 
     <!-- Trip -->
     <div class="container">
-      <h2>Mark's Ride Request</h2>
+      <h2>Thank you for your feedback! </h2>
       <div class="results-table">
         <table>
           <thead>
             <tr>
-              <th>Marco Botton</th>
+              <th>Name</th>
               <th>Total Riders</th>
               <th>Pick-up</th>
               <th>Destination</th>
@@ -55,19 +55,37 @@
           </tbody>
         </table>
       </div>
-      <h2>Quote successfully sent! </h2>
-      <div class="confirm-message">
-          <p>Hi Mark,</p>
-          <p>I'd like to make an offer of $100 for your ride. Please feel free to let me know if you have any questions! Look forward to serve you!</p>
-          <p>Best,</p>
-          <p>John</p>
+
+      <div class="ratings-container">
+        <div class="horizontal-group ratings-group">
+          <p>Guests
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+          </p>
+        </div>
+        <div class="horizontal-group ratings-group">
+          <p>Flight
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+            <span>☆</span>
+          </p>
+        </div>
+        <div class="horizontal-group ratings-group">
+          <p>Traffic
+            <span>★</span>
+            <span>★</span>
+            <span>☆</span>
+            <span>☆</span>
+            <span>☆</span>
+          </p>
+        </div>
       </div>
-    <div class="horizontal-group">
-      <button class="button progress left" onclick="location.href='chat.html'">
-        View in Chat</button>
-      <button class="button progress" onclick="location.href='driver-dashboard-2.html'">
-        My Dashboard</button>
-    </div>
+
     </div>
   </body>
 </html>
