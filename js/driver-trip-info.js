@@ -1,57 +1,32 @@
 
-var driver_trip_storage = window.localStorage;
-localStorage.setItem('driver_has_trips', false);
-var all_trips = [ 
-	{
-		"Name": "Giacomo Guilizzoni",
-		"Total Riders": 3,
-		"Pick-up": "LAX",
-		"Destination": "La Jolla",
-		"Flight Number": "MU538",
-		"Arrival Time": "2018-01-19 15:03",
-		"Nickname": "Peldi",
-		"Status": "Driver Arrival"
-	}, 
-	{
-		"Name": "Marco Botton",
-		"Total Riders": 2,
-		"Pick-up": "SAN",
-		"Destination": "Irvine",
-		"Flight Number": "AA1270",
-		"Arrival Time": "2018-01-25 05:25",
-		"Nickname": "Mark",
-		"Status": "Confirmed"
-	}, 
-	{
-		"Name": "Mariah Maclachlan",
-		"Total Riders": 2,
-		"Pick-up": "LAX",
-		"Destination": "La Jolla",
-		"Flight Number": "XZ3265",
-		"Arrival Time": "2018-01-26 09:33",
-		"Nickname": "Patata",
-		"Status": "Confirmed"
-	}, 
-	{
-		"Name": "Valerie Liberty",
-		"Total Riders": 2,
-		"Pick-up": "LAX",
-		"Destination": "Irvine",
-		"Flight Number": "SQ972",
-		"Arrival Time": "2018-02-01 23:42",
-		"Nickname": "Val",
-		"Status": "Confirmed"
+// dynamically create tables based on data passed in
+function create_table(table_header, trip_data, extra_element) {
+	// Get the amount of objects inside 'trip_data' so we can loop through each one.
+	var trip_count = trip_data.length;
+	var trip_form_keys = Object.keys(trip_data[0]);
+	var column_count = trip_form_keys.length;
+
+	var tableContent = "";
+
+	// Loop through the JSON and output each row in to a string.
+	for (i = 0; i < trip_count; i++) {
+		var cur_row = "<tr>";
+		for (j = 0; j < column_count; j++) {
+			cur_row = cur_row + "<td>" + all_trips[i][trip_form_keys[j]] + "</td>";
+		}
+		cur_row = cur_row + extra_element + "</tr>";
+		tableContent = tableContent + cur_row;
 	}
-];
+	var tableFooter = "</table>";
+	return (tableHeader + tableContent + tableFooter);
+}
 
-localStorage.setItem('driver_all_trips', JSON.stringify(all_trips));
+function store_selected_row() {
+	
+}
 
-// Get the amount of objects inside 'all_trips' so we can loop through each one.
-var trip_count = all_trips.length;
-var trip_form_keys = Object.keys(all_trips[0]);
-var column_count = trip_form_keys.length;
+/*************** Render table in driver-all-requests.html ***************/
 
-// Make the results table to include in our output.
 var tableHeader = "<table><thead><tr>" + 
 	        	"<th>Name</th>" + 
 	            "<th>Total Riders</th>" + 
@@ -62,25 +37,27 @@ var tableHeader = "<table><thead><tr>" +
 	            "<th>Nickname</th>" + 
 	            "<th>Status</th>" +
 	        	"</tr></thead><tbody>";
-var tableContent = "";
 
-// Loop through the JSON and output each row in to a string.
-for (i = 0; i < trip_count; i++) {
-	var cur_row = "<tr>";
-	for (j = 0; j < column_count; j++) {
-		cur_row = cur_row + "<td>" + all_trips[i][trip_form_keys[j]] + "</td>";
-	}
-	cur_row = cur_row + '<td><button class="button message">Message</button></td>' + "</tr>";
-	tableContent = tableContent + cur_row;
-}
+var message_button = '<td><button class="button message">Message</button></td>';
+var all_trips_html = create_table(tableHeader, all_trips, message_button);
 
-var tableFooter = "</table>";
+var checkbox = '<td><input type="checkbox"></td>';
+var available_trips_html = create_table(tableHeader, available_trips, checkbox);
 
-// Get div and output the HTML. You can include these HTML strings straight in to your emailText variable.
+// Render the table for different pages
 window.onload = function(){
 	render_table();
 	function render_table() {
-		document.getElementById("table-render").innerHTML = tableHeader + tableContent + tableFooter;
+		var all_trips_page = document.getElementById("all-trips-render");
+		var available_trips_page = document.getElementById("available_trips-render");
+		if (all_trips_page != null) {
+			all_trips_page.innerHTML = all_trips_html;
+		}
+		if (available_trips_page != null) {
+			available_trips_page.innerHTML = available_trips_html;
+		}
 	}
 }
+
+
 

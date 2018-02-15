@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/driver-trips.css">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+    <script src="js/driver-data.js"></script>
+    <script src="js/driver-trip-info.js"></script>
+
   </head>
   <body class="driver">
 
@@ -48,8 +51,8 @@
       </div>
     </div>
 
-      <div class="results-table">
-        <table>
+      <div class="results-table" id="available_trips-render">
+        <!-- <table>
           <thead>
             <tr>
               <th>Name</th>
@@ -103,7 +106,7 @@
               <td><input type="checkbox"></td>
             </tr>
           </tbody>
-        </table>
+        </table> -->
       </div>
       <div class="horizontal-group">
         <button class="button progress left" onclick="location.href='driver-dashboard-2.html'">
