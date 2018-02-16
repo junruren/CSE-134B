@@ -169,6 +169,11 @@ a.find-a-ride {
 
 .checklist {
     padding: 7px 15px;
+    margin: 1%;
+}
+
+.indv-detail-button {
+    margin: 1%;
 }
 
 .more-links {
@@ -180,6 +185,7 @@ a.find-a-ride {
 
 .more-links-content {
     color: white;
+        margin-right: 1%
 }
 
 

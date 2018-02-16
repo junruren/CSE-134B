@@ -1,5 +1,11 @@
 var driver_trip_storage = window.localStorage;
-localStorage.setItem('driver_has_trips', false);
+localStorage.setItem('driver_has_trips', true);
+
+var user_info = {
+	"Name": "John Doe",
+	"Preferred Area": ["San Diego-Los Angelos"]
+};
+
 var all_trips = [ 
 	{
 		"Name": "Giacomo Guilizzoni",
@@ -86,7 +92,30 @@ var available_trips = [
 	}
 ];
 
-var selected_trip = [];
+var selected_trip = [{
+		"Name": "Marco Botton",
+		"Total Riders": 2,
+		"Pick-up": "SAN",
+		"Destination": "Irvine",
+		"Flight Number": "AA1270",
+		"Arrival Time": "2018-01-25 05:25",
+		"Nickname": "Mark",
+		"Status": "Confirmed"
+	}];
+
+var latest_pickup = {
+		"Name": "Marco Botton",
+		"Total Riders": 2,
+		"Pick-up": "SAN",
+		"Destination": "Irvine",
+		"Flight Number": "AA1270",
+		"Arrival Time": "2018-01-25 05:25",
+		"Nickname": "Mark",
+		"Status": "Confirmed"
+	};
+
+var trip_progress = [];
+
 
 localStorage.setItem('driver_all_trips', JSON.stringify(all_trips));
 localStorage.setItem('driver_available_trips', JSON.stringify(available_trips));

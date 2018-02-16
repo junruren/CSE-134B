@@ -12,7 +12,7 @@ function create_table(table_header, trip_data, extra_element) {
 	for (i = 0; i < trip_count; i++) {
 		var cur_row = "<tr>";
 		for (j = 0; j < column_count; j++) {
-			cur_row = cur_row + "<td>" + all_trips[i][trip_form_keys[j]] + "</td>";
+			cur_row = cur_row + "<td>" + trip_data[i][trip_form_keys[j]] + "</td>";
 		}
 		cur_row = cur_row + extra_element + "</tr>";
 		tableContent = tableContent + cur_row;
@@ -39,10 +39,7 @@ var tableHeader = "<table><thead><tr>" +
 	        	"</tr></thead><tbody>";
 
 var message_button = '<td><button class="button message">Message</button></td>';
-var all_trips_html = create_table(tableHeader, all_trips, message_button);
-
 var checkbox = '<td><input type="checkbox"></td>';
-var available_trips_html = create_table(tableHeader, available_trips, checkbox);
 
 // Render the table for different pages
 window.onload = function(){
@@ -51,9 +48,11 @@ window.onload = function(){
 		var all_trips_page = document.getElementById("all-trips-render");
 		var available_trips_page = document.getElementById("available_trips-render");
 		if (all_trips_page != null) {
+			var all_trips_html = create_table(tableHeader, all_trips, message_button);
 			all_trips_page.innerHTML = all_trips_html;
 		}
 		if (available_trips_page != null) {
+			var available_trips_html = create_table(tableHeader, available_trips, checkbox);
 			available_trips_page.innerHTML = available_trips_html;
 		}
 	}
