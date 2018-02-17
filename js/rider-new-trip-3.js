@@ -20,6 +20,19 @@ window.onload = function() {
     document.getElementById("time").innerHTML = time;
     document.getElementById("date").innerHTML = date;
 
+    // If coming back for reedit: read from localStorage
+    try {
+        var flight_info = rider_trip_demo['arrival']['flight_info'];
+        check_share_allowed.checked = flight_info['share_allowed'];
+        var passenger_info = rider_trip_demo['arrival']['passenger_info'];
+        input_num.value = passenger_info['total_riders'];
+        check_unknown.checked = passenger_info['unknown']; 
+        var locations = rider_trip_demo['arrival']['locations'];
+        input_origin.value = locations['origin'];
+        input_destination.value = locations['destination'];
+    } catch (TypeError) {
+        console.log("No previous record found.");
+    }
     next_btn.onclick = function() {
         // Read user's input
         var share_allowed = check_share_allowed.checked;
