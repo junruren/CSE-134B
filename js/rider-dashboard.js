@@ -42,7 +42,7 @@ function create_trip_hp() {
 window.onload = function(){
   var rider_trip_demo = JSON.parse(localStorage.getItem('rider_trip_demo'));
   var dashboard_page = document.getElementById("dashboard_layout");
-  var has_trip = (rider_trip_demo != null);
+  var has_trip = (rider_trip_demo != null && rider_trip_demo['status'] == 'yes');
 	if (!has_trip) {
 		render_empty_hp(create_empty_hp());
 	} else {
