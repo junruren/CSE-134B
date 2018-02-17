@@ -56,25 +56,3 @@ var rider_trip_1 = {
     },
 };
 
-var rider_trip_demo = {
-    "status": "no",
-    "has_departure": false,
-    "has_arrival": false,
-    "arrival": {
-        "flight_info": {
-            "flight_number": "CA983",
-            "destination": "Los Angeles (LAX)",
-            "date": "2018-08-01",
-            "time": "6:00pm",
-            "share_allowed": true,
-        },
-        "passenger_info": {
-            "total_riders": 1,
-            "unknown": false,
-        },
-        "locations": {
-            "origin": "Arrival Gate B, Tom Bradly Intl Terminal",
-            "destination": "9229 Regents Road, La Jolla, CA",
-        },
-    },
-};
