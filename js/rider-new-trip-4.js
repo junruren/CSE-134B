@@ -36,6 +36,6 @@ window.onload = function() {
         // Write to localStorage
         localStorage.setItem('rider_trip_demo', JSON.stringify(rider_trip_demo));
         // Back to Dashboard
-        location.href='rider-new-trip-4.html';
+        location.href='rider-dashboard.html';
     };
 };
