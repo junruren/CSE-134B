@@ -553,9 +553,11 @@ function addAirports() {
   }
 }
 
-addYears();
-addColors();
-addMaxPassengers();
-addMakes();
-addModels();
-addAirports();
+window.onload = function () {
+  addYears();
+  addColors();
+  addMaxPassengers();
+  addMakes();
+  addModels();
+  addAirports();
+}
