@@ -20,7 +20,9 @@ window.onload = function() {
             "date": date,
             "time": time,
         }
-        rider_trip_demo['flight_info'] = flight_info;
+        rider_trip_demo['arrival'] = {
+            'flight_info': flight_info,
+        };
         localStorage.setItem('rider_trip_demo', JSON.stringify(rider_trip_demo));
 
         // Jump to next step
