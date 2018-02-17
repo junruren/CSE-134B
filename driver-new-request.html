@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/driver-trips.css">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+
     <script src="js/driver-data.js"></script>
     <script src="js/driver-trip-info.js"></script>
 
@@ -51,7 +52,7 @@
       </div>
     </div>
 
-      <div class="results-table" id="available_trips-render">
+      <div class="results-table" id="available-trips-render">
         <!-- <table>
           <thead>
             <tr>
@@ -83,7 +84,7 @@
               <td>AA1270</td>
               <td>2018-01-25 05:25</td>
               <td>Mark</td>
-              <td><input type="checkbox" checked></td>
+              <td><input type="checkbox"></td>
             </tr>
             <tr>
               <td>Mariah Maclachlan</td>
@@ -116,4 +117,13 @@
       </div>
     </div>
   </body>
+
+  <script type="text/javascript">
+    window.onload = function(){
+      var available_trips_page = document.getElementById("available-trips-render");
+      var checkbox = '<td><input type="checkbox" class="select_checkbox" onclick="store_selected_row()"></td>';
+      render_table(available_trips_page, available_trips, checkbox);
+    }
+  </script>
+
 </html>

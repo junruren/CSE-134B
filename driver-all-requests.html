@@ -119,4 +119,12 @@
       </div>
     </div>
   </body>
+
+  <script type="text/javascript">
+    window.onload = function(){
+      var all_trips_page = document.getElementById("all-trips-render");
+      var message_button = '<td><button class="button message">Message</button></td>';
+      render_table(all_trips_page, all_trips, message_button);
+    }
+  </script>
 </html>

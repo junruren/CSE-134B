@@ -1,4 +1,3 @@
-
 // dynamically create tables based on data passed in
 function create_table(table_header, trip_data, extra_element) {
 	// Get the amount of objects inside 'trip_data' so we can loop through each one.
@@ -10,7 +9,7 @@ function create_table(table_header, trip_data, extra_element) {
 
 	// Loop through the JSON and output each row in to a string.
 	for (i = 0; i < trip_count; i++) {
-		var cur_row = "<tr>";
+		var cur_row = '<tr class="trip_row">';
 		for (j = 0; j < column_count; j++) {
 			cur_row = cur_row + "<td>" + trip_data[i][trip_form_keys[j]] + "</td>";
 		}
@@ -22,10 +21,26 @@ function create_table(table_header, trip_data, extra_element) {
 }
 
 function store_selected_row() {
-	
+	console.log("selected a row");
+	var trips = document.getElementsByClassName("trip_row");
+	var checkboxes = document.getElementsByClassName("select_checkbox");
+	for (var i = 0; i < trips.length; i++) {
+		if (checkboxes[i].checked == true) {
+			console.log("selected: " + i);
+			localStorage.removeItem('driver_selected_trip');
+			localStorage.setItem('driver_selected_trip', JSON.stringify(available_trips[i]));
+			console.log("stored " + localStorage.getItem('driver_selected_trip'));
+			return;
+		}
+	}
 }
 
-/*************** Render table in driver-all-requests.html ***************/
+function render_table(selected_page, trips_data, extra_element) {
+	if (selected_page != null) {
+		var element_html = create_table(tableHeader, trips_data, extra_element);
+		selected_page.innerHTML = element_html;
+	}
+}
 
 var tableHeader = "<table><thead><tr>" + 
 	        	"<th>Name</th>" + 
@@ -38,25 +53,4 @@ var tableHeader = "<table><thead><tr>" +
 	            "<th>Status</th>" +
 	        	"</tr></thead><tbody>";
 
-var message_button = '<td><button class="button message">Message</button></td>';
-var checkbox = '<td><input type="checkbox"></td>';
-
-// Render the table for different pages
-window.onload = function(){
-	render_table();
-	function render_table() {
-		var all_trips_page = document.getElementById("all-trips-render");
-		var available_trips_page = document.getElementById("available_trips-render");
-		if (all_trips_page != null) {
-			var all_trips_html = create_table(tableHeader, all_trips, message_button);
-			all_trips_page.innerHTML = all_trips_html;
-		}
-		if (available_trips_page != null) {
-			var available_trips_html = create_table(tableHeader, available_trips, checkbox);
-			available_trips_page.innerHTML = available_trips_html;
-		}
-	}
-}
-
-
-
+function 

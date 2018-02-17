@@ -119,4 +119,3 @@ var trip_progress = [];
 
 localStorage.setItem('driver_all_trips', JSON.stringify(all_trips));
 localStorage.setItem('driver_available_trips', JSON.stringify(available_trips));
-localStorage.setItem('driver_selected_trip', JSON.stringify(selected_trip));
