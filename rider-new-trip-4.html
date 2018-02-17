@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>New Trip</title>
+  <script src="js/rider-data.js"></script>
+  <script src="js/rider-new-trip-4.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="./css/trip.css">
 </head>
@@ -38,12 +40,12 @@
       <div class="details flex-container">
         <div class="flight-details">
           <!-- Icon Here -->
-          <p>Flight CA986</p>
-          <p>For Los Angeles (LAX)</p>
-          <p>6:00 pm</p>
-          <p>Aug 01, 2018</p>
+          <p id="flight-number"></p>
+          <p id="airport"></p>
+          <p id="time"></p>
+          <p id="date"></p>
           <label class="checkbox-container">Allow paired driver to know my flight no.
-            <input type="checkbox" disabled checked>
+            <input id="check-share-allowed" type="checkbox" disabled>
             <span class="checkmark"></span>
           </label>
         </div>
@@ -51,9 +53,9 @@
           <!-- Icon Here -->
           <p>Including you</p>
           <p>How many persons will be riding?</p>
-          <input type="number" name="persons" value="1" disabled>
+          <input id="input-num" type="number" name="persons"disabled>
           <label class="checkbox-container">Currently don't know *
-            <input type="checkbox" checked disabled>
+            <input id="check-unknown" type="checkbox" disabled>
             <span class="checkmark"></span>
           </label>
         </div>
@@ -61,21 +63,17 @@
           <div class="pick-up">
             <!-- Icon Here -->
             <p>Meet your driver at</p>
-            <input type="text" disabled value="Arrival Gate B, Tom Bradly Intl Terminal">
-            <div class="horizontal-group">
-              <p>Roughly</p>
-              <p>7:45pm Aug 01, 2018</p>
-            </div>
+            <input id="input-origin" type="text" disabled>
           </div>
           <div class="drop-off">
             <!-- Icon Here -->
             <p>Ride destination</p>
-            <input type="text" disabled value="9229 Regents Road, La Jolla, CA 92037">
+            <input id="input-destination" type="text" disabled>
           </div>
         </div>
       </div>
       <div class="footer">
-        <button class="button" onclick="location.href='rider-dashboard.html'">Everything looks good!</button>
+        <button id='next-btn' class="button" onclick="location.href='rider-dashboard.html'">Everything looks good!</button>
         <br>
         <a href="./rider-new-trip-3.html">I need to make some changes</a>
       </div>
