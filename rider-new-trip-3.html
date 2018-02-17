@@ -54,9 +54,9 @@
           <!-- Icon Here -->
           <p>Including you</p>
           <p>How many persons will be riding?</p>
-          <input type="number" name="persons" value="1">
+          <input id="input-num" type="number" name="persons">
           <label class="checkbox-container">Currently don't know *
-            <input type="checkbox">
+            <input id="check-unknown" type="checkbox">
             <span class="checkmark"></span>
           </label>
         </div>
@@ -64,16 +64,12 @@
           <div class="pick-up">
             <!-- Icon Here -->
             <p>Meet your driver at</p>
-            <input type="text" placeholder="Arrival Gate B, Tom Bradly Intl Terminal">
-            <div class="horizontal-group">
-              <p>Roughly</p>
-              <p>7:45pm Aug 01, 2018</p>
-            </div>
+            <input id="input-origin" type="text" placeholder="Arrival Gate B, Tom Bradly Intl Terminal">
           </div>
           <div class="drop-off">
             <!-- Icon Here -->
             <p>Ride destination</p>
-            <input type="text" placeholder="9229 Regents Road, La Jolla, CA 92037">
+            <input id="input-destination" type="text" placeholder="9229 Regents Road, La Jolla, CA 92037">
           </div>
         </div>
       </div>
