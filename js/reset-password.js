@@ -1,5 +1,4 @@
-var password = document.getElementById("password")
-  , confirmPassword = document.getElementById("confirm-password");
+var password = document.getElementById("password"), confirmPassword = document.getElementById("confirm-password");
 
 function validatePassword(){
   if(password.value != confirmPassword.value) {
@@ -11,5 +10,7 @@ function validatePassword(){
   }
 }
 
-password.onchange = validatePassword;
-confirmPassword.onkeyup = validatePassword;
+window.onload = function () {
+  password.onchange = validatePassword;
+  confirmPassword.onkeyup = validatePassword;
+}

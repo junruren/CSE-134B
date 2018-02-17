@@ -34,23 +34,17 @@
     <div class="container">
       <h2>Results based on your location settings:</h2>
       <div class="filters">
-      <div class="area-filter">
-        <input type="checkbox"><label>Area</label>
-        <select>
-          <option value="San Diego - Los Angeles" selected >San Diego - Los Angeles</option>
-        </select>
+        <div class="area-filter">
+          <input type="checkbox"><label>Area</label>
+          <select>
+            <option value="San Diego - Los Angeles" selected >San Diego - Los Angeles</option>
+          </select>
+        </div>
+        <div class="capacity-filter">
+          <input type="checkbox" id="capacity-checkbox" checked><label>Capacity: max</label>
+          <input type="number" id="capacity-input" oninput="filter_capacity()">
+        </div>
       </div>
-      <div class="time-filter">
-        <input type="checkbox"><label>Time:</label>
-        <span>next</span>
-        <input type="number">
-        <span>days</span>
-      </div>
-      <div class="capacity-filter">
-        <input type="checkbox" checked><label>Capacity: max</label>
-        <input type="number">
-      </div>
-    </div>
 
       <!-- Table rendered depending on data -->
       <div class="results-table" id="available-trips-render">
