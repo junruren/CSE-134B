@@ -3,6 +3,18 @@ window.onload = function() {
     var input_flight_number = document.getElementById("input-f-n");
     var input_date = document.getElementById("input-date");
     var input_time = document.getElementById("input-time");
+
+    // If coming back for reedit: read from localStorage
+    try {
+        var rider_trip_demo = JSON.parse(localStorage.getItem('rider_trip_demo'));
+        var flight_info = rider_trip_demo['arrival']['flight_info'];
+        input_flight_number.value = flight_info['flight_number'];
+        input_date.value = flight_info['date'];
+        input_time.value = flight_info['time'];
+    } catch (TypeError) {
+        console.log("No previous record found.");
+    }
+
     next_btn.onclick = function() {
         var flight_number = input_flight_number.value;
         var date = input_date.value;
@@ -20,9 +32,17 @@ window.onload = function() {
             "date": date,
             "time": time,
         }
-        rider_trip_demo['arrival'] = {
-            'flight_info': flight_info,
-        };
+        try {
+            rider_trip_demo['arrival']['flight_number'] = flight_number;
+            rider_trip_demo['arrival']['date'] = date;
+            rider_trip_demo['arrival']['time'] = time;
+
+        } catch (TypeError) {
+            // Initialize when no previous record is found
+            rider_trip_demo['arrival'] = {
+                'flight_info': flight_info,
+            }; 
+        }
         localStorage.setItem('rider_trip_demo', JSON.stringify(rider_trip_demo));
 
         // Jump to next step
