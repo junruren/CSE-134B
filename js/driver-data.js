@@ -32,7 +32,7 @@ var all_trips = [
 	}, 
 	{
 		"Name": "Mariah Maclachlan",
-		"Total Riders": 2,
+		"Total Riders": 1,
 		"Pick-up": "LAX",
 		"Destination": "La Jolla",
 		"Flight Number": "XZ3265",
@@ -46,9 +46,49 @@ var all_trips = [
 		"Pick-up": "LAX",
 		"Destination": "Irvine",
 		"Flight Number": "SQ972",
-		"Arrival Time": "2018-02-01 23:42",
+		"Arrival Time": "2017-12-01 23:42",
 		"Nickname": "Val",
 		"Status": "Confirmed"
+	},
+	{
+		"Name": "Person1",
+		"Total Riders": 3,
+		"Pick-up": "LAX",
+		"Destination": "La Jolla",
+		"Flight Number": "MU538",
+		"Arrival Time": "2017-12-19 15:03",
+		"Nickname": "1",
+		"Status": "Finished"
+	}, 
+	{
+		"Name": "Person2",
+		"Total Riders": 2,
+		"Pick-up": "SAN",
+		"Destination": "Irvine",
+		"Flight Number": "AA1270",
+		"Arrival Time": "2017-12-25 05:25",
+		"Nickname": "2",
+		"Status": "Finished"
+	}, 
+	{
+		"Name": "Person3",
+		"Total Riders": 2,
+		"Pick-up": "LAX",
+		"Destination": "La Jolla",
+		"Flight Number": "XZ3265",
+		"Arrival Time": "2017-12-26 09:33",
+		"Nickname": "3",
+		"Status": "Finished"
+	}, 
+	{
+		"Name": "Person4",
+		"Total Riders": 2,
+		"Pick-up": "LAX",
+		"Destination": "Irvine",
+		"Flight Number": "SQ972",
+		"Arrival Time": "2017-12-01 23:42",
+		"Nickname": "4",
+		"Status": "Finished"
 	}
 ];
 
@@ -75,7 +115,7 @@ var available_trips = [
 	}, 
 	{
 		"Name": "Mariah Maclachlan",
-		"Total Riders": 2,
+		"Total Riders": 1,
 		"Pick-up": "LAX",
 		"Destination": "La Jolla",
 		"Flight Number": "XZ3265",

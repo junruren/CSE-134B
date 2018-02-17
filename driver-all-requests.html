@@ -41,13 +41,7 @@
           </select>
         </div>
         <div class="status-filter">
-          <input type="checkbox"><label>Finished</label>
-          <input type="checkbox" checked><label>Upcoming</label>
-        </div>
-        <div class="time-filter">
-          <span>Next</span>
-          <input type="number">
-          <span>days</span>
+          <input type="checkbox" id="filter-upcoming-button" onclick="filter_upcoming()" checked><label>Upcoming</label>
         </div>
       </div>
 
@@ -80,6 +74,7 @@
       var all_trips_page = document.getElementById("all-trips-render");
       var message_button = '<td><button class="button message" onclick="location.href='+chat_page+'">Message</button></td>';
       render_table(false, all_trips_page, all_trips, message_button);
+      filter_upcoming();
     }
   </script>
 </html>
