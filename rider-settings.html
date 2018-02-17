@@ -8,6 +8,8 @@
   <title>Settings</title>
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="./css/settings.css">
+  <script src="js/rider-data.js"></script>
+  <script src="js/rider-settings.js"></script>
 </head>
 
 <body>
@@ -42,25 +44,26 @@
         <div class="info-details">
           <form class="" action="index.html" method="post">
             <label>First Name:</label>
-            <input type="text" name="firstname" value="Ziyi" disabled>
+            <input type="text" name="firstname" disabled id="first_name_input">
             <br>
             <label>Nick Name:</label>
-            <input type="text" name="nickname" value="Annie" disabled>
+            <input type="text" name="nickname" disabled id="nick_name_input">
             <br>
             <label>Last Name:</label>
-            <input type="text" name="lastname" value="Xiao" disabled>
+            <input type="text" name="lastname" disabled id="last_name_input">
             <br>
             <label>Phone Number:</label>
-            <input type="number" name="phone-number" value="8581234567" disabled>
+            <input type="number" name="phone-number" disabled id="phone_input">
             <br>
             <label>Email Address:</label>
-            <input type="email" name="email" value="anniexiao@example.com" disabled>
+            <input type="email" name="email" disabled id="email_input">
           </form>
         </div>
-        <div class="setting-buttons">
-          <button class="button">Edit</button>
-          <button class="button">Reset Password</button>
-        </div>
+      </div>
+      <div class="setting-buttons flex-container" id="setting-btns">
+        <button class="button" id="save_btn">Save</button>
+        <button class="button" id="edit_btn">Edit</button>
+        <button class="button" id="reset_btn">Reset Password</button>
       </div>
     </div>
   </div>
