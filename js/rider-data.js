@@ -6,4 +6,11 @@ var user_info_rider = {
     "email": "anniexiao@example.com",
 };
 
-localStorage.setItem('user_info_rider', JSON.stringify(user_info_rider));
+/*
+ * Currently not working - want to preserve user entered values in localStorage
+ * AKA: not keep initializing localStorage with the values above...
+ */
+if (window.localStorage.getItem('user_info_rider') == null) {
+    console.log("Reset user info!");
+    localStorage.setItem('user_info_rider', JSON.stringify(user_info_rider));
+}
