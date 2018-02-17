@@ -1,4 +1,3 @@
-var user_name = user_info['Name'].split(" ")[0];
 function create_empty_hp (){
 	var greetings = '<div class="vertical-middle">' + 
         '<h1>Hello, ' + user_name + '</h1>' + 
@@ -24,9 +23,9 @@ function create_trip_hp (latest_pickup){
         '<button class="button indv-detail-button">Arriving Flight Info</button></div></div>';
 
     var check_list = '<div class="todos"><div>' + 
-            '<input type="checkbox"><button class="button checklist">Find a request</button></div>' + 
-            '<div><input type="checkbox"><button class="button checklist">Send price offer</button></div>' + 
-            '<div><input type="checkbox"><button class="button checklist">Confirm deal</button></div>' + 
+            '<input type="checkbox" checked><button disabled class="button checklist">Find a request</button></div>' + 
+            '<div><input type="checkbox" checked><button disabled class="button checklist">Send price offer</button></div>' + 
+            '<div><input type="checkbox" checked><button disabled class="button checklist">Confirm deal</button></div>' + 
             '<div><input type="checkbox"><button class="button checklist">Confirm driver arrival</button></div>' + 
             '<div><input type="checkbox"><button class="button checklist">Confirm guests pickup</button></div>' + 
             '<div><input type="checkbox"><button class="button checklist">Confirm dropoff</button></div>' + 

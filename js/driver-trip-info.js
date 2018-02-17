@@ -4,7 +4,6 @@ function create_table(table_header, trip_data, extra_element) {
 	var trip_count = trip_data.length;
 	var trip_form_keys = Object.keys(trip_data[0]);
 	var column_count = trip_form_keys.length;
-
 	var tableContent = "";
 
 	// Loop through the JSON and output each row in to a string.
@@ -50,3 +49,31 @@ var tableHeader = "<table><thead><tr>" +
 	            "<th>Status</th>" +
 	        	"</tr></thead><tbody>";
 
+function store_input_text() {
+	var text = document.getElementById("offer-content").value;
+	localStorage.removeItem('driver_input_text');
+	localStorage.setItem('driver_input_text', text);
+}
+
+function default_text_html(driver_name, guest_name) {
+	var default_text = '<h2>Say hi to ' + guest_name + ' (and give a quote!):</h2>' + 
+      '<div class="send-message">' + 
+      '<textarea name="message" rows="8" cols="80" id="offer-content">Hi ' + guest_name + ', ' + 
+	  "\n\nI'd like to make an offer of $100 for your ride. Please feel free to let me know if " + 
+	  "you have any questions! Look forward to serve you! " + 
+	  '\n\nBest,'+ '\n' + driver_name +'</textarea></div>';
+	return default_text;
+}
+
+function display_default_text(driver_name, guest_name, selected_element) {
+	if (selected_element != null) {
+		var text_html = default_text_html(driver_name, guest_name);
+		selected_element.innerHTML = text_html;
+	}
+}
+
+function display_sent_text(selected_element, text){
+	if (selected_element != null) {
+		selected_element.innerHTML = text;
+	}
+}

@@ -6,6 +6,9 @@ var user_info = {
 	"Preferred Area": ["San Diego-Los Angelos"]
 };
 
+var user_name = user_info['Name'].split(" ")[0];
+
+
 var all_trips = [ 
 	{
 		"Name": "Giacomo Guilizzoni",

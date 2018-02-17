@@ -61,20 +61,22 @@
         </table> -->
       </div>
       
+      <div id="default-text-div">
       <h2>Say hi to Mark (and give a quote!):</h2>
       <div class="send-message">
-      <textarea name="message" rows="8" cols="80" id="offer-content">Hi Mark,
+      <textarea name="message" rows="8" cols="80" id="offer-content">Hi,
 
 I'd like to make an offer of $100 for your ride. Please feel free to let me know if you have any questions! Look forward to serve you!
 
 Best,
 John</textarea>
     </div>
+  </div>
 
     <div class="horizontal-group">
       <button class="button progress left" onclick="location.href='driver-new-request.html'">
         Back</button>
-      <button class="button progress" onclick="location.href='driver-quote-sent.html'">
+      <button class="button progress" onclick="store_input_text(); location.href='driver-quote-sent.html'">
         Send</button>
     </div>
     </div>
@@ -84,7 +86,9 @@ John</textarea>
     window.onload = function(){
       var send_quote_page = document.getElementById("selected-trip-render");
       var selected_trip_json = [JSON.parse(localStorage.getItem('driver_selected_trip'))];
+      var quote_text_area = document.getElementById("default-text-div");
       render_table(send_quote_page, selected_trip_json, '');
+      display_default_text(user_name, selected_trip_json[0]["Name"].split(' ')[0], quote_text_area);
     }
   </script>
 
