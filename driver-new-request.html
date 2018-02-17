@@ -52,63 +52,11 @@
       </div>
     </div>
 
+      <!-- Table rendered depending on data -->
       <div class="results-table" id="available-trips-render">
-        <!-- <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Total Riders</th>
-              <th>Pick-up</th>
-              <th>Destination</th>
-              <th>Flight Number</th>
-              <th>Arrival Time</th>
-              <th>Nickname</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Giacomo Guilizzoni</td>
-              <td>3</td>
-              <td>LAX</td>
-              <td>La Jolla</td>
-              <td>MU538</td>
-              <td>2018-01-19 15:03</td>
-              <td>Peldi</td>
-              <td><input type="checkbox"></td>
-            </tr>
-            <tr>
-              <td>Marco Botton</td>
-              <td>2</td>
-              <td>SAN</td>
-              <td>Irvine</td>
-              <td>AA1270</td>
-              <td>2018-01-25 05:25</td>
-              <td>Mark</td>
-              <td><input type="checkbox"></td>
-            </tr>
-            <tr>
-              <td>Mariah Maclachlan</td>
-              <td>2</td>
-              <td>LAX</td>
-              <td>La Jolla</td>
-              <td>XZ3265</td>
-              <td>2018-01-26 09:33</td>
-              <td>Patata</td>
-              <td><input type="checkbox"></td>
-            </tr>
-            <tr>
-              <td>Valerie Liberty</td>
-              <td>2</td>
-              <td>LAX</td>
-              <td>Irvine</td>
-              <td>SQ972</td>
-              <td>2018-02-01 23:42</td>
-              <td>Val</td>
-              <td><input type="checkbox"></td>
-            </tr>
-          </tbody>
-        </table> -->
+
       </div>
+
       <div class="horizontal-group">
         <button class="button progress left" onclick="location.href='driver-dashboard-2.html'">
           Back to Dashboard</button>
@@ -122,7 +70,7 @@
     window.onload = function(){
       var available_trips_page = document.getElementById("available-trips-render");
       var checkbox = '<td><input type="checkbox" class="select_checkbox" onclick="store_selected_row()"></td>';
-      render_table(available_trips_page, available_trips, checkbox);
+      render_table(true, available_trips_page, available_trips, checkbox);
     }
   </script>
 

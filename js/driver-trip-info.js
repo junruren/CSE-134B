@@ -1,5 +1,5 @@
 // dynamically create tables based on data passed in
-function create_table(table_header, trip_data, extra_element) {
+function create_table(no_status, table_header, trip_data, extra_element) {
 	// Get the amount of objects inside 'trip_data' so we can loop through each one.
 	var trip_count = trip_data.length;
 	var trip_form_keys = Object.keys(trip_data[0]);
@@ -10,12 +10,14 @@ function create_table(table_header, trip_data, extra_element) {
 	for (i = 0; i < trip_count; i++) {
 		var cur_row = '<tr class="trip_row">';
 		for (j = 0; j < column_count; j++) {
-			cur_row = cur_row + "<td>" + trip_data[i][trip_form_keys[j]] + "</td>";
+			var entry = trip_data[i][trip_form_keys[j]];
+			if (no_status && j==column_count-1) { entry = ""; }
+			cur_row = cur_row + "<td>" + entry + "</td>";
 		}
 		cur_row = cur_row + extra_element + "</tr>";
 		tableContent = tableContent + cur_row;
 	}
-	var tableFooter = "</table>";
+	var tableFooter = "</tbody></table>";
 	return (tableHeader + tableContent + tableFooter);
 }
 
@@ -31,9 +33,9 @@ function store_selected_row() {
 	}
 }
 
-function render_table(selected_page, trips_data, extra_element) {
+function render_table(no_status, selected_page, trips_data, extra_element) {
 	if (selected_page != null) {
-		var element_html = create_table(tableHeader, trips_data, extra_element);
+		var element_html = create_table(no_status, tableHeader, trips_data, extra_element);
 		selected_page.innerHTML = element_html;
 	}
 }

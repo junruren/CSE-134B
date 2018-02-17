@@ -51,68 +51,22 @@
         </div>
       </div>
 
+      <!-- Table rendered depending on data -->
       <div class="results-table" id="all-trips-render">
-        <!-- <table>
+        <table>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Total Riders</th>
-              <th>Pick-up</th>
-              <th>Destination</th>
-              <th>Flight Number</th>
-              <th>Arrival Time</th>
-              <th>Nickname</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Giacomo Guilizzoni</td>
-              <td>3</td>
-              <td>LAX</td>
-              <td>La Jolla</td>
-              <td>MU538</td>
-              <td>2018-01-19 15:03</td>
-              <td>Peldi</td>
-              <td>Driver Arrival</td>
-              <td><button class="button message">Message</button></td>
-            </tr>
-            <tr>
-              <td>Marco Botton</td>
-              <td>2</td>
-              <td>SAN</td>
-              <td>Irvine</td>
-              <td>AA1270</td>
-              <td>2018-01-25 05:25</td>
-              <td>Mark</td>
-              <td>Confirmed</td>
-              <td><button class="button message">Message</button></td>
-            </tr>
-            <tr>
-              <td>Mariah Maclachlan</td>
-              <td>2</td>
-              <td>LAX</td>
-              <td>La Jolla</td>
-              <td>XZ3265</td>
-              <td>2018-01-26 09:33</td>
-              <td>Patata</td>
-              <td>Confirmed</td>
-              <td><button class="button message">Message</button></td>
-            </tr>
-            <tr>
-              <td>Valerie Liberty</td>
-              <td>2</td>
-              <td>LAX</td>
-              <td>Irvine</td>
-              <td>SQ972</td>
-              <td>2018-02-01 23:42</td>
-              <td>Val</td>
-              <td>Confirmed</td>
-              <td><button class="button message">Message</button></td>
-            </tr>
-          </tbody>
-        </table> -->
+            <th>Name</th>
+            <th>Total Riders</th>
+            <th>Pick-up</th>
+            <th>Destination</th>
+            <th>Flight Number</th>
+            <th>Arrival Time</th>
+            <th>Nickname</th>
+            <th>Status</th>
+            </tr></thead>
       </div>
+
       <div class="horizontal-group">
         <button class="button progress" onclick="location.href='driver-dashboard-2.html'">
           Back to Dashboard</button>
@@ -122,9 +76,10 @@
 
   <script type="text/javascript">
     window.onload = function(){
+      var chat_page = "'chat.html'"
       var all_trips_page = document.getElementById("all-trips-render");
-      var message_button = '<td><button class="button message">Message</button></td>';
-      render_table(all_trips_page, all_trips, message_button);
+      var message_button = '<td><button class="button message" onclick="location.href='+chat_page+'">Message</button></td>';
+      render_table(false, all_trips_page, all_trips, message_button);
     }
   </script>
 </html>

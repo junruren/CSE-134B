@@ -32,40 +32,19 @@
 
     <!-- Trip -->
     <div class="container">
-      <h2>Mark's Ride Request</h2>
+      <h2>Selected Ride Request</h2>
+
+      <!-- Table rendered depending on data -->
       <div class="results-table" id="selected-trip-render">
-        <!-- <table>
-          <thead>
-            <tr>
-              <th>Marco Botton</th>
-              <th>Total Riders</th>
-              <th>Pick-up</th>
-              <th>Destination</th>
-              <th>Flight Number</th>
-              <th>Arrival Time</th>
-              <th>Nickname</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Marco Botton</td>
-              <td>2</td>
-              <td>SAN</td>
-              <td>Irvine</td>
-              <td>AA1270</td>
-              <td>2018-01-25 05:25</td>
-              <td>Mark</td>
-            </tr>
-          </tbody>
-        </table> -->
+        
       </div>
+
       <h2>Quote successfully sent! </h2>
+
+      <!-- Message displayed depending on data -->
       <div class="confirm-message" id="quote-sent">
-<!--           <p>Hi Mark,</p>
-          <p>I'd like to make an offer of $100 for your ride. Please feel free to let me know if you have any questions! Look forward to serve you!</p>
-          <p>Best,</p>
-          <p>John</p> -->
       </div>
+
     <div class="horizontal-group">
       <button class="button progress left" onclick="location.href='chat.html'">
         View in Chat</button>
@@ -79,7 +58,7 @@
     window.onload = function(){
       var send_quote_page = document.getElementById("selected-trip-render");
       var selected_trip_json = [JSON.parse(localStorage.getItem('driver_selected_trip'))];
-      render_table(send_quote_page, selected_trip_json, '');
+      render_table(true, send_quote_page, selected_trip_json, '');
       var sent_text = document.getElementById("quote-sent");
       display_sent_text(sent_text, localStorage.getItem('driver_input_text'));
     }

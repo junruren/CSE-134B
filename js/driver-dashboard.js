@@ -18,8 +18,8 @@ function create_trip_hp (latest_pickup){
         '<h2>Picking up: ' + latest_pickup['Name'] + '</h2>' + 
         '<h2>Flight: ' + latest_pickup['Flight Number'] + '</h2>' + 
         '<div class="detail-buttons">' + 
-        '<button class="button indv-detail-button">Ride Details</button>' + 
-        '<button class="button indv-detail-button">Message Your Guest</button>' + 
+        '<button class="button indv-detail-button" id="ride-detail-button">Ride Details</button>' + 
+        '<button class="button indv-detail-button" id="message-button">Message Your Guest</button>' + 
         '<button class="button indv-detail-button">Arriving Flight Info</button></div></div>';
 
     var check_list = '<div class="todos"><div>' + 
@@ -62,6 +62,10 @@ window.onload = function(){
 	function render_trip_hp(trip_hp_html) {
 		if (dashboard_page != null) {
 			dashboard_page.innerHTML = trip_hp_html;
+            document.getElementById("ride-detail-button").setAttribute(
+                "onclick", "location.href='driver-all-requests.html'");
+            document.getElementById("message-button").setAttribute(
+                "onclick", "location.href='chat.html'");
 		}
 	}
 }

@@ -34,42 +34,16 @@
     <!-- Trip -->
     <div class="container">
       <h2>Selected Ride Request</h2>
-      <div class="results-table" id="selected-trip-render">
-        <!-- <table>
-          <thead>
-            <tr>
-              <th>Marco Botton</th>
-              <th>Total Riders</th>
-              <th>Pick-up</th>
-              <th>Destination</th>
-              <th>Flight Number</th>
-              <th>Arrival Time</th>
-              <th>Nickname</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Marco Botton</td>
-              <td>2</td>
-              <td>SAN</td>
-              <td>Irvine</td>
-              <td>AA1270</td>
-              <td>2018-01-25 05:25</td>
-              <td>Mark</td>
-            </tr>
-          </tbody>
-        </table> -->
+
+      <!-- Table rendered depending on data -->
+      <div class="results-table" id="selected-trip-render">        
       </div>
       
       <div id="default-text-div">
       <h2>Say hi to Mark (and give a quote!):</h2>
       <div class="send-message">
-      <textarea name="message" rows="8" cols="80" id="offer-content">Hi,
-
-I'd like to make an offer of $100 for your ride. Please feel free to let me know if you have any questions! Look forward to serve you!
-
-Best,
-John</textarea>
+      <!-- Default input text based on driver and guest info-->
+      <textarea name="message" rows="8" cols="80" id="offer-content"></textarea>
     </div>
   </div>
 
@@ -87,7 +61,7 @@ John</textarea>
       var send_quote_page = document.getElementById("selected-trip-render");
       var selected_trip_json = [JSON.parse(localStorage.getItem('driver_selected_trip'))];
       var quote_text_area = document.getElementById("default-text-div");
-      render_table(send_quote_page, selected_trip_json, '');
+      render_table(true, send_quote_page, selected_trip_json, '');
       display_default_text(user_name, selected_trip_json[0]["Name"].split(' ')[0], quote_text_area);
     }
   </script>
