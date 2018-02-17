@@ -38,7 +38,7 @@ body.container {
     flex-wrap: wrap;
 }
 
-.flight-details, .arrival-details, .party-details, .location-details {
+.flight-details, .party-details, .location-details {
     float: left;
     width: 300px;
     padding: 5px;

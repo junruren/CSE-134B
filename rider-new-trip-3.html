@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>New Trip</title>
+  <script src="js/rider-data.js"></script>
+  <script src="js/rider-new-trip-3.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="./css/trip.css">
 </head>
@@ -38,27 +40,15 @@
       <div class="details flex-container">
         <div class="flight-details">
           <!-- Icon Here -->
-          <p>Flight CA986</p>
-          <p>For Los Angeles (LAX)</p>
-          <p>6:00 pm</p>
-          <p>Aug 01, 2018</p>
+          <p id="flight-number"></p>
+          <p id="airport"></p>
+          <p id="time"></p>
+          <p id="date"></p>
           <label class="checkbox-container">Allow paired driver to know my flight no.
-            <input type="checkbox">
+            <input id="check-share-allowed" type="checkbox">
             <span class="checkmark"></span>
           </label>
           <a href="./rider-new-trip-2.html">Edit flight info</a>
-        </div>
-        <div class="arrival-details">
-          <!-- Icon Here -->
-          <p>Estimated time within the terminal</p>
-          <input type="number" name="hour" value="1">
-          <p>Hours</p>
-          <input type="number" name="minute" value="45">
-          <p>Minutes</p>
-          <label class="checkbox-container">Currently don't know *
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
         </div>
         <div class="party-details">
           <!-- Icon Here -->
@@ -89,7 +79,7 @@
       </div>
       <div class="footer">
         <p class="text-over-dark-bg">* You will have to confrim these info eventually in order to make a deal with a paired driver</p>
-        <button class="button" onclick="location.href='rider-new-trip-4.html'">Broadcast my request to drivers!</button>
+        <button id="next-btn" class="button" onclick="location.href='rider-new-trip-4.html'">Broadcast my request to drivers!</button>
       </div>
     </div>
   </div>
