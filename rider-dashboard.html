@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Dashboard</title>
+    <script src="js/rider-data.js"></script>
+    <script src="js/rider-dashboard.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/dashboard.css">
   </head>
@@ -28,12 +30,8 @@
       <li><a href="#">Notification</a></li>
     </ul>
 
-    <div class="container">
-      <div class="vertical-middle">
-          <h1>Hello Annie,</h1>
-          <h2>Where is your next destination?</h2>
-          <button class="button" onclick="location.href='rider-new-trip.html'">Find My Next Rides</button>
-      </div>
+    <!-- Filled based on rider's trip info-->
+    <div class="container" id="dashboard_layout">
     </div>
   </body>
 </html>
