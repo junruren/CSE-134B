@@ -10,7 +10,7 @@ function create_empty_hp (){
 function create_trip_hp() {
     var content = 
     "<div class='vertical-middle with-more-info'>" +
-      "<h1>Hello Annie,</h1>" +
+      "<h1>Hello " + user_info_rider["nick_name"] + ",</h1>" +
       "<h2>Your trip to Los Angeles is good to go!</h2>" +
       "<div class='dashboard-info flex-container'>" +
         "<div class='arrival'>" +
@@ -40,12 +40,13 @@ function create_trip_hp() {
 }
 
 window.onload = function(){
-    var dashboard_page = document.getElementById("dashboard_layout");
-    var has_trip = (rider_trip_demo["status"] == "yes");
+  var rider_trip_demo = JSON.parse(localStorage.getItem('rider_trip_demo'));
+  var dashboard_page = document.getElementById("dashboard_layout");
+  var has_trip = (rider_trip_demo != null);
 	if (!has_trip) {
 		render_empty_hp(create_empty_hp());
 	} else {
-		render_trip_hp(create_trip_hp(latest_pickup));
+		render_trip_hp(create_trip_hp());
 	}
 
 	function render_empty_hp(empty_hp_html) {
@@ -59,10 +60,6 @@ window.onload = function(){
 	function render_trip_hp(trip_hp_html) {
 		if (dashboard_page != null) {
 			dashboard_page.innerHTML = trip_hp_html;
-            document.getElementById("ride-detail-button").setAttribute(
-                "onclick", "location.href='driver-all-requests.html'");
-            document.getElementById("message-button").setAttribute(
-                "onclick", "location.href='chat.html'");
 		}
 	}
 }
