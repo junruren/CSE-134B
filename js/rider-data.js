@@ -1,9 +1,9 @@
 var user_info_rider = {
-    "first_name": "Ziyi",
-    "last_name": "Xiao",
-    "nick_name": "Annie",
+    "first_name": "Yage",
+    "last_name": "Bentian",
+    "nick_name": "Scarlett",
     "phone": "8581234567",
-    "email": "anniexiao@example.com",
+    "email": "scarlett@example.com",
 };
 
 /*
