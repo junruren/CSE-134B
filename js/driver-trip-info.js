@@ -21,15 +21,12 @@ function create_table(table_header, trip_data, extra_element) {
 }
 
 function store_selected_row() {
-	console.log("selected a row");
 	var trips = document.getElementsByClassName("trip_row");
 	var checkboxes = document.getElementsByClassName("select_checkbox");
 	for (var i = 0; i < trips.length; i++) {
 		if (checkboxes[i].checked == true) {
-			console.log("selected: " + i);
 			localStorage.removeItem('driver_selected_trip');
 			localStorage.setItem('driver_selected_trip', JSON.stringify(available_trips[i]));
-			console.log("stored " + localStorage.getItem('driver_selected_trip'));
 			return;
 		}
 	}
@@ -53,4 +50,3 @@ var tableHeader = "<table><thead><tr>" +
 	            "<th>Status</th>" +
 	        	"</tr></thead><tbody>";
 
-function 

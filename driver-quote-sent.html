@@ -33,8 +33,8 @@
     <!-- Trip -->
     <div class="container">
       <h2>Mark's Ride Request</h2>
-      <div class="results-table">
-        <table>
+      <div class="results-table" id="selected-trip-render">
+        <!-- <table>
           <thead>
             <tr>
               <th>Marco Botton</th>
@@ -57,7 +57,7 @@
               <td>Mark</td>
             </tr>
           </tbody>
-        </table>
+        </table> -->
       </div>
       <h2>Quote successfully sent! </h2>
       <div class="confirm-message">
@@ -74,4 +74,13 @@
     </div>
     </div>
   </body>
+
+  <script type="text/javascript">
+    window.onload = function(){
+      var send_quote_page = document.getElementById("selected-trip-render");
+      var selected_trip_json = [JSON.parse(localStorage.getItem('driver_selected_trip'))];
+      render_table(send_quote_page, selected_trip_json, '');
+    }
+  </script>
+
 </html>
