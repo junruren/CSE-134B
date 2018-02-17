@@ -24,8 +24,8 @@ var rider_trip_1 = {
         "flight_info": {
             "flight_number": "CA983",
             "origin": "Beijing (PEK)",
-            "departure_date": "2018-08-01",
-            "take_off_time": "9:00pm",
+            "date": "2018-08-01",
+            "time": "9:00pm",
             "share_allowed": true,
         },
         "passenger_info": {
@@ -41,8 +41,8 @@ var rider_trip_1 = {
         "flight_info": {
             "flight_number": "CA983",
             "destination": "Los Angeles (LAX)",
-            "departure_date": "2018-08-01",
-            "take_off_time": "6:00pm",
+            "date": "2018-08-01",
+            "time": "6:00pm",
             "share_allowed": true,
         },
         "passenger_info": {
@@ -64,8 +64,8 @@ var rider_trip_demo = {
         "flight_info": {
             "flight_number": "CA983",
             "destination": "Los Angeles (LAX)",
-            "departure_date": "2018-08-01",
-            "take_off_time": "6:00pm",
+            "date": "2018-08-01",
+            "time": "6:00pm",
             "share_allowed": true,
         },
         "passenger_info": {
