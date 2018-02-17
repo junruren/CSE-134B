@@ -37,54 +37,28 @@
           <a href="#">Upload scanned license</a>
         </div>
         <div class="vehicle">
-          <select class="vehicle-info" name="year">
+          <select class="vehicle-info" name="year" id="vehicle-year">
             <option disabled selected>Year</option>
-            <option value="2012">2012</option>
-            <option value="2013">2013</option>
-            <option value="2014">2014</option>
-            <option value="2015">2015</option>
-            <option value="2016">2016</option>
-            <option value="2017">2017</option>
-            <option value="2018">2018</option>
           </select>
-          <select class="vehicle-info" name="make">
+          <select class="vehicle-info" name="make" id="vehicle-make">
             <option disabled selected>Make</option>
-            <option value="Audi">Audi</option>
-            <option value="BMW">BMW</option>
-            <option value="Honda">Honda</option>
-            <option value="Mercedez-Benz">Mercedez-Benz</option>
-            <option value="Toyota">Toyota</option>
           </select>
-          <select class="vehicle-info" name="model">
+          <select class="vehicle-info" name="model" id="vehicle-model">
             <option disabled selected>Model</option>
-            <option value="">Some dynamic populated option</option>
           </select>
-          <select class="vehicle-info" name="color">
+          <select class="vehicle-info" name="color" id="vehicle-color">
             <option disabled selected>Color</option>
-            <option value="Black">Black</option>
-            <option value="Red">Red</option>
-            <option value="White">White</option>
-            <option value="Yellow">Yellow</option>
           </select>
         </div>
         <div class="num-passengers">
           <label>Max number of passengers</label>
-          <select class="vehicle-info" name="max-passengers">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3" selected>3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
+          <select class="vehicle-info" name="max-passengers" id="max-passengers">
           </select>
         </div>
         <hr>
         <div>
-          <select class="airport" name="airport">
+          <select class="airport" name="airport" id="airport">
             <option disabled selected>Home Base Airport</option>
-            <option value="LAX">LAX</option>
-            <option value="SAN">SAN</option>
           </select>
         </div>
         <div>
@@ -93,5 +67,6 @@
         <p>Already have an account? <a href="driver-login.html">Log In</a></p>
       </div>
     </div>
+    <script src="js/driver-signup.js" charset="utf-8"></script>
   </body>
 </html>

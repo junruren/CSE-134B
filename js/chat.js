@@ -1,3 +1,11 @@
+// ********* For PA3 only
+var messageCounter = 0;
+var programmedMessages = [
+  'Hello Annie! The deal seems perfect. I will meet you at the scheduled time. Please tell me the pickup zone when you arrive.',
+  'Perfect. I am looking forward to meeting you! See you then.'
+]
+// *********
+
 function createMessage(message, messageType) {
   var newMsg = document.createElement('p');
   newMsg.appendChild(document.createTextNode(message));
@@ -26,11 +34,6 @@ function sendNewMessage() {
   }, 5000)
 }
 
-document.getElementById('sendButton').addEventListener('click', sendNewMessage);
-
-// For PA3 only
-var messageCounter = 0;
-var programmedMessages = [
-  'Hello Annie! The deal seems perfect. I will meet you at the scheduled time. Please tell me the pickup zone when you arrive.',
-  'Perfect. I am looking forward to meeting you! See you then.'
-]
+window.onload = function () {
+  document.getElementById('sendButton').addEventListener('click', sendNewMessage);
+}
