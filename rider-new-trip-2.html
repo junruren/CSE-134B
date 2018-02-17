@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>New Trip</title>
+    <script src="js/rider-data.js"></script>
+    <script src="js/rider-new-trip-2.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/trip.css">
   </head>
@@ -31,15 +33,19 @@
         <div class="flex-container add-flight">
           <div class="f-n">
             <label>Flight Number</label>
-            <input type="text" name="flight-number" value="CA983">
+            <input id="input-f-n" type="text" name="flight-number">
           </div>
           <div class="a-d">
             <label>Arrival Date (in destination's timezone)</label>
-            <input type="date" name="arrival-date" value="2018-08-01">
+            <input id="input-date" type="date" name="arrival-date">
+          </div>
+          <div class="a-t">
+            <label>Time</label>
+            <input id="input-time" type="time" name="arrival-time">
           </div>
         </div>
         <div class="next-bt">
-          <button class="button" onclick="location.href='rider-new-trip-3.html'">Next</button>
+          <button class="button" id="next-btn" onclick="location.href='rider-new-trip-3.html'">Next</button>
         </div>
         <div class="footer">
           <p class="text-over-dark-bg">Flight info helps us to figure out your best pick up time and location for you instantly</p>
