@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>New Trip</title>
+    <script src="js/rider-data.js"></script>
+    <script src="js/rider-new-trip.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/trip.css">
   </head>
@@ -31,17 +33,17 @@
           <h2 class="text-over-dark-bg">Are you looking for...</h2>
           <div class="choose-rides-for-d-a">
             <label class="checkbox-container">A ride for your departure (e.g. from your home to an airport)
-              <input type="checkbox">
+              <input type="checkbox" id="checkbox-departure">
               <span class="checkmark"></span>
             </label>
             <hr>
             <label class="checkbox-container">A ride after your arrival (e.g. from an airport to your destination)
-              <input type="checkbox">
+              <input type="checkbox" id="checkbox-arrival">
               <span class="checkmark"></span>
             </label>
           </div>
           <div class="next-bt">
-            <button class="button" onclick="location.href='rider-new-trip-2.html'">Next</button>
+            <button class="button" id="next-btn" onclick="location.href='rider-new-trip-2.html'">Next</button>
           </div>
       </div>
     </div>
