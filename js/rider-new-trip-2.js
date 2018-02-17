@@ -16,7 +16,7 @@ window.onload = function() {
         var rider_trip_demo = JSON.parse(localStorage.getItem('rider_trip_demo'));
         var flight_info = {
             "flight_number": flight_number,
-            "destination": "Los Angeles (LAX)",
+            "airport": "Los Angeles (LAX)",
             "date": date,
             "time": time,
         }
