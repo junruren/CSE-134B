@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+
 import './css/master.css';
 import './css/index.css';
 
@@ -28,7 +30,7 @@ class Home extends Component {
             </div>
           </div>
           <div className="onboard-buttons">
-            <button className="button" onclick="location.href='driver-login.html'">I am a driver</button>
+            <button className="button"> <Link to="/driver_home">I am a driver</Link></button>
             <button className="button" onclick="location.href='rider-login.html'">I am a rider</button>
           </div>
         </div>

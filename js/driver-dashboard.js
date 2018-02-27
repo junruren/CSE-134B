@@ -46,7 +46,7 @@ window.onload = function(){
 	var dashboard_page = document.getElementById("dashboard_layout");
 	var has_trip = (all_trips.length > 0);
 	if (!has_trip) {
-		render_empty_hp(create_empty_hp());
+		render_empty_hp(dashboard_page, create_empty_hp());
 	} else {
 		render_trip_hp(create_trip_hp(latest_pickup));
 	}
