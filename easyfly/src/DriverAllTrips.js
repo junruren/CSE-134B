@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import Nav from './Nav'
 
-class DriverNewRequests extends Component {
+class DriverAllTrips extends Component {
 	render() {
     return (
     <div>
       <Nav />
       <h1>
-        Test DriverNewRequests
+        Test DriverAllTrips
       </h1>
     </div>
     );
   }
 }
 
-export default DriverNewRequests;
+export default DriverAllTrips;
