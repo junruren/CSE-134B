@@ -169,10 +169,12 @@ a.find-a-ride {
 .checklist {
     padding: 7px 15px;
     margin: 1%;
+    height: 35px; 
 }
 
 .indv-detail-button {
     margin: 1%;
+    width: auto;
 }
 
 .more-links {
