@@ -6,5 +6,6 @@ import './index.css';
 import Paths from './route'
 import registerServiceWorker from './registerServiceWorker';
 
+
 ReactDOM.render(<Paths />, document.getElementById('root'));
 registerServiceWorker();
