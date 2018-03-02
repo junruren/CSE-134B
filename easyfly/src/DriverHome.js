@@ -34,7 +34,7 @@ class DriverHome extends Component {
 
   render() {
 
-    if (this.state.hasTrip == false) {
+    if (this.state.hasTrip === false) {
       return (
         <div>
           <Nav />

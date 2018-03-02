@@ -19,7 +19,7 @@ const Login = (props) => {
           <input type="email" name="email" placeholder="Email" />
           <input type="password" name="password" placeholder="Password" />
           <Link to={loginUrl}><button className="button">Log In</button></Link>
-          <a href="#">Forgot the password?</a>
+          <a>Forgot the password?</a>
           <p>Don't have an account? Sign Up</p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import React, { Component } from 'react'
+import React from 'react'
 import Home from './Home';
 import {DriverLogin, RiderLogin} from './Login';
 import DriverHome from './DriverHome'
