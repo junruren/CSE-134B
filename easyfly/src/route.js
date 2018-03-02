@@ -1,4 +1,4 @@
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import React, { Component } from 'react'
 import Home from './Home';
@@ -8,7 +8,7 @@ import DriverNewRequests from './DriverNewRequests'
 import DriverAllTrips from './DriverAllTrips'
 
 const Paths = () => (
-    <HashRouter>
+    <BrowserRouter>
     	<div>
 	    	<Route exact path="/" component={Home} />
 	    	<Route path="/driver_home" component={DriverHome} />
@@ -17,7 +17,7 @@ const Paths = () => (
         <Route path="/driver/login" component={DriverLogin}/>
         <Route path="/rider/login" component={RiderLogin}/>
    		</div>
-   	</HashRouter>
+   	</BrowserRouter>
  );
 
 export default Paths;
