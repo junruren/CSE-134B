@@ -1,18 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './css/master.css';
 import './css/login.css';
 
 const Login = (props) => {
+  var loginUrl = '';
+  if (props.usertype === 'Driver') {
+    loginUrl = '/driver_home';
+  } else if (props.usertype === 'Rider') {
+    // Implement it here
+  }
+  
   return (
     <div className="container">
       <div className="vertical-middle">
-        <h1>Log In as a {props.usertype}</h1>
+        <h1 style={{color: 'black'}}>Log In as a {props.usertype}</h1>
         <div className="signup-form">
           <input type="email" name="email" placeholder="Email" />
           <input type="password" name="password" placeholder="Password" />
-          <button className="button">Log In</button>
+          <Link to={loginUrl}><button className="button">Log In</button></Link>
           <a href="#">Forgot the password?</a>
           <p>Don't have an account? Sign Up</p>
         </div>
