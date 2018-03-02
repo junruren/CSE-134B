@@ -1,0 +1,14 @@
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .feature {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .feature {
+    width: 100%;
+  }
+  .hero, .layer {
+    max-height: 300px;
+  }
+}
