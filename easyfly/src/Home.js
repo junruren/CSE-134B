@@ -30,8 +30,8 @@ class Home extends Component {
             </div>
           </div>
           <div className="onboard-buttons">
-             <Link to="/driver_home"><button className="button">I am a driver</button></Link>
-             <button className="button" onclick="location.href='rider-login.html'">I am a rider</button>
+             <Link to="/driver/login"><button className="button">I am a driver</button></Link>
+             <Link to="/rider/login"><button className="button">I am a rider</button></Link>
           </div>
         </div>
       </div>
