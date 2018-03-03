@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './css/signup.css';
@@ -653,7 +653,6 @@ const vehicles = {
 var years = ['2012', '2013', '2014', '2015', '2016', '2017', '2018'];
 var makes = [];
 for (var make in vehicles) {makes.push(make);}
-var models = [];
 var colors = ['Blue', 'Maroon', 'Yellow', 'Silver', 'Purple', 'Orange', 'Green',
   'Gray', 'Pink', 'Tan', 'Brown', 'Black', 'Red', 'Gold', 'Beige', 'White'];
 var airports = ['LAX', 'SAN', 'LGA', 'JFK', 'SFO', 'SEA', 'ORD', 'PIT', 'ATL', 'LAS'];
