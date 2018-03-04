@@ -73,6 +73,7 @@ body.container {
     margin: 5px;
 }
 
+/*
 .text-over-dark-bg {
     color: white;
     text-shadow: 1px 1px 5px #252525;
@@ -81,26 +82,24 @@ body.container {
 .container h1:not(.text-over-dark-bg), .container h2:not(.text-over-dark-bg) {
     color: #252525;
 }
-
 .container h1 {
     font-size: 400%;
-    font-weight: 700; /* This corresponds to "Bold" */
+    font-weight: 700;
     text-align: left;
     line-height: 1.45;
 }
-
 .container h2 {
     font-size: 200%;
-    font-weight: 600; /* This corresponds to "Semi Bold" */
+    font-weight: 600;
     text-align: left;
     line-height: 1;
 }
-
+*/
 a {
     color: #94C6CF;
 }
 
-.button {
+.trip-button {
     background-color: #1F7DC1;
     border: none;
     color: white;
@@ -113,11 +112,11 @@ a {
     cursor: pointer;
 }
 
-.button:hover {
+.trip-button:hover {
     background-color: #94C6CF;
 }
 
-.button:disabled {
+.trip-button:disabled {
   opacity: 0.65; 
   cursor: not-allowed;
 }
