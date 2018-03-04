@@ -36,13 +36,13 @@ class DriverHome extends Component {
 
     if (this.state.hasTrip === false) {
       return (
-        <div>
+        <div className="dashboard-display">
           <DriverNav />
           <div className="container" id="dashboard_layout">
             <div className="vertical-middle"> 
               <h1>Hello, {this.state.user} </h1>
               <h2>Ready to take another order?</h2> 
-              <Link to="/driver_new_requests"><button className="button homepage" id="find_riders">Find Riders</button></Link>
+              <Link to="/driver_new_requests"><button className="dashboard-button" id="find_riders">Find Riders</button></Link>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ class DriverHome extends Component {
 
     else {
       return (
-        <div>
+        <div className="dashboard-display">
         <DriverNav />
         <div className="container" id="dashboard_layout">
           <div className="vertical-middle with-more-info" id="greet-user">
@@ -64,20 +64,20 @@ class DriverHome extends Component {
                 <h2>Flight: {this.state.trip['Flight Number']}</h2>
 
                 <div className="detail-buttons"> 
-                  <button className="button indv-detail-button" id="ride-detail-button">Ride Details</button>  
-                  <button className="button indv-detail-button" id="message-button">Message Your Guest</button> 
-                  <button className="button indv-detail-button">Arriving Flight Info</button>
+                  <button className="dashboard-button indv-detail-button" id="ride-detail-button">Ride Details</button>  
+                  <button className="dashboard-button indv-detail-button" id="message-button">Message Your Guest</button> 
+                  <button className="dashboard-button indv-detail-button">Arriving Flight Info</button>
                 </div>
               </div>
 
               <div className="todos">
-                <div><input type="checkbox" checked /><button disabled className="button checklist">Find a request</button></div>
-                <div><input type="checkbox" checked /><button disabled className="button checklist">Send price offer</button></div>
-                <div><input type="checkbox" checked /><button disabled className="button checklist">Confirm deal</button></div>
-                <div><input type="checkbox" /><button className="button checklist">Confirm driver arrival</button></div>
-                <div><input type="checkbox" /><button className="button checklist">Confirm guests pickup</button></div>
-                <div><input type="checkbox" /><button className="button checklist">Confirm dropoff</button></div>
-                <div><input type="checkbox" /><button className="button checklist">Write a review</button></div>
+                <div><input type="checkbox" checked /><button disabled className="dashboard-button checklist">Find a request</button></div>
+                <div><input type="checkbox" checked /><button disabled className="dashboard-button checklist">Send price offer</button></div>
+                <div><input type="checkbox" checked /><button disabled className="dashboard-button checklist">Confirm deal</button></div>
+                <div><input type="checkbox" /><button className="dashboard-button checklist">Confirm driver arrival</button></div>
+                <div><input type="checkbox" /><button className="dashboard-button checklist">Confirm guests pickup</button></div>
+                <div><input type="checkbox" /><button className="dashboard-button checklist">Confirm dropoff</button></div>
+                <div><input type="checkbox" /><button className="dashboard-button checklist">Write a review</button></div>
               </div>
             </div>
 

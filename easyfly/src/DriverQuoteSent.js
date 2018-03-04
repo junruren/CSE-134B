@@ -44,12 +44,12 @@ class DriverQuoteSent extends Component {
 
     const Buttons = () => (
       <div className="horizontal-group">
-        <Link to="/chat"><button className="button progress">View In Chat</button></Link>
+        <Link to="/chat"><button className="dashboard-button progress">View In Chat</button></Link>
       </div>
     )
 
     return (
-      <div>
+      <div className="dashboard-display">
       <DriverNav />
       <div className="container">
         <DriverSelectedTrip />

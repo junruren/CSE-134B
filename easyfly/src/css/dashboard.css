@@ -95,7 +95,7 @@ body.container {
     line-height: 1;
 }
 
-.button {
+.dashboard-button{
     background-color: #1F7DC1;
     border: none;
     color: white;
@@ -108,16 +108,16 @@ body.container {
     cursor: pointer;
 }
 
-.button:hover {
+.dashboard-button:hover {
     background-color: #94C6CF;
 }
 
-.button:disabled {
+.dashboard-button:disabled {
   opacity: 0.65; 
   cursor: not-allowed;
 }
 
-.ride-info-left .button {
+.ride-info-left.dashboard-button {
     width: 70%;
     margin: 1%;
 }
@@ -294,7 +294,7 @@ ul.navbar .dropdown:hover .dropdown-content {
         margin: 2%;
     }
 
-    .button {
+    .dashboard-button  {
         margin-bottom: 5%;
     }
 

@@ -6,7 +6,7 @@ import './css/home.css';
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div className="dashboard-display">
         <div style={styles.hero}>
           <div style={styles.layer}>
             <h1 style={{fontSize: '3em'}}>EasyFly</h1>

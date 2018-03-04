@@ -135,14 +135,14 @@ class DriverAllTrips extends Component {
             <td>{trip["Nickname"]}</td>
             <td>{trip["Status"]}</td>
             <td>
-              <Link to="/chat"><button className="button message">Message</button></Link>
+              <Link to="/chat"><button className="dashboard-button message">Message</button></Link>
             </td>
           </tr>
       )
     ));
 
     return (
-      <div>
+      <div className="dashboard-display">
       <DriverNav />
       <div className="container">
         <h2>Here are all your pickups:</h2>
