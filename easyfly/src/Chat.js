@@ -46,9 +46,9 @@ class Chat extends React.Component {
   
   handleSend(event) {
     if (this.state.textField !== '') {
-      this.setState((prevState, props) => {
-        messages: prevState.messages.push({type: 'my-message', message: this.state.textField})
-      });
+      this.setState((prevState, props) => ({
+        messages: prevState.messages.concat({type: 'my-message', message: this.state.textField})
+      }));
       
       this.setState({
         textField: ''
