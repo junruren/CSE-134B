@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './css/dashboard.css';
+import './css/navbar.css';
 
 class RiderNav extends Component {
 	state = {
