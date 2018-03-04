@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
 import DriverNav from './DriverNav'
-import DriverFilterBar from './DriverFilterBar'
 import DriverTableHeader from './DriverTableHeader'
 import './css/driver-trips.css'
 import './css/dashboard.css'
@@ -13,7 +12,30 @@ class DriverNewRequests extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      capacityInput: 10,
       new_trips: [ 
+        {
+          "Name": "Giacomo Guilizzoni",
+          "Total Riders": 3,
+          "Pick-up": "LAX",
+          "Destination": "La Jolla",
+          "Flight Number": "MU538",
+          "Arrival Time": "2018-01-19 15:03",
+          "Nickname": "Peldi",
+          "Status": "Driver Arrival"
+        }, 
+        {
+          "Name": "Marco Botton",
+          "Total Riders": 2,
+          "Pick-up": "SAN",
+          "Destination": "Irvine",
+          "Flight Number": "AA1270",
+          "Arrival Time": "2018-01-25 05:25",
+          "Nickname": "Mark",
+          "Status": "Confirmed"
+        }
+      ],
+      filtered_trips: [ 
         {
           "Name": "Giacomo Guilizzoni",
           "Total Riders": 3,
@@ -37,6 +59,8 @@ class DriverNewRequests extends Component {
       ]
     };
 
+    this.handleCapacityFilter = this.handleCapacityFilter.bind(this);
+
   }
 
    componentDidMount() {
@@ -48,12 +72,37 @@ class DriverNewRequests extends Component {
   }
 
 
+  handleCapacityFilter(event) {
+    var inputValue = event.target.value;
+    console.log("calling filter" + inputValue);
+    var trips_to_display = [];
+    for(var i = 0; i<this.state.new_trips.length; i++) {
+      if(this.state.new_trips[i]["Total Riders"]<=inputValue) {
+        trips_to_display.push(this.state.new_trips[i]);
+      }
+    }
+    this.setState({filtered_trips: trips_to_display}); 
+    this.setState({capacityInput: inputValue});
+  }
 
 	render() {
 
-    // page.push(tableHeader);
+    const DriverFilterBar = () => (
+      <div className="filters">
+        <div className="area-filter">
+          <input type="checkbox" /><label>Area</label>
+          <select>
+            <option value="San Diego - Los Angeles" selected >San Diego - Los Angeles</option>
+          </select>
+        </div>
+        <div className="capacity-filter">
+          <input type="checkbox" id="capacity-checkbox" checked/><label>Capacity: max </label>
+          <input type="number" id="capacity-input" onChange={this.handleCapacityFilter} value={this.state.capacityInput}/>
+        </div>
+      </div>
+    );
 
-    const Body = () =>( this.state.new_trips.map((trip) => (
+    const Body = () =>( this.state.filtered_trips.map((trip) => (
           <tr className="trip_row">
             <td>{trip["Name"]}</td>
             <td>{trip["Total Riders"]}</td>

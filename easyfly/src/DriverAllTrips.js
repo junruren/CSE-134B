@@ -163,7 +163,6 @@ class DriverAllTrips extends Component {
      this.setState({ filtered: false });
    }
 
-
   }
 
 
@@ -187,7 +186,7 @@ class DriverAllTrips extends Component {
           </select>
         </div>
         <div className="status-filter">
-          <input type="checkbox" id="filter-upcoming-button" onClick={this.handleFilter} checked={this.state.filtered}/><label>Upcoming</label> 
+          <input type="checkbox" id="filter-upcoming-button" checked={this.state.filtered} onChange={this.handleFilter} /><label>Upcoming</label> 
         </div>
       </div>
 );
