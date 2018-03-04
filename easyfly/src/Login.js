@@ -4,11 +4,14 @@ import { Link } from 'react-router-dom';
 import './css/login.css';
 
 const Login = (props) => {
-  var loginUrl = '';
+  var loginURL = '/';
+  var signupURL = '/';
   if (props.usertype === 'Driver') {
-    loginUrl = '/driver_home';
+    loginURL = '/driver_home';
+    signupURL = '/driver/signup';
   } else if (props.usertype === 'Rider') {
     // Implement it here
+    signupURL = '/rider/signup';
   }
   
   return (
@@ -18,9 +21,9 @@ const Login = (props) => {
         <div className="signup-form">
           <input style={{...styles.rectangles, ...styles.textInput}} type="email" name="email" placeholder="Email" />
           <input style={{...styles.rectangles, ...styles.textInput}} type="password" name="password" placeholder="Password" />
-          <Link to={loginUrl} style={{display: 'block'}}><button style={styles.rectangles} className="button">Log In</button></Link>
+          <Link to={loginURL} style={{display: 'block'}}><button style={styles.rectangles} className="button">Log In</button></Link>
           <Link to="/">Forgot the password?</Link>
-          <p>Don't have an account? Sign Up</p>
+          <p>Don't have an account? <Link to={signupURL}>Sign Up</Link></p>
         </div>
       </div>
     </div>

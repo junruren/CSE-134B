@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './css/signup.css';
@@ -93,13 +93,19 @@ class DriverInfo extends React.Component {
   }
 };
 
-const SignUpButtons = () => {
+const SignUpButtons = (props) => {
+  var loginURL = '/';
+  if (props.userType === 'Driver') {
+    loginURL = '/driver/login';
+  } else if (props.userType === 'Rider') {
+    loginURL = '/rider/login';
+  }
   return (
     <div style={styles.outerStretch}>
       <div>
         <button className="button" style={styles.innerStretch}>Sign Up</button>
       </div>
-      <p style={{textAlign: 'center'}}>Already have an account? Log In</p>
+      <p style={{textAlign: 'center'}}>Already have an account? <Link to={loginURL}>Log In</Link></p>
     </div>
   );
 };
@@ -109,7 +115,7 @@ export const RiderSignup = () => {
     <div className="vertical-middle">
       <h1 style={{fontSize: '2.5em', textAlign: 'center'}}>Sign Up as a Rider</h1>
       <BasicInfo />
-      <SignUpButtons />
+      <SignUpButtons userType="Rider" />
     </div>
   );
 };
@@ -120,7 +126,7 @@ export const DriverSignup = () => {
       <h1 style={{fontSize: '2.5em', textAlign: 'center'}}>Sign Up as a Driver</h1>
       <BasicInfo />
       <DriverInfo />
-      <SignUpButtons />
+      <SignUpButtons userType="Driver" />
     </div>
   );
 };
@@ -647,7 +653,6 @@ const vehicles = {
 var years = ['2012', '2013', '2014', '2015', '2016', '2017', '2018'];
 var makes = [];
 for (var make in vehicles) {makes.push(make);}
-var models = [];
 var colors = ['Blue', 'Maroon', 'Yellow', 'Silver', 'Purple', 'Orange', 'Green',
   'Gray', 'Pink', 'Tan', 'Brown', 'Black', 'Red', 'Gold', 'Beige', 'White'];
 var airports = ['LAX', 'SAN', 'LGA', 'JFK', 'SFO', 'SEA', 'ORD', 'PIT', 'ATL', 'LAS'];
