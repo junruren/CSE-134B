@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
+
 import DriverNav from './DriverNav'
 import DriverSelectedTrip from './DriverSelectedTrip'
 import './css/driver-trips.css'
@@ -37,25 +39,24 @@ class DriverQuoteSent extends Component {
     var defaultInput = 'Hi there! \n\nI\'d like to make an offer of $100 for your ride. \nPlease feel free to let me know if you have any questions! \n\nLooking forward to serve you! ';
 
     const SentText = () => (
-      
       <div className="confirm-message" id="quote-sent"> {defaultInput} </div>
-
     );
 
     const Buttons = () => (
       <div className="horizontal-group">
-      <button className="button progress" onclick="location.href='driver-new-request.html'">
-        View In Chat</button>
+        <Link to="/chat"><button className="button progress">View In Chat</button></Link>
       </div>
     )
 
     return (
+      <div>
+      <DriverNav />
       <div className="container">
-        <DriverNav />
         <DriverSelectedTrip />
         <h2>Quote successfully sent! </h2>
         <SentText />
         <Buttons />
+      </div>
       </div>
     );
   }

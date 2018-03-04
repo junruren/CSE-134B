@@ -51,6 +51,8 @@ class DriverHome extends Component {
 
     else {
       return (
+        <div>
+        <DriverNav />
         <div className="container" id="dashboard_layout">
           <div className="vertical-middle with-more-info" id="greet-user">
             <h1>Hello, {this.state.user} </h1>
@@ -86,6 +88,7 @@ class DriverHome extends Component {
 
           </div>
 
+        </div>
         </div>
 
       );

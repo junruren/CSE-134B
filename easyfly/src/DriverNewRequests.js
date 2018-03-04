@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
+
 import DriverNav from './DriverNav'
 import DriverFilterBar from './DriverFilterBar'
 import DriverTableHeader from './DriverTableHeader'
@@ -70,16 +72,15 @@ class DriverNewRequests extends Component {
 
     const ProgressButtons = () => (
       <div className="horizontal-group">
-        <button className="button progress left" onclick="location.href='driver-dashboard-2.html'">
-          Back to Dashboard</button>
-        <button className="button progress right" onclick="location.href='driver-send-quote.html'">
-          Next</button>
+        <Link to="/driver_home"><button className="button progress left">Back to Dashboard</button></Link>
+        <Link to="/driver_send_quote"><button className="button progress right">Next</button></Link>
       </div>
     )
 
     return (
+      <div>
+      <DriverNav />
       <div className="container">
-        <DriverNav />
         <div>
           <h2>Results based on your location settings: </h2>
           <DriverFilterBar />
@@ -93,6 +94,7 @@ class DriverNewRequests extends Component {
           </table>
         </div> 
         <ProgressButtons />
+      </div>
       </div>
     );
   }

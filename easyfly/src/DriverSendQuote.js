@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
+
 import DriverNav from './DriverNav'
 import DriverSelectedTrip from './DriverSelectedTrip'
 import './css/driver-trips.css'
@@ -24,7 +26,7 @@ class DriverSendQuote extends Component {
       };
   }
   
-   componentDidMount() {
+  componentDidMount() {
     document.body.classList.add('driver');
   }
 
@@ -48,19 +50,19 @@ class DriverSendQuote extends Component {
 
     const Buttons = () => (
       <div className="horizontal-group">
-      <button className="button progress left" onclick="location.href='driver-new-request.html'">
-        Back</button>
-      <button className="button progress" onclick="store_input_text(); location.href='driver-quote-sent.html'">
-        Send</button>
+        <Link to="/driver_new_requests"><button className="button progress left">Back</button></Link>
+        <Link to="/driver_quote_sent"><button className="button progress" >Send</button></Link> 
       </div>
     )
 
     return (
+      <div>
+      <DriverNav />
       <div className="container">
-        <DriverNav />
         <DriverSelectedTrip />
         <TextInput />
         <Buttons />
+      </div>
       </div>
     );
   }

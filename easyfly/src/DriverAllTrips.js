@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
+
 import DriverNav from './DriverNav'
 import DriverTableHeader from './DriverTableHeader'
 import './css/driver-trips.css'
@@ -97,7 +99,7 @@ class DriverAllTrips extends Component {
 }
 
 
-   componentDidMount() {
+  componentDidMount() {
     document.body.classList.add('driver');
   }
 
@@ -117,7 +119,7 @@ class DriverAllTrips extends Component {
           </select>
         </div>
         <div className="status-filter">
-          <input type="checkbox" id="filter-upcoming-button" onclick="filter_upcoming()" /><label>Upcoming</label>
+          <input type="checkbox" id="filter-upcoming-button" /><label>Upcoming</label> 
         </div>
       </div>
 );
@@ -133,15 +135,16 @@ class DriverAllTrips extends Component {
             <td>{trip["Nickname"]}</td>
             <td>{trip["Status"]}</td>
             <td>
-              <button className="button message" onclick="location.href='chat.html'">Message</button>
+              <Link to="/chat"><button className="button message">Message</button></Link>
             </td>
           </tr>
       )
     ));
 
     return (
+      <div>
+      <DriverNav />
       <div className="container">
-        <DriverNav />
         <h2>Here are all your pickups:</h2>
         <FilterBar />
         <div className="results-table" id="available-trips-render"> 
@@ -153,7 +156,8 @@ class DriverAllTrips extends Component {
           </table>
         </div> 
       </div>
-      );
+      </div>
+    );
   }
 
 }
