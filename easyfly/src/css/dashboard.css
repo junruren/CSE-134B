@@ -117,7 +117,7 @@ body.container {
   cursor: not-allowed;
 }
 
-.ride-info-left.dashboard-button {
+.ride-info-left .dashboard-button {
     width: 70%;
     margin: 1%;
 }
