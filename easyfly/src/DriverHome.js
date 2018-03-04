@@ -51,7 +51,7 @@ class DriverHome extends Component {
 
     else {
       return (
-        <div className="dashboard-display">
+        <div>
         <DriverNav />
         <div className="container" id="dashboard_layout">
           <div className="vertical-middle with-more-info" id="greet-user">
