@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './css/dashboard.css';
 
-class Nav extends Component {
+class DriverNav extends Component {
 	state = {
 		user: "driver"
 	};
@@ -19,9 +19,10 @@ class Nav extends Component {
 	        		</div>
       			</li>
       			<li><Link to="">Notification</Link></li>
+      			<li><Link to="/driver_home">Home</Link></li>
     		</ul>
 		);
 	}
 }
 
-export default Nav;
+export default DriverNav;
