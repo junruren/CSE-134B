@@ -103,7 +103,7 @@ const SignUpButtons = (props) => {
   return (
     <div style={styles.outerStretch}>
       <div>
-        <button className="button" style={styles.innerStretch}>Sign Up</button>
+        <button className="button" style={{...styles.innerStretch, ...styles.vertical}}>Sign Up</button>
       </div>
       <p style={{textAlign: 'center'}}>Already have an account? <Link to={loginURL}>Log In</Link></p>
     </div>

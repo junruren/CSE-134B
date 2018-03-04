@@ -3,29 +3,87 @@ import { Link } from 'react-router-dom';
 
 import './css/chat.css';
 
-const Chat = (props) => {
-  return (
-    <div style={{display: 'flex', flexDirection: 'column'}}>
-      <nav style={styles.nav}>
-        <div style={styles.divWidth}>
-          <Link to="/" style={{fontSize: '1.4em', textDecoration: 'none', color: '#1F7DC1'}}><i className="fas fa-chevron-left"></i> Back</Link>
+const Message = (props) => {
+  if (props.messageType === 'my-message') {
+    return (
+      <div style={{...styles.myMessage, ...styles.messageDiv}}>
+        <p style={styles.messageP}>{props.message}</p>
+      </div>
+    );
+  } else {
+    return (
+      <div style={{...styles.othersMessage, ...styles.messageDiv}}>
+        <p style={styles.messageP}>{props.message}</p>
+      </div>
+    );
+  }
+}
+
+class Chat extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'John',
+      messages: [
+        {
+          type: 'others-message',
+          message: 'Hello! My name is John. I will be your driver for your ride.'
+        }
+      ],
+      textField: ''
+    }
+    
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSend = this.handleSend.bind(this);
+  }
+  
+  handleChange(event) {
+    this.setState({
+      textField: event.target.value
+    });
+  }
+  
+  handleSend(event) {
+    if (this.state.textField !== '') {
+      this.setState((prevState, props) => {
+        messages: prevState.messages.push({type: 'my-message', message: this.state.textField})
+      });
+      
+      this.setState({
+        textField: ''
+      });
+    }
+  }
+  
+  render() {
+    const messageList = this.state.messages.map((message) =>
+      <Message message={message.message} messageType={message.type}/>
+    );
+    return (
+      <div style={{display: 'flex', flexDirection: 'column'}}>
+        <nav style={styles.nav}>
+          <div style={styles.divWidth}>
+            <Link to="/" style={{fontSize: '1.4em', textDecoration: 'none', color: '#1F7DC1'}}><i className="fas fa-chevron-left"></i> Back</Link>
+          </div>
+          <div style={styles.divWidth}>
+            <p style={styles.personName}>{this.state.name}</p>
+          </div>
+          <div style={styles.divWidth}></div>
+        </nav>
+        <hr style={{marginLeft: '0', marginRight: '0'}}/>
+        <div style={styles.messages}>
+          {messageList}
         </div>
-        <div style={styles.divWidth}>
-          <p style={styles.personName}>John</p>
-        </div>
-        <div style={styles.divWidth}></div>
-      </nav>
-      <hr style={{marginLeft: '0', marginRight: '0'}}/>
-      <div style={styles.messages}></div>
-      <footer style={styles.footer}>
-        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>
-          <input type="text" placeholder="Enter message here..." id="messageInput" style={{...styles.borderRadius, ...styles.chatControlElements, width: '78%', border: '1px solid #252525', height: '40px', padding: '5px'}}/>
-          <button className="button" id='sendButton' style={{...styles.borderRadius, ...styles.chatControlElements, width: '18%', height: '40px'}}>Send</button>
-        </div>
-        <button className="button" style={{...styles.borderRadius, ...styles.footerButton}}>Confirm Deal from My Side</button>
-      </footer>
-    </div>
-  );
+        <footer style={styles.footer}>
+          <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>
+            <input type="text" placeholder="Enter message here..." value={this.state.textField} onChange={this.handleChange} style={{...styles.borderRadius, ...styles.chatControlElements, width: '78%', border: '1px solid #252525', height: '40px', padding: '5px'}}/>
+            <button className="button" onClick={this.handleSend} style={{...styles.borderRadius, ...styles.chatControlElements, width: '18%', height: '40px'}}>Send</button>
+          </div>
+          <button className="button" style={{...styles.borderRadius, ...styles.footerButton}}>Confirm Deal from My Side</button>
+        </footer>
+      </div>
+    );
+  }
 };
 
 const styles = {
