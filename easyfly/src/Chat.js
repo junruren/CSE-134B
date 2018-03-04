@@ -35,6 +35,7 @@ class Chat extends React.Component {
     
     this.handleChange = this.handleChange.bind(this);
     this.handleSend = this.handleSend.bind(this);
+    this.goBack = this.goBack.bind(this);
   }
   
   handleChange(event) {
@@ -55,6 +56,10 @@ class Chat extends React.Component {
     }
   }
   
+  goBack() {
+    this.props.history.goBack();
+  }
+  
   render() {
     const messageList = this.state.messages.map((message) =>
       <Message message={message.message} messageType={message.type}/>
@@ -63,7 +68,7 @@ class Chat extends React.Component {
       <div style={{display: 'flex', flexDirection: 'column'}}>
         <nav style={styles.nav}>
           <div style={styles.divWidth}>
-            <Link to="/" style={{fontSize: '1.4em', textDecoration: 'none', color: '#1F7DC1'}}><i className="fas fa-chevron-left"></i> Back</Link>
+            <Link to='#' onClick={this.goBack} style={{fontSize: '1.4em', textDecoration: 'none', color: '#1F7DC1'}}><i className="fas fa-chevron-left"></i> Back</Link>
           </div>
           <div style={styles.divWidth}>
             <p style={styles.personName}>{this.state.name}</p>
