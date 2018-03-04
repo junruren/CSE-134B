@@ -142,7 +142,7 @@ class DriverAllTrips extends Component {
     ));
 
     return (
-      <div className="dashboard-display">
+      <div>
       <DriverNav />
       <div className="container">
         <h2>Here are all your pickups:</h2>

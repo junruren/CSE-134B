@@ -49,7 +49,7 @@ class DriverQuoteSent extends Component {
     )
 
     return (
-      <div className="dashboard-display">
+      <div>
       <DriverNav />
       <div className="container">
         <DriverSelectedTrip />

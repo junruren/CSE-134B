@@ -78,7 +78,7 @@ class DriverNewRequests extends Component {
     )
 
     return (
-      <div className="dashboard-display">
+      <div>
       <DriverNav />
       <div className="container">
         <div>
