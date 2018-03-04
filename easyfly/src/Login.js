@@ -10,7 +10,7 @@ const Login = (props) => {
     loginURL = '/driver_home';
     signupURL = '/driver/signup';
   } else if (props.usertype === 'Rider') {
-    // Implement it here
+    loginURL = '/rider/home';
     signupURL = '/rider/signup';
   }
   
