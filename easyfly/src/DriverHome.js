@@ -44,11 +44,7 @@ class DriverHome extends Component {
             <div className="vertical-middle"> 
               <h1>Hello, {this.state.user} </h1>
               <h2>Ready to take another order?</h2> 
-<<<<<<< HEAD
               <Link to={`/driver_new_requests`}><button className="dashboard-button" id="find_riders">Find Riders</button></Link>
-=======
-              <Link to="/driver/new_requests"><button className="dashboard-button" id="find_riders">Find Riders</button></Link>
->>>>>>> 789d78c675acf0d23925206e997ede6428e0777c
             </div>
           </div>
         </div>
