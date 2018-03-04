@@ -1,6 +1,6 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import React from 'react'
+import React from 'react';
 import Home from './Home';
 import {DriverLogin, RiderLogin} from './Login';
 import {DriverSignup, RiderSignup} from './Signup';
@@ -9,6 +9,7 @@ import DriverNewRequests from './DriverNewRequests'
 import DriverAllTrips from './DriverAllTrips'
 import DriverSendQuote from './DriverSendQuote'
 import DriverQuoteSent from './DriverQuoteSent'
+import Chat from './Chat';
 
 const Paths = () => (
   <BrowserRouter>
@@ -19,11 +20,11 @@ const Paths = () => (
     	<Route path="/driver_all_trips" component={DriverAllTrips} />
       <Route path="/driver_send_quote" component={DriverSendQuote} />
       <Route path="/driver_quote_sent" component={DriverQuoteSent} />
-
       <Route path="/driver/login" component={DriverLogin}/>
       <Route path="/driver/signup" component={DriverSignup}/>
       <Route path="/rider/login" component={RiderLogin}/>
       <Route path="/rider/signup" component={RiderSignup}/>
+      <Route path="/chat" component={Chat}/>
  		</div>
  	</BrowserRouter>
 );
