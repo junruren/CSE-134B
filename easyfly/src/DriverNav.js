@@ -19,7 +19,7 @@ class DriverNav extends Component {
 	        		</div>
       			</li>
       			<li><Link to="/">Notification</Link></li>
-      			<li><Link to="/driver_home">Home</Link></li>
+      			<li><Link to="/driver/home">Home</Link></li>
     		</ul>
 		);
 	}

@@ -50,8 +50,8 @@ class DriverSendQuote extends Component {
 
     const Buttons = () => (
       <div className="horizontal-group">
-        <Link to="/driver_new_requests"><button className="dashboard-button progress left">Back</button></Link>
-        <Link to="/driver_quote_sent"><button className="dashboard-button progress" >Send</button></Link> 
+        <Link to="/driver/new_requests"><button className="dashboard-button progress left">Back</button></Link>
+        <Link to="/driver/quote_sent"><button className="dashboard-button progress" >Send</button></Link> 
       </div>
     )
 
