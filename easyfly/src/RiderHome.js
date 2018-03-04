@@ -61,10 +61,12 @@ class RiderHome extends Component {
 
   componentDidMount() {
     document.body.classList.add('rider');
+    document.body.classList.add('dashboard');
   }
 
   componentWillUnmount() {
     document.body.classList.remove('rider');
+    document.body.classList.remove('dashboard');
   }
 
   render() {

@@ -117,7 +117,7 @@ a {
   cursor: not-allowed;
 }
 
-input, select {
+input.trip-input {
     height: 40px;
     display: block;
     font-size: 1em;
@@ -129,7 +129,7 @@ input, select {
     padding-left: 10px;
 }
 
-input:disabled {
+input.trip-input:disabled {
     background-color: lightgrey;
 }
 
