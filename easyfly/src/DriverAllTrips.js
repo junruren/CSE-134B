@@ -11,7 +11,8 @@ class DriverAllTrips extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {      
+    this.state = {   
+      filtered: true,
       all_trips:[ 
       {
         "Name": "Giacomo Guilizzoni",
@@ -93,10 +94,77 @@ class DriverAllTrips extends Component {
         "Nickname": "4",
         "Status": "Finished"
       }
+    ],
+
+    filtered_trips:[ 
+      {
+        "Name": "Giacomo Guilizzoni",
+        "Total Riders": 3,
+        "Pick-up": "LAX",
+        "Destination": "La Jolla",
+        "Flight Number": "MU538",
+        "Arrival Time": "2018-01-19 15:03",
+        "Nickname": "Peldi",
+        "Status": "Driver Arrival"
+      }, 
+      {
+        "Name": "Marco Botton",
+        "Total Riders": 2,
+        "Pick-up": "SAN",
+        "Destination": "Irvine",
+        "Flight Number": "AA1270",
+        "Arrival Time": "2018-01-25 05:25",
+        "Nickname": "Mark",
+        "Status": "Confirmed"
+      }, 
+      {
+        "Name": "Mariah Maclachlan",
+        "Total Riders": 1,
+        "Pick-up": "LAX",
+        "Destination": "La Jolla",
+        "Flight Number": "XZ3265",
+        "Arrival Time": "2018-01-26 09:33",
+        "Nickname": "Patata",
+        "Status": "Confirmed"
+      }, 
+      {
+        "Name": "Valerie Liberty",
+        "Total Riders": 2,
+        "Pick-up": "LAX",
+        "Destination": "Irvine",
+        "Flight Number": "SQ972",
+        "Arrival Time": "2017-12-01 23:42",
+        "Nickname": "Val",
+        "Status": "Confirmed"
+      }
     ]
+
   };
 
+  this.handleFilter = this.handleFilter.bind(this);
+
 }
+
+  handleFilter(event) {
+    var button = document.getElementById("filter-upcoming-button");
+    var trips_to_display = this.state.all_trips;
+    if (button.checked) {
+    trips_to_display = [];
+    for(var i = 0; i<this.state.all_trips.length; i++) {
+      if(this.state.all_trips[i]["Status"]!="Finished") {
+        trips_to_display.push(this.state.all_trips[i]);
+      }
+    }
+    this.setState({ filtered_trips: trips_to_display });
+    this.setState({ filtered: true });
+  }
+   else {
+     this.setState({ filtered_trips: this.state.all_trips });
+     this.setState({ filtered: false });
+   }
+
+
+  }
 
 
   componentDidMount() {
@@ -119,12 +187,12 @@ class DriverAllTrips extends Component {
           </select>
         </div>
         <div className="status-filter">
-          <input type="checkbox" id="filter-upcoming-button" /><label>Upcoming</label> 
+          <input type="checkbox" id="filter-upcoming-button" onClick={this.handleFilter} checked={this.state.filtered}/><label>Upcoming</label> 
         </div>
       </div>
 );
 
-    const Body = () =>( this.state.all_trips.map((trip) => (
+    const Body = () =>( this.state.filtered_trips.map((trip) => (
           <tr className="trip_row">
             <td>{trip["Name"]}</td>
             <td>{trip["Total Riders"]}</td>
