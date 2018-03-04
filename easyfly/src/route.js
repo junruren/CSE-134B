@@ -1,12 +1,13 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import React from 'react'
+import React from 'react';
 import Home from './Home';
 import {DriverLogin, RiderLogin} from './Login';
 import {DriverSignup, RiderSignup} from './Signup';
-import DriverHome from './DriverHome'
-import DriverNewRequests from './DriverNewRequests'
-import DriverAllTrips from './DriverAllTrips'
+import DriverHome from './DriverHome';
+import DriverNewRequests from './DriverNewRequests';
+import DriverAllTrips from './DriverAllTrips';
+import Chat from './Chat';
 
 const Paths = () => (
   <BrowserRouter>
@@ -19,6 +20,7 @@ const Paths = () => (
       <Route path="/driver/signup" component={DriverSignup}/>
       <Route path="/rider/login" component={RiderLogin}/>
       <Route path="/rider/signup" component={RiderSignup}/>
+      <Route path="/chat" component={Chat}/>
  		</div>
  	</BrowserRouter>
 );
