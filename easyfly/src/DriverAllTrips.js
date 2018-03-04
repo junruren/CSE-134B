@@ -151,7 +151,7 @@ class DriverAllTrips extends Component {
     if (button.checked) {
     trips_to_display = [];
     for(var i = 0; i<this.state.all_trips.length; i++) {
-      if(this.state.all_trips[i]["Status"]!="Finished") {
+      if(this.state.all_trips[i]["Status"]!=="Finished") {
         trips_to_display.push(this.state.all_trips[i]);
       }
     }
