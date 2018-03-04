@@ -80,11 +80,11 @@ class RiderNewTrip extends Component {
   }
 
   componentDidMount() {
-    document.body.classList.add('rider');
+    document.body.classList.add('trip');
   }
 
   componentWillUnmount() {
-    document.body.classList.remove('rider');
+    document.body.classList.remove('trip');
   }
 
   render() {
