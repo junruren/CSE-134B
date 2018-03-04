@@ -5,6 +5,7 @@ import Home from './Home';
 import { DriverLogin, RiderLogin } from './Login';
 import { DriverSignup, RiderSignup } from './Signup';
 import DriverHome from './DriverHome'
+import RiderHome from './RiderHome'
 import DriverNewRequests from './DriverNewRequests'
 import DriverAllTrips from './DriverAllTrips'
 import DriverSendQuote from './DriverSendQuote'
@@ -26,6 +27,7 @@ const Paths = () => (
       <Route path="/driver/signup" component={DriverSignup}/>
       <Route path="/rider/login" component={RiderLogin}/>
       <Route path="/rider/signup" component={RiderSignup}/>
+      <Route path="/rider/home" component={RiderHome}/>
       <Route path="/chat" component={Chat}/>
  		</div>
  	</BrowserRouter>
