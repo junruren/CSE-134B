@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import DriverNav from './DriverNav'
-import FilterBar from './FilterBar'
-import TableHeader from './TableHeader'
+import DriverFilterBar from './DriverFilterBar'
+import DriverTableHeader from './DriverTableHeader'
 import './css/driver-trips.css'
 import './css/dashboard.css'
 
@@ -82,11 +82,11 @@ class DriverNewRequests extends Component {
         <DriverNav />
         <div>
           <h2>Results based on your location settings: </h2>
-          <FilterBar />
+          <DriverFilterBar />
         </div>
         <div className="results-table" id="all-trips-render"> 
           <table>
-            <TableHeader />
+            <DriverTableHeader />
             <tbody>
               <Body />
             </tbody>

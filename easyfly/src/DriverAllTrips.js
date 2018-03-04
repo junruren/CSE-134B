@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import DriverNav from './DriverNav'
-import TableHeader from './TableHeader'
+import DriverTableHeader from './DriverTableHeader'
 import './css/driver-trips.css'
 import './css/dashboard.css'
 
@@ -146,7 +146,7 @@ class DriverAllTrips extends Component {
         <FilterBar />
         <div className="results-table" id="available-trips-render"> 
           <table>
-            <TableHeader />
+            <DriverTableHeader />
             <tbody>
               <Body />
             </tbody>

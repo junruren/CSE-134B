@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
-import TableHeader from './TableHeader'
+import DriverTableHeader from './DriverTableHeader'
 
 
-class SelectedTrip extends Component {
+class DriverSelectedTrip extends Component {
 
 	constructor(props) {
 	    super(props);
@@ -42,7 +42,7 @@ class SelectedTrip extends Component {
 	  		<h2>Selected Ride Request: </h2>
 	        <div className="results-table" id="selected-trip-render"> 
 	          <table>
-	            <TableHeader />
+	            <DriverTableHeader />
 	            <tbody>
 	              <Body />
 	            </tbody>
@@ -55,4 +55,4 @@ class SelectedTrip extends Component {
 
 }
 
-export default SelectedTrip;
+export default DriverSelectedTrip;

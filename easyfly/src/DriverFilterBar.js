@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const FilterBar = () => (
+const DriverFilterBar = () => (
   <div className="filters">
     <div className="area-filter">
       <input type="checkbox" /><label>Area</label>
@@ -16,4 +16,4 @@ const FilterBar = () => (
   </div>
 );
 
-export default FilterBar;
+export default DriverFilterBar;

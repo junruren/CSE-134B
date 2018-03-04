@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import DriverNav from './DriverNav'
-import FilterBar from './FilterBar'
-import TableHeader from './TableHeader'
-import SelectedTrip from './SelectedTrip'
+import DriverSelectedTrip from './DriverSelectedTrip'
 import './css/driver-trips.css'
 import './css/dashboard.css'
 
@@ -54,7 +52,7 @@ class DriverQuoteSent extends Component {
     return (
       <div className="container">
         <DriverNav />
-        <SelectedTrip />
+        <DriverSelectedTrip />
         <h2>Quote successfully sent! </h2>
         <SentText />
         <Buttons />

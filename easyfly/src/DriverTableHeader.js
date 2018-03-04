@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-  const TableHeader = () => (
+  const DriverTableHeader = () => (
       <thead>
         <tr>
           <th>Name</th>
@@ -15,4 +15,4 @@ import React, { Component } from 'react'
       </thead>
   );
 
-  export default TableHeader;
+  export default DriverTableHeader;

@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import DriverNav from './DriverNav'
-import FilterBar from './FilterBar'
-import TableHeader from './TableHeader'
-import SelectedTrip from './SelectedTrip'
+import DriverSelectedTrip from './DriverSelectedTrip'
 import './css/driver-trips.css'
 import './css/dashboard.css'
 
@@ -60,7 +58,7 @@ class DriverSendQuote extends Component {
     return (
       <div className="container">
         <DriverNav />
-        <SelectedTrip />
+        <DriverSelectedTrip />
         <TextInput />
         <Buttons />
       </div>
