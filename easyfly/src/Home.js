@@ -6,7 +6,7 @@ import './css/home.css';
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div className="dashboard-display">
         <div style={styles.hero}>
           <div style={styles.layer}>
             <h1 style={{fontSize: '3em'}}>EasyFly</h1>
@@ -29,8 +29,8 @@ class Home extends Component {
             </div>
           </div>
           <div style={{textAlign: 'center'}}>
-             <Link to="/driver/login"><button className="button" style={styles.button}>I am a driver</button></Link>
-             <Link to="/rider/login"><button className="button" style={styles.button}>I am a rider</button></Link>
+             <Link to="/driver/login"><button className="dashboard-button" style={styles.button}>I am a driver</button></Link>
+             <Link to="/rider/login"><button className="dashboard-button" style={styles.button}>I am a rider</button></Link>
           </div>
         </div>
       </div>

@@ -2,11 +2,11 @@
   font-family: 'Muli', sans-serif;
 }
 
-body.container {
+body.settings-container {
   position: relative;
 }
 
-.vertical-middle {
+.settings-vertical-middle {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -17,12 +17,12 @@ body.container {
   margin: auto;
 }
 
-.flex-container {
+.settings-flex-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.container h1 {
+.settings-container h1 {
   font-size: 400%;
   font-weight: 700; /* This corresponds to "Bold" */
   text-align: left;
@@ -30,7 +30,7 @@ body.container {
   line-height: 1.45;
 }
 
-.container h2 {
+.settings-container h2 {
   font-size: 200%;
   font-weight: 600; /* This corresponds to "Semi Bold" */
   text-align: left;
@@ -45,7 +45,7 @@ body.container {
   margin: 1px;
 }
 
-.info-details {
+.settings-info-details {
   float: left;
   width: 500px;
   padding: 1px;
@@ -56,7 +56,7 @@ body.container {
   width: 100%;
 }
 
-.button {
+.indv-settings-button {
   background-color: #1F7DC1;
   border: none;
   color: white;
@@ -69,7 +69,7 @@ body.container {
   cursor: pointer;
 }
 
-.button:hover {
+.indv-settings-button:hover {
   background-color: #94C6CF;
 }
 
@@ -77,17 +77,17 @@ body.container {
   float: left;
 }
 
-.setting-buttons .button {
+.setting-buttons .indv-settings-button {
   margin: 1px;
 }
 
-label {
+.settings-info-details > label {
   font-weight: 300;
-  font-size: 150%;
+  font-size: 120%;
   margin-right: 5px;
 }
 
-input {
+settings-info-details > input {
   font-weight: 600;
   font-size: 125%;
 }
@@ -156,15 +156,15 @@ ul.navbar .dropdown:hover .dropdown-content {
   ul.navbar li.dropdown,
   ul.navbar li {float: none;}
 
-  .vertical-middle {
+  .settings-vertical-middle {
       top: 250px;
   }
 
-  .container h1 {
+  .settings-container h1 {
       font-size: 200%;
   }
 
-  .container h2 {
+  .settings-container h2 {
       font-size: 100%;
   }
 }
