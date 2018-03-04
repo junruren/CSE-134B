@@ -12,7 +12,7 @@ class DriverNewRequests extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      capacityInput: 10,
+      capacityInput: 4,
       new_trips: [ 
         {
           "Name": "Giacomo Guilizzoni",

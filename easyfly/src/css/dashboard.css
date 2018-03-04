@@ -186,7 +186,8 @@ a.find-a-ride {
 
 .more-links-content {
     color: white;
-        margin-right: 1%
+    margin-right: 1%;
+    text-decoration: underline;
 }
 
 

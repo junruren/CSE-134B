@@ -82,8 +82,8 @@ class DriverHome extends Component {
             </div>
 
             <div className = "more-links"> 
-              <Link to="/driver_all_trips"><a className = "more-links-content">See All Upcoming</a></Link>
-              <Link to="/driver_new_requests"><a className = "more-links-content">Find New Rides</a></Link>
+              <Link to="/driver_all_trips" className = "more-links-content">See All Upcoming</Link>
+              <Link to="/driver_new_requests" className = "more-links-content">Find New Rides</Link>
             </div>
 
           </div>
