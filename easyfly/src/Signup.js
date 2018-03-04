@@ -33,7 +33,7 @@ class DriverInfo extends React.Component {
       models: []
     };
   }
-  
+
   render() {
     var yearOptions = years.map((year) => <option key={year.toString()}>{year}</option>);
     var makeOptions = makes.map((make) => <option key={make.toString()}>{make}</option>);
@@ -41,13 +41,13 @@ class DriverInfo extends React.Component {
     var numPassengersOptions = [1,2,3,4,5,6,7].map((num) => <option key={num.toString()}>{num}</option>);
     var airportOptions = airports.map((airport) => <option key={airport.toString()}>{airport}</option>);
     var modelOptions = this.state.models.map((model) => <option key={model.toString()}>{model}</option>);
-    
+
     const makeChanged = (e) => {
       this.setState({
         models: vehicles[e.target.value]
       });
     }
-    
+
     return (
       <div style={styles.outerStretch}>
         <hr/>
@@ -95,15 +95,20 @@ class DriverInfo extends React.Component {
 
 const SignUpButtons = (props) => {
   var loginURL = '/';
+  var dashboardURL = '';
   if (props.userType === 'Driver') {
     loginURL = '/driver/login';
+    dashboardURL = '/driver/home';
   } else if (props.userType === 'Rider') {
     loginURL = '/rider/login';
+    dashboardURL = '/rider/home';
   }
   return (
     <div style={styles.outerStretch}>
       <div>
-        <button className="button" style={{...styles.innerStretch, ...styles.vertical}}>Sign Up</button>
+        <Link to={dashboardURL}>
+          <button className="button" style={{...styles.innerStretch, ...styles.vertical}}>Sign Up</button>
+        </Link>
       </div>
       <p style={{textAlign: 'center'}}>Already have an account? <Link to={loginURL}>Log In</Link></p>
     </div>

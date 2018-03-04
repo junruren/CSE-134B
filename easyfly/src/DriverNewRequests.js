@@ -121,8 +121,8 @@ class DriverNewRequests extends Component {
 
     const ProgressButtons = () => (
       <div className="horizontal-group">
-        <Link to="/driver_home"><button className="dashboard-button progress left">Back to Dashboard</button></Link>
-        <Link to="/driver_send_quote"><button className="dashboard-button progress right">Next</button></Link>
+        <Link to="/driver/home"><button className="dashboard-button progress left">Back to Dashboard</button></Link>
+        <Link to="/driver/send_quote"><button className="dashboard-button progress right">Next</button></Link>
       </div>
     )
 
