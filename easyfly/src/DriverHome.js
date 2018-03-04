@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Nav from './Nav'
+import DriverNav from './DriverNav'
 
 import './css/dashboard.css';
 
@@ -37,12 +37,12 @@ class DriverHome extends Component {
     if (this.state.hasTrip === false) {
       return (
         <div>
-          <Nav />
+          <DriverNav />
           <div className="container" id="dashboard_layout">
             <div className="vertical-middle"> 
               <h1>Hello, {this.state.user} </h1>
               <h2>Ready to take another order?</h2> 
-              <button className="button homepage" id="find_riders">Find Riders</button>
+              <Link to="/driver_new_requests"><button className="button homepage" id="find_riders">Find Riders</button></Link>
             </div>
           </div>
         </div>
@@ -51,6 +51,8 @@ class DriverHome extends Component {
 
     else {
       return (
+        <div>
+        <DriverNav />
         <div className="container" id="dashboard_layout">
           <div className="vertical-middle with-more-info" id="greet-user">
             <h1>Hello, {this.state.user} </h1>
@@ -80,12 +82,13 @@ class DriverHome extends Component {
             </div>
 
             <div className = "more-links"> 
-              <a className = "more-links-content" href="driver-all-requests.html">See All Upcoming</a> 
-              <a className = "more-links-content" href="driver-new-request.html">Find New Rides</a> 
+              <Link to="/driver_all_trips"><a className = "more-links-content">See All Upcoming</a></Link>
+              <Link to="/driver_new_requests"><a className = "more-links-content">Find New Rides</a></Link>
             </div>
 
           </div>
 
+        </div>
         </div>
 
       );
