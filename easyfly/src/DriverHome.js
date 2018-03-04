@@ -71,9 +71,9 @@ class DriverHome extends Component {
               </div>
 
               <div className="todos">
-                <div><input type="checkbox" checked /><button disabled className="dashboard-button checklist">Find a request</button></div>
-                <div><input type="checkbox" checked /><button disabled className="dashboard-button checklist">Send price offer</button></div>
-                <div><input type="checkbox" checked /><button disabled className="dashboard-button checklist">Confirm deal</button></div>
+                <div><input type="checkbox" defaultChecked /><button disabled className="dashboard-button checklist">Find a request</button></div>
+                <div><input type="checkbox" defaultChecked /><button disabled className="dashboard-button checklist">Send price offer</button></div>
+                <div><input type="checkbox" defaultChecked /><button disabled className="dashboard-button checklist">Confirm deal</button></div>
                 <div><input type="checkbox" /><button className="dashboard-button checklist">Confirm driver arrival</button></div>
                 <div><input type="checkbox" /><button className="dashboard-button checklist">Confirm guests pickup</button></div>
                 <div><input type="checkbox" /><button className="dashboard-button checklist">Confirm dropoff</button></div>

@@ -96,7 +96,7 @@ class DriverNewRequests extends Component {
           </select>
         </div>
         <div className="capacity-filter">
-          <input type="checkbox" id="capacity-checkbox" checked/><label>Capacity: max </label>
+          <input type="checkbox" id="capacity-checkbox" defaultChecked/><label>Capacity: max </label>
           <input type="number" id="capacity-input" onChange={this.handleCapacityFilter} value={this.state.capacityInput}/>
         </div>
       </div>
