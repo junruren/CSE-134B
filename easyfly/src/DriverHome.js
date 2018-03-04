@@ -26,10 +26,12 @@ class DriverHome extends Component {
 
   componentDidMount() {
     document.body.classList.add('driver');
+    document.body.classList.add('dashboard');
   }
 
   componentWillUnmount() {
     document.body.classList.remove('driver');
+    document.body.classList.remove('dashboard');
   }
 
   render() {
