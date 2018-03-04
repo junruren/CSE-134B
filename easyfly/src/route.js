@@ -5,12 +5,14 @@ import Home from './Home';
 import { DriverLogin, RiderLogin } from './Login';
 import { DriverSignup, RiderSignup } from './Signup';
 import DriverHome from './DriverHome'
-import RiderHome from './RiderHome'
 import DriverNewRequests from './DriverNewRequests'
 import DriverAllTrips from './DriverAllTrips'
 import DriverSendQuote from './DriverSendQuote'
 import DriverQuoteSent from './DriverQuoteSent'
 import DriverSettings from './DriverSettings'
+import RiderHome from './RiderHome'
+import RiderNewTrip from './RiderNewTrip'
+import RiderSettings from './RiderSettings'
 import Chat from './Chat';
 
 const Paths = () => (
@@ -28,6 +30,8 @@ const Paths = () => (
       <Route path="/rider/login" component={RiderLogin}/>
       <Route path="/rider/signup" component={RiderSignup}/>
       <Route path="/rider/home" component={RiderHome}/>
+      <Route path="/rider/new_trip" component={RiderNewTrip}/>
+      <Route path="/rider/settings" component={RiderSettings}/>
       <Route path="/chat" component={Chat}/>
  		</div>
  	</BrowserRouter>
