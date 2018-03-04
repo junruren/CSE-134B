@@ -88,7 +88,7 @@ class RiderNewTrip extends Component {
   }
 
   render() {
-    if (this.state.step == 0) {
+    if (this.state.step === 0) {
       return(
         <div>
           <RiderNav />
@@ -115,7 +115,7 @@ class RiderNewTrip extends Component {
         </div>
       );
     }
-    else if (this.state.step == 1) {
+    else if (this.state.step === 1) {
       return(
         <div>
           <RiderNav />
@@ -149,7 +149,7 @@ class RiderNewTrip extends Component {
         </div>
       );
     }
-    else if (this.state.step == 2) {
+    else if (this.state.step === 2) {
       return(
         <div>
           <RiderNav />
@@ -199,7 +199,7 @@ class RiderNewTrip extends Component {
         </div>
       );
     }
-    else { // if (this.state.step == 3)
+    else { // if (this.state.step === 3)
       return(
         <div>
           <RiderNav />
