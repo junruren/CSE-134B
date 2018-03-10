@@ -10,6 +10,8 @@ import DriverAllTrips from './DriverAllTrips'
 import DriverSendQuote from './DriverSendQuote'
 import DriverQuoteSent from './DriverQuoteSent'
 import DriverSettings from './DriverSettings'
+import DriverNav from './DriverNav'
+
 import RiderHome from './RiderHome'
 import RiderNewTrip from './RiderNewTrip'
 import RiderSettings from './RiderSettings'
