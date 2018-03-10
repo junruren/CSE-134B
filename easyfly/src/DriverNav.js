@@ -10,7 +10,7 @@ class DriverNav extends Component {
 	render() {
 		return (
 			<ul className="navbar">
-      			<li><Link to="/">Sign Out</Link></li>
+      			<li><Link to={`/`}>Sign Out</Link></li>
       			<li className="dropdown">
 	        		<a className="dropbtn">Account</a>
 	        		<div className="dropdown-content">
@@ -18,8 +18,8 @@ class DriverNav extends Component {
 	          			<Link to={"/" + this.state.user + "_settings"}>Settings</Link>
 	        		</div>
       			</li>
-      			<li><Link to="/">Notification</Link></li>
-      			<li><Link to="/driver_home">Home</Link></li>
+      			<li><Link to={`/`}>Notification</Link></li>
+      			<li><Link to={`/driver_home`}>Home</Link></li>
     		</ul>
 		);
 	}

@@ -29,8 +29,8 @@ class Home extends Component {
             </div>
           </div>
           <div style={{textAlign: 'center'}}>
-             <Link to="/driver/login"><button className="dashboard-button" style={styles.button}>I am a driver</button></Link>
-             <Link to="/rider/login"><button className="dashboard-button" style={styles.button}>I am a rider</button></Link>
+             <Link to={`/driver/login`}><button className="dashboard-button" style={styles.button}>I am a driver</button></Link>
+             <Link to={`/rider/login`}><button className="dashboard-button" style={styles.button}>I am a rider</button></Link>
           </div>
         </div>
       </div>

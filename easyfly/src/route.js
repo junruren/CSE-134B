@@ -10,23 +10,22 @@ import DriverAllTrips from './DriverAllTrips'
 import DriverSendQuote from './DriverSendQuote'
 import DriverQuoteSent from './DriverQuoteSent'
 import DriverSettings from './DriverSettings'
-import DriverNav from './DriverNav'
-
 import RiderHome from './RiderHome'
 import RiderNewTrip from './RiderNewTrip'
 import RiderSettings from './RiderSettings'
 import Chat from './Chat';
+import ResetPassword from './ResetPassword';
 
 const Paths = () => (
   <BrowserRouter>
   	<div>
     	<Route exact path="/" component={Home} />
-    	<Route path="/driver_home" component={DriverHome} />
-    	<Route path="/driver_new_requests" component={DriverNewRequests} />
-    	<Route path="/driver_all_trips" component={DriverAllTrips} />
-      <Route path="/driver_send_quote" component={DriverSendQuote} />
-      <Route path="/driver_quote_sent" component={DriverQuoteSent} />
-      <Route path="/driver_settings" component={DriverSettings} />
+    	<Route path="/driver/home" component={DriverHome} />
+    	<Route path="/driver/new_requests" component={DriverNewRequests} />
+    	<Route path="/driver/all_trips" component={DriverAllTrips} />
+      <Route path="/driver/send_quote" component={DriverSendQuote} />
+      <Route path="/driver/quote_sent" component={DriverQuoteSent} />
+      <Route path="/driver/settings" component={DriverSettings} />
       <Route path="/driver/login" component={DriverLogin}/>
       <Route path="/driver/signup" component={DriverSignup}/>
       <Route path="/rider/login" component={RiderLogin}/>
@@ -35,6 +34,7 @@ const Paths = () => (
       <Route path="/rider/new_trip" component={RiderNewTrip}/>
       <Route path="/rider/settings" component={RiderSettings}/>
       <Route path="/chat" component={Chat}/>
+      <Route path="/reset_password" component={ResetPassword}/>
  		</div>
  	</BrowserRouter>
 );
