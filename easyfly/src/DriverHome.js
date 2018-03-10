@@ -37,15 +37,6 @@ class DriverHome extends Component {
   render() {
     if (this.state.hasTrip === false) {
       return (
-<<<<<<< HEAD
-        <div className="dashboard-display">
-          <DriverNav />
-          <div className="container" id="dashboard_layout">
-            <div className="vertical-middle"> 
-              <h1>Hello, {this.state.user} </h1>
-              <h2>Ready to take another order?</h2> 
-              <Link to={`/driver_new_requests`}><button className="dashboard-button" id="find_riders">Find Riders</button></Link>
-=======
         <BrowserRouter>
           <div className="dashboard-display">
             <DriverNav />
@@ -55,7 +46,6 @@ class DriverHome extends Component {
                 <h2>Ready to take another order?</h2> 
                 <Link to="/driver/new_requests"><button className="dashboard-button" id="find_riders">Find Riders</button></Link>
               </div>
->>>>>>> 837c98c9456e78c0230f0a700d96be57ccc08ee5
             </div>
           </div>
         </BrowserRouter>
