@@ -23,5 +23,10 @@
     "build": "react-scripts build",
     "test": "mocha --reporter progress tools/testSetup.js test/*.test.js",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2"
   }
 }
