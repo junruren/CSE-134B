@@ -9,11 +9,7 @@ import DriverTableHeader from './DriverTableHeader'
 import './css/driver-trips.css'
 import './css/dashboard.css'
 
-const mapDispatchToProps = dispatch => {
-  return {
-    saveTrip: selected_trip => dispatch(saveTrip(selected_trip))
-  };
-};
+
 
 class ConnectDriverNewRequests extends Component {
 
@@ -65,10 +61,21 @@ class ConnectDriverNewRequests extends Component {
           "Nickname": "Mark",
           "Status": "Confirmed"
         }
-      ]
+      ],
+      driver_selected_trip: {
+          "Name": "Marco Botton",
+          "Total Riders": 2,
+          "Pick-up": "SAN",
+          "Destination": "Irvine",
+          "Flight Number": "AA1270",
+          "Arrival Time": "2018-01-25 05:25",
+          "Nickname": "Mark",
+          "Status": "Confirmed"
+        }
     };
 
     this.handleCapacityFilter = this.handleCapacityFilter.bind(this);
+    this.handleSelectTrip = this.handleSelectTrip.bind(this);
 
   }
 
@@ -83,7 +90,6 @@ class ConnectDriverNewRequests extends Component {
 
   handleCapacityFilter(event) {
     var inputValue = event.target.value;
-    console.log("calling filter" + inputValue);
     var trips_to_display = [];
     for(var i = 0; i<this.state.new_trips.length; i++) {
       if(this.state.new_trips[i]["Total Riders"]<=inputValue) {
@@ -96,10 +102,16 @@ class ConnectDriverNewRequests extends Component {
 
 
   handleSelectTrip(event) {
-    event.preventDefault();
     var chosen_trip = event.target.getAttribute("id"); 
-  }
 
+    for(var i = 0; i<this.state.new_trips.length; i++) {
+      if(this.state.new_trips[i]["Name"]===chosen_trip) {
+          this.props.saveTrip(this.state.new_trips[i]);
+          this.setState({driver_selected_trip: this.state.new_trips[i]});
+          break;
+      }
+    }
+  }
 
 	render() {
 
@@ -117,6 +129,9 @@ class ConnectDriverNewRequests extends Component {
         </div>
       </div>
     );
+
+    console.log("this.props: ");
+    console.log(this.props);
 
     const Body = () =>( this.state.filtered_trips.map((trip) => (
           <tr className="trip_row">
@@ -168,11 +183,20 @@ class ConnectDriverNewRequests extends Component {
       </div>
     );
   }
-
 }
 
-const DriverNewRequests = connect(null, mapDispatchToProps)(ConnectDriverNewRequests);
+const mapDispatchToProps = dispatch => {
+  return {
+    saveTrip: driver_selected_trip => dispatch(saveTrip(driver_selected_trip))
+  };
+};
+
+function mapStateToProps(state, ownProps) {
+  return {
+    driver_selected_trip: state.driver_selected_trip
+  }
+}
+
+const DriverNewRequests = connect(mapStateToProps, mapDispatchToProps)(ConnectDriverNewRequests);
 
 export default DriverNewRequests;
-
-

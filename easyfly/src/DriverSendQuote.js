@@ -56,16 +56,17 @@ class DriverSendQuote extends Component {
     )
 
     return (
-      <BrowserRouter>
+      <div>
       <DriverNav />
       <div className="container">
         <DriverSelectedTrip />
         <TextInput />
         <Buttons />
       </div>
-      </BrowserRouter>
+      </div>
     );
   }
 }
+
 
 export default DriverSendQuote;
