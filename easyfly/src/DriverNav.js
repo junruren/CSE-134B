@@ -14,12 +14,12 @@ class DriverNav extends Component {
       			<li className="dropdown">
 	        		<a className="dropbtn">Account</a>
 	        		<div className="dropdown-content">
-	          			<Link to={"/" + this.state.user + "_all_trips"}>My Trips</Link>
-	          			<Link to={"/" + this.state.user + "_settings"}>Settings</Link>
+	          			<Link to={"/" + this.state.user + "/all_trips"}>My Trips</Link>
+	          			<Link to={"/" + this.state.user + "/settings"}>Settings</Link>
 	        		</div>
       			</li>
-      			<li><Link to={`/`}>Notification</Link></li>
-      			<li><Link to={`/driver_home`}>Home</Link></li>
+      			<li><Link to={'/'}>Notification</Link></li>
+      			<li><Link to={'/driver/home'}>Home</Link></li>
     		</ul>
 		);
 	}

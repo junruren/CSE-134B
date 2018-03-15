@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, BrowserRouter } from 'react-router-dom';
 
 import DriverNav from './DriverNav'
 import './css/settings.css'
@@ -9,7 +9,7 @@ class DriverSettings extends Component {
 
 	render() {
 		return (
-		<div>
+		<BrowserRouter>
 			<DriverNav />
 
 			<div className="settings-container">
@@ -49,7 +49,7 @@ class DriverSettings extends Component {
       		</div>
     		</div>
 
-		</div>
+		</BrowserRouter>
 		);
 	}
 

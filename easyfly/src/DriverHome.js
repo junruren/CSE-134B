@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import DriverNav from './DriverNav'
 
 import './css/dashboard.css';
@@ -37,7 +37,7 @@ class DriverHome extends Component {
   render() {
     if (this.state.hasTrip === false) {
       return (
-        <BrowserRouter>
+        <div>
           <div className="dashboard-display">
             <DriverNav />
             <div className="container" id="dashboard_layout">
@@ -48,12 +48,12 @@ class DriverHome extends Component {
               </div>
             </div>
           </div>
-        </BrowserRouter>
+        </div>
       );
     }
     else {
       return (
-        <BrowserRouter>
+        <div>
           <div>
             <DriverNav />
             <div className="container" id="dashboard_layout">
@@ -88,7 +88,7 @@ class DriverHome extends Component {
               </div>
             </div>
           </div>
-        </BrowserRouter>
+        </div>
       );
     }
   }

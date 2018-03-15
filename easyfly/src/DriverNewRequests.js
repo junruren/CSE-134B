@@ -1,17 +1,26 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { saveTrip } from './actions/saveTrip'
 
 import DriverNav from './DriverNav'
 import DriverTableHeader from './DriverTableHeader'
 import './css/driver-trips.css'
 import './css/dashboard.css'
 
+const mapDispatchToProps = dispatch => {
+  return {
+    saveTrip: selected_trip => dispatch(saveTrip(selected_trip))
+  };
+};
 
-class DriverNewRequests extends Component {
+class ConnectDriverNewRequests extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      select: false,
       capacityInput: 4,
       new_trips: [ 
         {
@@ -85,6 +94,13 @@ class DriverNewRequests extends Component {
     this.setState({capacityInput: inputValue});
   }
 
+
+  handleSelectTrip(event) {
+    event.preventDefault();
+    var chosen_trip = event.target.getAttribute("id"); 
+  }
+
+
 	render() {
 
     const DriverFilterBar = () => (
@@ -113,7 +129,12 @@ class DriverNewRequests extends Component {
             <td>{trip["Nickname"]}</td>
             <td></td>
             <td>
-              <input type="checkbox" className="select_checkbox" />
+              <input 
+                type="checkbox" 
+                className="select_checkbox" 
+                id={trip["Name"]}
+                onChange={this.handleSelectTrip}
+              />
             </td>
           </tr>
       )
@@ -150,4 +171,8 @@ class DriverNewRequests extends Component {
 
 }
 
+const DriverNewRequests = connect(null, mapDispatchToProps)(ConnectDriverNewRequests);
+
 export default DriverNewRequests;
+
+

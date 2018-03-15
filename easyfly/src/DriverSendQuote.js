@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, BrowserRouter } from 'react-router-dom';
 
 import DriverNav from './DriverNav'
 import DriverSelectedTrip from './DriverSelectedTrip'
@@ -56,14 +56,14 @@ class DriverSendQuote extends Component {
     )
 
     return (
-      <div>
+      <BrowserRouter>
       <DriverNav />
       <div className="container">
         <DriverSelectedTrip />
         <TextInput />
         <Buttons />
       </div>
-      </div>
+      </BrowserRouter>
     );
   }
 }
