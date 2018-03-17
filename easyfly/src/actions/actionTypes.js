@@ -1,1 +1,2 @@
 export const SAVE_SELECTED_TRIP = 'SAVE_SELECTED_TRIP';
+export const CHANGE_STEP = 'CHANGE_STEP';
