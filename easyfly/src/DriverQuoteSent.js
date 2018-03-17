@@ -49,7 +49,7 @@ class DriverQuoteSent extends Component {
     )
 
     return (
-      <BrowserRouter>
+      <div>
       <DriverNav />
       <div className="container">
         <DriverSelectedTrip />
@@ -57,7 +57,7 @@ class DriverQuoteSent extends Component {
         <SentText />
         <Buttons />
       </div>
-      </BrowserRouter>
+      </div>
     );
   }
 }

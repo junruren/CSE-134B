@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link, BrowserRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 
 import DriverNav from './DriverNav'
 import DriverSelectedTrip from './DriverSelectedTrip'
@@ -7,7 +9,7 @@ import './css/driver-trips.css'
 import './css/dashboard.css'
 
 
-class DriverSendQuote extends Component {
+class ConnectDriverSendQuote extends Component {
 
   constructor(props) {
       super(props);
@@ -23,7 +25,9 @@ class DriverSendQuote extends Component {
             "Nickname": "Peldi",
             "Status": "Driver Arrival"
         }, 
+        driver_quote: props.driver_quote
       };
+      this.handleInput = this.handleInput.bind(this);
   }
   
   componentDidMount() {
@@ -34,15 +38,19 @@ class DriverSendQuote extends Component {
     document.body.classList.remove('driver');
   }
 
-  render() {
+  handleInput(event) {
+      var inputValue = event.target.value;
+      console.log(inputValue);
+      this.setState({driver_quote: inputValue});
+  }
 
-    var defaultInput = 'Hi there! \n\nI\'d like to make an offer of $100 for your ride. \nPlease feel free to let me know if you have any questions! \n\nLooking forward to serve you! ';
+  render() {
 
     const TextInput = () => (
       <div id="default-text-div">
         <h2>Say hi to {this.state.selected_trip["Nickname"]} (and give a quote!):</h2>
         <div className="send-message">
-          <textarea name="message" rows="8" cols="80" id="offer-content" value={defaultInput}>
+          <textarea name="message" rows="8" cols="80" id="offer-content" value={this.state.driver_quote} onChange={this.handleInput}>
           </textarea>
         </div>
       </div>
@@ -68,5 +76,12 @@ class DriverSendQuote extends Component {
   }
 }
 
+function mapStateToProps(state, ownProps) {
+  return {
+    driver_quote: state.driver_quote
+  }
+}
+
+const DriverSendQuote = connect(mapStateToProps)(ConnectDriverSendQuote);
 
 export default DriverSendQuote;
