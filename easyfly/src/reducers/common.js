@@ -1,4 +1,4 @@
-import {SAVE_SELECTED_TRIP} from "../actions/actionTypes";
+import {SAVE_SELECTED_TRIP, CHANGE_STEP} from "../actions/actionTypes";
 import initialState from './initialState';
 
 export default function rootReducer(state = initialState, action) {
@@ -6,7 +6,7 @@ export default function rootReducer(state = initialState, action) {
 		case SAVE_SELECTED_TRIP:
 			console.log("hi");
 			console.log("new state: ");
-			console.log( 
+			console.log(
 				{
 				...state,
 				driver_selected_trip: action.payload
@@ -16,6 +16,10 @@ export default function rootReducer(state = initialState, action) {
 				...state,
 				driver_selected_trip: action.payload
 			};
+		case CHANGE_STEP:
+			return Object.assign({}, state, {
+				step: action.step
+			});
 		default:
 			return state;
 	}
