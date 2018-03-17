@@ -68,26 +68,6 @@ class ConnectRiderNewTrip extends Component {
     })
   }
 
-  // nextStep = () => {
-  //   this.setState((prevState) => {
-  //     return {
-  //       step: prevState.step + 1,
-  //       user_info_rider: prevState.user_info_rider,
-  //       rider_trip_demo: prevState.rider_trip_demo,
-  //     }
-  //   });
-  // }
-  //
-  // prevStep = () => {
-  //   this.setState((prevState) => {
-  //     return {
-  //       step: prevState.step - 1,
-  //       user_info_rider: prevState.user_info_rider,
-  //       rider_trip_demo: prevState.rider_trip_demo,
-  //     }
-  //   });
-  // }
-
   componentDidMount() {
     document.body.classList.add('trip');
   }
