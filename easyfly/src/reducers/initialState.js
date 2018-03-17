@@ -1,5 +1,6 @@
 export default {
-  driver_new_trips: [ 
+    driver_name: "John",
+	driver_new_trips: [
         {
           "Name": "Giacomo Guilizzoni",
           "Total Riders": 3,
@@ -9,7 +10,7 @@ export default {
           "Arrival Time": "2018-01-19 15:03",
           "Nickname": "Peldi",
           "Status": "Driver Arrival"
-        }, 
+        },
         {
           "Name": "Marco Botton",
           "Total Riders": 2,
@@ -32,5 +33,5 @@ export default {
           "Nickname": "Mark",
           "Status": "Confirmed"
         },
-  driver_name: "John"
+   driver_quote: 'Hi there! \n\nI\'d like to make an offer of $100 for your ride. \nPlease feel free to let me know if you have any questions! \n\nLooking forward to serve you! '
 };

@@ -7,7 +7,7 @@ export const steps = {
 	REVIEW: 'REVIEW',
 }
 
-export const driverNewTrip = new_step => (
+export const changeStep = new_step => (
 	{ type: CHANGE_STEP,
 	  step: new_step
 	}

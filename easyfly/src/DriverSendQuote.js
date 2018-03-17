@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
-import { Link, BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Field, reduxForm } from 'redux-form'
+import { connect } from 'react-redux';
+
+import { saveQuote } from './actions/saveQuote'
+
 
 import DriverNav from './DriverNav'
 import DriverSelectedTrip from './DriverSelectedTrip'
@@ -7,23 +12,16 @@ import './css/driver-trips.css'
 import './css/dashboard.css'
 
 
-class DriverSendQuote extends Component {
+class ConnectDriverSendQuote extends Component {
 
   constructor(props) {
       super(props);
       this.state = {
         user: 'John',
-        selected_trip: {
-            "Name": "Giacomo Guilizzoni",
-            "Total Riders": 3,
-            "Pick-up": "LAX",
-            "Destination": "La Jolla",
-            "Flight Number": "MU538",
-            "Arrival Time": "2018-01-19 15:03",
-            "Nickname": "Peldi",
-            "Status": "Driver Arrival"
-        }, 
+        driver_selected_trip: Object.assign({}, props.driver_selected_trip),
+        driver_quote: props.driver_quote
       };
+      this.handleInput = this.handleInput.bind(this);
   }
   
   componentDidMount() {
@@ -34,15 +32,20 @@ class DriverSendQuote extends Component {
     document.body.classList.remove('driver');
   }
 
+  handleInput(event) {
+      var inputValue = document.getElementById('offer-content').value;
+      console.log(inputValue);
+      this.props.saveQuote(inputValue);
+      this.setState({driver_quote: inputValue});
+  }
+
   render() {
 
-    var defaultInput = 'Hi there! \n\nI\'d like to make an offer of $100 for your ride. \nPlease feel free to let me know if you have any questions! \n\nLooking forward to serve you! ';
-
-    const TextInput = () => (
+    const TextInput = ({input}) => (
       <div id="default-text-div">
-        <h2>Say hi to {this.state.selected_trip["Nickname"]} (and give a quote!):</h2>
+        <h2>Say hi to {this.state.driver_selected_trip["Nickname"]} (and give a quote!):</h2>
         <div className="send-message">
-          <textarea name="message" rows="8" cols="80" id="offer-content" value={defaultInput}>
+          <textarea name="message" rows="3" cols="80" id="offer-content">
           </textarea>
         </div>
       </div>
@@ -51,7 +54,7 @@ class DriverSendQuote extends Component {
     const Buttons = () => (
       <div className="horizontal-group">
         <Link to="/driver/new_requests"><button className="dashboard-button progress left">Back</button></Link>
-        <Link to="/driver/quote_sent"><button className="dashboard-button progress" >Send</button></Link> 
+        <Link to="/driver/quote_sent"><button className="dashboard-button progress" onClick={this.handleInput}>Send</button></Link> 
       </div>
     )
 
@@ -60,7 +63,7 @@ class DriverSendQuote extends Component {
       <DriverNav />
       <div className="container">
         <DriverSelectedTrip />
-        <TextInput />
+        <TextInput input={this.state.driver_quote}/>
         <Buttons />
       </div>
       </div>
@@ -68,5 +71,19 @@ class DriverSendQuote extends Component {
   }
 }
 
+function mapStateToProps(state, ownProps) {
+  return {
+    driver_quote: state.driver_quote,
+    driver_selected_trip: state.driver_selected_trip
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    saveQuote: inputValue => dispatch(saveQuote(inputValue))
+  };
+};
+
+const DriverSendQuote = connect(mapStateToProps, mapDispatchToProps)(ConnectDriverSendQuote);
 
 export default DriverSendQuote;

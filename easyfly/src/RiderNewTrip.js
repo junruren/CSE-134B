@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { changeStep } from './actions/driverNewTrip';
 import RiderNav from './RiderNav'
 
 import './css/trip.css';

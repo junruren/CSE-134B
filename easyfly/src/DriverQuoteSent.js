@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link, BrowserRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 
 import DriverNav from './DriverNav'
 import DriverSelectedTrip from './DriverSelectedTrip'
@@ -7,26 +9,18 @@ import './css/driver-trips.css'
 import './css/dashboard.css'
 
 
-class DriverQuoteSent extends Component {
+class ConnectDriverQuoteSent extends Component {
 
   constructor(props) {
       super(props);
       this.state = {
         user: 'John',
-        selected_trip: {
-            "Name": "Giacomo Guilizzoni",
-            "Total Riders": 3,
-            "Pick-up": "LAX",
-            "Destination": "La Jolla",
-            "Flight Number": "MU538",
-            "Arrival Time": "2018-01-19 15:03",
-            "Nickname": "Peldi",
-            "Status": "Driver Arrival"
-        }, 
+        driver_selected_trip: Object.assign({}, props.driver_selected_trip),
+        driver_quote: props.driver_quote
       };
   }
   
-   componentDidMount() {
+  componentDidMount() {
     document.body.classList.add('driver');
   }
 
@@ -36,10 +30,8 @@ class DriverQuoteSent extends Component {
 
   render() {
 
-    var defaultInput = 'Hi there! \n\nI\'d like to make an offer of $100 for your ride. \nPlease feel free to let me know if you have any questions! \n\nLooking forward to serve you! ';
-
     const SentText = () => (
-      <div className="confirm-message" id="quote-sent"> {defaultInput} </div>
+      <div className="confirm-message" id="quote-sent"> {this.state.driver_quote} </div>
     );
 
     const Buttons = () => (
@@ -49,7 +41,7 @@ class DriverQuoteSent extends Component {
     )
 
     return (
-      <BrowserRouter>
+      <div>
       <DriverNav />
       <div className="container">
         <DriverSelectedTrip />
@@ -57,9 +49,20 @@ class DriverQuoteSent extends Component {
         <SentText />
         <Buttons />
       </div>
-      </BrowserRouter>
+      </div>
     );
   }
 }
+
+function mapStateToProps(state, ownProps) {
+  return {
+    driver_selected_trip: state.driver_selected_trip,
+    driver_quote: state.driver_quote
+  }
+}
+
+
+
+const DriverQuoteSent = connect(mapStateToProps)(ConnectDriverQuoteSent);
 
 export default DriverQuoteSent;
