@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { changeStep } from './actions/driverNewTrip';
+import { steps, changeStep } from './actions/driverNewTrip';
 import RiderNav from './RiderNav'
 
 import './css/trip.css';
 
-class RiderNewTrip extends Component {
+class ConnectRiderNewTrip extends Component {
 
   constructor(props) {
     super(props);
@@ -18,7 +18,7 @@ class RiderNewTrip extends Component {
         "phone": "8581234567",
         "email": "scarlett_honda@example.com",
       },
-      step: 0, // Annotate the current step of adding a new trip. 0 as initial step
+      step: props.step,
       rider_trip_demo: {
         "status": "yes",
         "has_departure": true,
@@ -61,25 +61,32 @@ class RiderNewTrip extends Component {
     };
   }
 
-  nextStep = () => {
-    this.setState((prevState) => {
-      return {
-        step: prevState.step + 1,
-        user_info_rider: prevState.user_info_rider,
-        rider_trip_demo: prevState.rider_trip_demo,
-      }
-    });
+  handleStepChange = (newStep) => {
+    this.props.changeStep(newStep);
+    this.setState({
+      step: newStep
+    })
   }
 
-  prevStep = () => {
-    this.setState((prevState) => {
-      return {
-        step: prevState.step - 1,
-        user_info_rider: prevState.user_info_rider,
-        rider_trip_demo: prevState.rider_trip_demo,
-      }
-    });
-  }
+  // nextStep = () => {
+  //   this.setState((prevState) => {
+  //     return {
+  //       step: prevState.step + 1,
+  //       user_info_rider: prevState.user_info_rider,
+  //       rider_trip_demo: prevState.rider_trip_demo,
+  //     }
+  //   });
+  // }
+  //
+  // prevStep = () => {
+  //   this.setState((prevState) => {
+  //     return {
+  //       step: prevState.step - 1,
+  //       user_info_rider: prevState.user_info_rider,
+  //       rider_trip_demo: prevState.rider_trip_demo,
+  //     }
+  //   });
+  // }
 
   componentDidMount() {
     document.body.classList.add('trip');
@@ -90,7 +97,7 @@ class RiderNewTrip extends Component {
   }
 
   render() {
-    if (this.state.step === 0) {
+    if (this.state.step === steps.RIDE_SELECTION) {
       return(
         <div>
           <RiderNav />
@@ -110,14 +117,14 @@ class RiderNewTrip extends Component {
                 </label>
               </div>
               <div className="next-bt">
-                <button className="trip-button" id="next-btn" onClick={this.nextStep}>Next</button>
+                <button className="trip-button" id="next-btn" onClick={ () => this.handleStepChange(steps.FLIGHT_INFO) }>Next</button>
               </div>
             </div>
           </div>
         </div>
       );
     }
-    else if (this.state.step === 1) {
+    else if (this.state.step === steps.FLIGHT_INFO) {
       return(
         <div>
           <RiderNav />
@@ -140,7 +147,7 @@ class RiderNewTrip extends Component {
                 </div>
               </div>
               <div className="next-bt">
-                <button className="trip-button" id="next-btn" onClick={this.nextStep}>Next</button>
+                <button className="trip-button" id="next-btn" onClick={ () => this.handleStepChange(steps.RIDE_INFO) }>Next</button>
               </div>
               <div className="footer">
                 <p style={styles.p_over_dark_bg}>Flight info helps us to figure out your best pick up time and location for you instantly</p>
@@ -151,7 +158,7 @@ class RiderNewTrip extends Component {
         </div>
       );
     }
-    else if (this.state.step === 2) {
+    else if (this.state.step === steps.RIDE_INFO) {
       return(
         <div>
           <RiderNav />
@@ -170,7 +177,7 @@ class RiderNewTrip extends Component {
                     <input className="input" id="check-share-allowed" type="checkbox" />
                     <span className="checkmark"></span>
                   </label>
-                  <a onClick={this.prevStep}>Edit flight info</a>
+                  <a onClick={ () => this.handleStepChange(steps.FLIGHT_INFO) }>Edit flight info</a>
                 </div>
                 <div className="party-details">
                   <p>Including you</p>
@@ -194,14 +201,14 @@ class RiderNewTrip extends Component {
               </div>
               <div className="footer">
                 <p style={styles.p_over_dark_bg}>* You will have to confrim these info eventually in order to make a deal with a paired driver</p>
-                <button id="next-btn" className="trip-button" onClick={this.nextStep}>Broadcast my request to drivers!</button>
+                <button id="next-btn" className="trip-button" onClick={ () => this.handleStepChange(steps.REVIEW) }>Broadcast my request to drivers!</button>
               </div>
             </div>
           </div>
         </div>
       );
     }
-    else { // if (this.state.step === 3)
+    else if (this.state.step === steps.REVIEW) {
       return(
         <div>
           <RiderNav />
@@ -244,7 +251,7 @@ class RiderNewTrip extends Component {
               <div className="footer">
                 <Link to="/rider/home"><button id="next-btn" className="trip-button">Everything looks good!</button></Link>
                 <br />
-                <a onClick={this.prevStep}>I need to make some changes</a>
+                <a onClick={ () => this.handleStepChange(steps.RIDE_INFO) }>I need to make some changes</a>
               </div>
             </div>
           </div>
@@ -291,5 +298,19 @@ const styles = {
     textShadowRadius: "5px",
   },
 }
+
+const mapStateToProps = state => {
+  return {
+    step: state.step
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    changeStep: new_step => dispatch(changeStep(new_step))
+  }
+}
+
+const RiderNewTrip = connect(mapStateToProps, mapDispatchToProps)(ConnectRiderNewTrip);
 
 export default RiderNewTrip;

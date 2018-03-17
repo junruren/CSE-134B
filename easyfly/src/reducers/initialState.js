@@ -1,3 +1,5 @@
+import {steps} from '../actions/driverNewTrip';
+
 export default {
     driver_name: "John",
 	driver_new_trips: [
@@ -33,5 +35,6 @@ export default {
           "Nickname": "Mark",
           "Status": "Confirmed"
         },
-   driver_quote: 'Hi there! \n\nI\'d like to make an offer of $100 for your ride. \nPlease feel free to let me know if you have any questions! \n\nLooking forward to serve you! '
+   driver_quote: 'Hi there! \n\nI\'d like to make an offer of $100 for your ride. \nPlease feel free to let me know if you have any questions! \n\nLooking forward to serve you! ',
+   step: steps.RIDE_SELECTION
 };
