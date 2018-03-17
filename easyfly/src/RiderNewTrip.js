@@ -115,15 +115,15 @@ class ConnectRiderNewTrip extends Component {
               <div className="flex-container add-flight">
                 <div className="f-n">
                   <label>Flight Number</label>
-                  <input className="input" id="input-f-n" type="text" name="flight-number" value={this.state.rider_trip_demo['arrival']['flight_info']['flight_number']}/>
+                  <input className="input" id="input-f-n" type="text" name="flight-number" placeholder={this.state.rider_trip_demo['arrival']['flight_info']['flight_number']}/>
                 </div>
                 <div className="a-d">
                   <label>Arrival Date (in destination's timezone)</label>
-                  <input className="input" id="input-date" type="date" name="arrival-date" value={this.state.rider_trip_demo['arrival']['flight_info']['date']}/>
+                  <input className="input" id="input-date" type="date" name="arrival-date" placeholder={this.state.rider_trip_demo['arrival']['flight_info']['date']}/>
                 </div>
                 <div className="a-t">
                   <label>Time</label>
-                  <input className="input" id="input-time" type="time" name="arrival-time" value={this.state.rider_trip_demo['arrival']['flight_info']['time']}/>
+                  <input className="input" id="input-time" type="time" name="arrival-time" placeholder={this.state.rider_trip_demo['arrival']['flight_info']['time']}/>
                 </div>
               </div>
               <div className="next-bt">
@@ -162,7 +162,7 @@ class ConnectRiderNewTrip extends Component {
                 <div className="party-details">
                   <p>Including you</p>
                   <p>How many persons will be riding?</p>
-                  <input className="input" id="input-num" type="number" name="persons" value={this.state.rider_trip_demo['arrival']['passenger_info']['total_riders']} />
+                  <input className="input" id="input-num" type="number" name="persons" placeholder={this.state.rider_trip_demo['arrival']['passenger_info']['total_riders']} />
                   <label className="checkbox-container">Currently don't know *
                     <input className="input" id="check-unknown" type="checkbox" />
                     <span className="checkmark"></span>
